@@ -1,0 +1,70 @@
+{
+  "name": "template-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development PORT=8000 react-scripts start",
+    "test": "NODE_ENV=test react-scripts test",
+    "start": "NODE_ENV=production PORT=8000 react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "lint": "eslint . --ext .js",
+    "postinstall": "./env.sh"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@emotion/core": "10.0.28",
+    "@emotion/styled": "10.0.27",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@xstyled/emotion": "1.17.2",
+    "axios": "0.19.2",
+    "connected-react-router": "6.8.0",
+    "dayjs": "1.8.33",
+    "emotion-theming": "10.0.27",
+    "jwt-decode": "2.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-ga": "3.1.2",
+    "react-helmet-async": "1.0.6",
+    "react-hook-form": "6.3.0",
+    "react-html-parser": "2.0.2",
+    "react-redux": "7.2.1",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "3.4.1",
+    "react-syntax-highlighter": "13.2.1",
+    "redux": "4.0.5",
+    "redux-devtools-extension": "2.13.8",
+    "redux-logger": "3.0.6",
+    "redux-thunk": "2.3.0"
+  },
+  "devDependencies": {
+    "@hookform/devtools": "2.0.5",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-jest": "23.18.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "7.20.3",
+    "eslint-plugin-standard": "4.0.1",
+    "prettier": "2.0.5",
+    "sinon": "9.0.2"
+  }
+}

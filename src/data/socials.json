@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Azobu",
+    "url": "https://azobu.com",
+    "imageUrl": "/assets/icons/azobu.svg"
+  },
+  {
+    "title": "Twitter",
+    "url": "https://twitter.com/AzobuHQ",
+    "imageUrl": "/assets/icons/twitter.svg"
+  },
+  {
+    "title": "Facebook",
+    "url": "https://facebook.com/AzobuHQ",
+    "imageUrl": "/assets/icons/facebook.svg"
+  },
+  {
+    "title": "Instagram",
+    "url": "https://instagram.com/AzobuHQ",
+    "imageUrl": "/assets/icons/instagram.svg"
+  },
+  {
+    "title": "LinkedIn",
+    "url": "https://linkedin.com/company/azobu",
+    "imageUrl": "/assets/icons/linkedin.svg"
+  },
+  {
+    "title": "GitHub",
+    "url": "https://github.com/azobu",
+    "imageUrl": "/assets/icons/github.svg"
+  }
+]

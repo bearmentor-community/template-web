@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Customizable interface with color theme mode."
+  },
+  {
+    "name": "Simple authentication and authorization flow."
+  },
+  {
+    "name": "Get and display data resources such as users and items."
+  },
+  {
+    "name": "Edit profile and upload avatar picture."
+  },
+  {
+    "name": "Development mode such as debug mode, upload, and not found."
+  }
+]

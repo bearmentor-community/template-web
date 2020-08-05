@@ -1,0 +1,23 @@
+{
+  "colors": {
+    "primary": "#5cadd6",
+    "primaryAlt": "#297aa3",
+    "secondary": "#8f8fa3",
+    "secondaryAlt": "#5c5c70",
+    "text": "#000",
+    "textAlt": "#555",
+    "textError": "#e02460",
+    "background": "#fff",
+    "backgroundAlt": "#eee",
+    "border": "#ccc",
+    "modes": {
+      "dark": {
+        "background": "#000",
+        "backgroundAlt": "#111",
+        "text": "#fff",
+        "textAlt": "#aaa",
+        "border": "#333"
+      }
+    }
+  }
+}
