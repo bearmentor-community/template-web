@@ -17,7 +17,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # Misc
-_*
 .DS_Store
 .env.local
 .env.development.local
