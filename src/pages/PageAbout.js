@@ -14,7 +14,7 @@ const PageAbout = () => {
         It is made highly opiniated by{' '}
         <Anchor href='https://mhaidarhanif.com'>M Haidar Hanif</Anchor> from{' '}
         <Anchor href='https://azobu.com'>Azobu</Anchor>. The main goal is to be
-        a starter kit learning purpose for new professional developers in web
+        a template and starter kit for professional developers in web
         development ecosystem.
       </p>
       <p>
@@ -25,9 +25,14 @@ const PageAbout = () => {
         JavaScript, Node.js, React, React Router, React Helmet, Redux, Redux Dev
         Tools, Redux Logger, Redux Thunk, xstyled/emotion, Axios, Express,
         Nodemon, Morgan, MongoDB, Mongoose, PostgreSQL, Sequelize, bcrypt, JSON
-        Web Token, dotenv, Jest, Sinon, ESLint, Prettier, Standard, and much
-        more. Might be leveraging TypeScript, Passport, OAuth, Redis, Docker,
-        and complete test suite in the future.
+        Web Token (JWT), dotenv-flow, Jest, Sinon, ESLint, Prettier, Standard,
+        and much more. Might be leveraging TypeScript, Passport, OAuth, Redis,
+        Docker, and complete test suite in the future.
+      </p>
+      <p>
+        The applications are deployed on Netlify and Google Cloud Platform,
+        accessible through{' '}
+        <Anchor href='https://template.azobu.com'>template.azobu.com</Anchor>
       </p>
       <p>The repositories are located at:</p>
       <ul>
