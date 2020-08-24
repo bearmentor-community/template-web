@@ -6,8 +6,6 @@ import {
   UPDATE_USER_SETTINGS_FAILURE
 } from '../types'
 
-import { sleep } from '../../../utils/timer'
-
 const updateUserSettings = (data = {}) => {
   return async (dispatch, getState) => {
     dispatch({
@@ -16,7 +14,6 @@ const updateUserSettings = (data = {}) => {
     const state = getState()
     const id = state.auth.data.user.id
     const token = state.auth.data.accessToken
-    await sleep()
 
     const body = new FormData()
     body.append('avatar', data.avatar[0]) // File

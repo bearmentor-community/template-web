@@ -6,15 +6,12 @@ import {
   GET_USER_SETTINGS_FAILURE
 } from '../types'
 
-import { sleep } from '../../../utils/timer'
-
 const getUserSettings = (body) => {
   return async (dispatch, getState) => {
     dispatch({ type: GET_USER_SETTINGS_START })
     const state = getState()
     const id = state.auth.data.user.id
     const token = state.auth.data.accessToken
-    await sleep()
 
     try {
       const response = await axios.get(

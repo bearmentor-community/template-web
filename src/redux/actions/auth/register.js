@@ -3,12 +3,10 @@ import { push } from 'connected-react-router'
 import ReactGA from 'react-ga'
 
 import { REGISTER_START, REGISTER_SUCCESS, REGISTER_FAILURE } from '../types'
-import { sleep } from '../../../utils/timer'
 
 const register = (body = {}) => {
   return async (dispatch) => {
     dispatch({ type: REGISTER_START })
-    await sleep()
 
     try {
       const response = await axios.post(

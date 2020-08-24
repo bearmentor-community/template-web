@@ -4,12 +4,10 @@ import ReactGA from 'react-ga'
 
 import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILURE } from '../types'
 import { decodeToken } from '../../../utils/jsonwebtoken'
-import { sleep } from '../../../utils/timer'
 
 const login = (body = {}) => {
   return async (dispatch) => {
     dispatch({ type: LOGIN_START })
-    await sleep()
 
     try {
       const response = await axios.post(

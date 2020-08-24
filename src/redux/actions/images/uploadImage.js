@@ -5,12 +5,10 @@ import {
   UPLOAD_IMAGE_SUCCESS,
   UPLOAD_IMAGE_FAILURE
 } from '../types'
-import { sleep } from '../../../utils/timer'
 
 const uploadImage = (body = {}) => {
   return async (dispatch) => {
     dispatch({ type: UPLOAD_IMAGE_START })
-    await sleep()
 
     const bodyFormData = new FormData()
     bodyFormData.append('image', body.image[0]) // File
