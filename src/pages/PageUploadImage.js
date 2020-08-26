@@ -18,7 +18,12 @@ const PageUploadImage = ({ isLoading, handleUploadImage }) => {
       <Section>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
-            <input name='image' type='file' ref={register} />
+            <input
+              name='image'
+              type='file'
+              accept='image/jpeg,image/png'
+              ref={register}
+            />
           </div>
           <div>
             <input type='submit' value='Upload Image' />

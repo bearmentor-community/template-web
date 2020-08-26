@@ -27,20 +27,14 @@ const Name = styled.span`
 const Users = ({ users }) => {
   return (
     <UsersStyled>
-      {users ? (
-        users.map((user, index) => (
-          <UserLink key={index} to={user.username}>
-            <Card>
-              <Avatar user={user} size={50} />
-              <Name>{user.name}</Name>
-            </Card>
-          </UserLink>
-        ))
-      ) : (
-        <div>
-          <p>Users are empty</p>
-        </div>
-      )}
+      {users.map((user, index) => (
+        <UserLink key={index} to={user.username}>
+          <Card>
+            <Avatar user={user} size={50} />
+            <Name>{user.name}</Name>
+          </Card>
+        </UserLink>
+      ))}
     </UsersStyled>
   )
 }

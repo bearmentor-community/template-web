@@ -24,7 +24,9 @@ const RouterContainer = () => {
     <Router history={history}>
       <>
         <ScrollToTop />
-        {GoogleAnalytics.init() && <GoogleAnalytics.RouteTracker />}
+        {process.env.NODE_ENV === 'production' && GoogleAnalytics.init() && (
+          <GoogleAnalytics.RouteTracker />
+        )}
         <Switch>
           {process.env.NODE_ENV === 'development' && (
             <Route path='/debug' component={PageDebug} />

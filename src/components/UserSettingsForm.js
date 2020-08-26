@@ -79,7 +79,13 @@ const UserSettingsForm = ({
     <Form onSubmit={handleSubmit(submitData)} encType='multipart/form-data'>
       <Field>
         <Avatar user={user} size={150} />
-        <InputFile name='avatar' type='file' ref={register()} />
+        <Label htmlFor='avatar'>Profile Avatar</Label>
+        <InputFile
+          name='avatar'
+          type='file'
+          accept='image/jpeg,image/png'
+          ref={register()}
+        />
       </Field>
 
       <Field>

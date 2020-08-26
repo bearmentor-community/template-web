@@ -13,7 +13,9 @@ const UsersContainer = ({ isLoading, handleGetUsers, users }) => {
 
   return (
     <Section>
-      {isLoading ? <LoadingSpinner /> : <Users users={users} />}
+      {isLoading && <LoadingSpinner />}
+      {!isLoading && users && users.length > 0 && <Users users={users} />}
+      {!isLoading && users.length <= 0 && <p>Sorry, users are empty</p>}
     </Section>
   )
 }

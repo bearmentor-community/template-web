@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 import { Header } from '../components'
 
+// TODO useEffect getAuthenticatedUser
 const HeaderContainer = ({ isAuthenticated, authenticatedUser }) => {
   return (
     <Header

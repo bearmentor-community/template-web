@@ -8,18 +8,12 @@ const ItemsStyled = styled.div``
 const Items = ({ items }) => {
   return (
     <ItemsStyled>
-      {!items ? (
-        <div>
-          <p>Items are empty</p>
+      {items.map((item, index) => (
+        <div key={index}>
+          <h4>{item.title}</h4>
+          <div>{ReactHtmlParser(item.html)}</div>
         </div>
-      ) : (
-        items.map((item, index) => (
-          <div key={index}>
-            <h4>{item.title}</h4>
-            <div>{ReactHtmlParser(item.html)}</div>
-          </div>
-        ))
-      )}
+      ))}
     </ItemsStyled>
   )
 }

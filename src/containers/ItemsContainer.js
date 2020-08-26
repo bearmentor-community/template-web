@@ -14,15 +14,16 @@ const ItemsContainer = ({ isLoading, handleGetItems, items }) => {
   return (
     <Section>
       {isLoading && <LoadingSpinner />}
-      {!isLoading && items && <Items items={items} />}
+      {!isLoading && items && items.length > 0 && <Items items={items} />}
+      {!isLoading && items.length <= 0 && <p>Sorry, items are empty</p>}
     </Section>
   )
 }
 
 ItemsContainer.propTypes = {
   isLoading: PropTypes.bool.isRequired,
-  handleGetItems: PropTypes.func.isRequired,
-  items: PropTypes.array
+  items: PropTypes.array,
+  handleGetItems: PropTypes.func.isRequired
 }
 
 export default connect(
