@@ -46,6 +46,9 @@ const GlobalStyleContainer = createGlobalStyle`
     &:focus {
       outline-color: primary;
     }
+    &:disabled {
+      color: text;
+    }
   }
 `
 

@@ -9,6 +9,7 @@ const Form = styled.form`
   flex-direction: column;
   align-items: center;
   margin-top: 50;
+  width: 350px;
   & > * {
     margin: 10 0;
   }
@@ -18,7 +19,7 @@ const Field = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 10;
-  width: 350px;
+  width: 100%;
 `
 
 const Label = styled.label`
@@ -77,9 +78,10 @@ const UserSettingsForm = ({
 }) => {
   return (
     <Form onSubmit={handleSubmit(submitData)} encType='multipart/form-data'>
+      <Avatar user={user} size={150} />
+
       <Field>
-        <Avatar user={user} size={150} />
-        <Label htmlFor='avatar'>Profile Avatar</Label>
+        <Label htmlFor='avatar'>Profile Picture</Label>
         <InputFile
           name='avatar'
           type='file'
