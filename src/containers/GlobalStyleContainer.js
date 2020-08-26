@@ -17,8 +17,8 @@ const GlobalStyleContainer = createGlobalStyle`
 
   p, ul, ol {
     font-size: 1.2em;
-    line-height: 1.5em;
-    margin: 20px 0;
+    line-height: 1.8em;
+    margin: 30px 0;
     a {
       
       color: primary;

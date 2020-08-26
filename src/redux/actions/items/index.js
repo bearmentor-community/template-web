@@ -5,7 +5,7 @@ import {
   GET_ITEMS_START,
   GET_ITEMS_SUCCESS,
   GET_ITEMS_FAILURE
-} from './types'
+} from '../types'
 
 export const resetItems = () => (dispatch) => dispatch({ type: RESET_ITEMS })
 

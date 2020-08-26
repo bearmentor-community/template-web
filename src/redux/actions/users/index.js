@@ -5,7 +5,7 @@ import {
   GET_USERS_START,
   GET_USERS_SUCCESS,
   GET_USERS_FAILURE
-} from './types'
+} from '../types'
 
 export const resetUsers = () => (dispatch) => dispatch({ type: RESET_USERS })
 
