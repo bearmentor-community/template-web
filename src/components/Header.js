@@ -84,7 +84,7 @@ const Header = ({ isAuthenticated, authenticatedUser }) => {
       <HeaderSegmentButtons>
         <ColorModeToggle />
 
-        {!isAuthenticated ? (
+        {!isAuthenticated && (
           <>
             <LinkButton variant='secondary' to='/login'>
               Login
@@ -93,7 +93,8 @@ const Header = ({ isAuthenticated, authenticatedUser }) => {
               Register
             </LinkButton>
           </>
-        ) : (
+        )}
+        {isAuthenticated && authenticatedUser.username && (
           <>
             <LinkAvatar
               to={authenticatedUser.username}
@@ -108,7 +109,7 @@ const Header = ({ isAuthenticated, authenticatedUser }) => {
 }
 
 Header.propTypes = {
-  isAuthenticated: PropTypes.bool,
+  isAuthenticated: PropTypes.bool.isRequired,
   authenticatedUser: PropTypes.object
 }
 

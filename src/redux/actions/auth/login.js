@@ -23,8 +23,7 @@ const login = (body = {}) => {
         type: LOGIN_SUCCESS,
         payload: {
           accessToken,
-          decodedAccessToken,
-          user
+          decodedAccessToken
         }
       })
 

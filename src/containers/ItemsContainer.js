@@ -30,7 +30,7 @@ export default connect(
   (state) => {
     return {
       isLoading: state.items.isLoading,
-      items: state.items.data
+      items: state.items.data || []
     }
   },
   (dispatch) => {

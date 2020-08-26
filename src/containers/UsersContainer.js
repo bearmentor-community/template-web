@@ -21,7 +21,7 @@ const UsersContainer = ({ isLoading, handleGetUsers, users }) => {
 }
 
 UsersContainer.propTypes = {
-  isLoading: PropTypes.bool,
+  isLoading: PropTypes.bool.isRequired,
   users: PropTypes.array,
   handleGetUsers: PropTypes.func.isRequired
 }
@@ -30,7 +30,7 @@ export default connect(
   (state) => {
     return {
       isLoading: state.users.isLoading,
-      users: state.users.data
+      users: state.users.data || []
     }
   },
   (dispatch) => {

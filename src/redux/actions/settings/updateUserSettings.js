@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { push } from 'connected-react-router'
 
 import {
   UPDATE_USER_SETTINGS_START,
@@ -6,20 +7,20 @@ import {
   UPDATE_USER_SETTINGS_FAILURE
 } from '../types'
 
-const updateUserSettings = (data = {}) => {
+const updateUserSettings = (user = {}) => {
   return async (dispatch, getState) => {
     dispatch({
       type: UPDATE_USER_SETTINGS_START
     })
     const state = getState()
-    const id = state.auth.data.user.id
+    const id = state.auth.data.decodedAccessToken.id
     const token = state.auth.data.accessToken
 
     const body = new FormData()
-    body.append('avatar', data.avatar[0]) // File
-    body.append('name', data.name) // string
-    body.append('username', data.username) // string
-    body.append('bio', data.bio) // string
+    body.append('avatar', user.avatar[0]) // File
+    body.append('name', user.name) // string
+    body.append('username', user.username) // string
+    body.append('bio', user.bio) // string
     // for (const pair of body.entries()) console.log(`${pair[0]}: ${pair[1]}`)
 
     try {
@@ -40,6 +41,7 @@ const updateUserSettings = (data = {}) => {
         type: UPDATE_USER_SETTINGS_SUCCESS,
         payload: response.data.data.user
       })
+      dispatch(push(user.username))
     } catch (error) {
       dispatch({
         type: UPDATE_USER_SETTINGS_FAILURE,

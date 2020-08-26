@@ -6,7 +6,11 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
   LOGOUT_START,
-  LOGOUT_SUCCESS
+  LOGOUT_SUCCESS,
+  LOGOUT_FAILURE,
+  GET_AUTHENTICATED_USER_START,
+  GET_AUTHENTICATED_USER_SUCCESS,
+  GET_AUTHENTICATED_USER_FAILURE
 } from '../actions/types'
 
 const initialState = {
@@ -69,6 +73,32 @@ const auth = (state = initialState, action) => {
     case LOGOUT_SUCCESS:
       return {
         ...initialState
+      }
+    case LOGOUT_FAILURE:
+      return {
+        ...initialState
+      }
+    case GET_AUTHENTICATED_USER_START:
+      return {
+        ...state,
+        isLoading: true,
+        error: null
+      }
+    case GET_AUTHENTICATED_USER_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        error: null,
+        data: {
+          ...state.data,
+          user: action.payload
+        }
+      }
+    case GET_AUTHENTICATED_USER_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        error: action.payload
       }
     default:
       return state
