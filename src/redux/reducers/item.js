@@ -1,8 +1,8 @@
 import {
-  GET_ITEMS_STARTED,
-  GET_ITEMS_SUCCESS,
-  GET_ITEMS_FAILURE,
-  GET_ITEMS_RESET
+  GET_ITEM_STARTED,
+  GET_ITEM_SUCCESS,
+  GET_ITEM_FAILURE,
+  GET_ITEM_RESET
 } from '../actions/types'
 
 const initialState = {
@@ -13,26 +13,26 @@ const initialState = {
 
 const items = (state = initialState, action) => {
   switch (action.type) {
-    case GET_ITEMS_STARTED:
+    case GET_ITEM_STARTED:
       return {
         ...state,
         isLoading: true,
         error: null
       }
-    case GET_ITEMS_SUCCESS:
+    case GET_ITEM_SUCCESS:
       return {
         ...state,
         isLoading: false,
         error: null,
         data: action.payload
       }
-    case GET_ITEMS_FAILURE:
+    case GET_ITEM_FAILURE:
       return {
         ...state,
         isLoading: false,
         error: action.payload
       }
-    case GET_ITEMS_RESET:
+    case GET_ITEM_RESET:
       return {
         ...initialState
       }

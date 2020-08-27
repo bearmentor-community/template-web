@@ -5,9 +5,10 @@ import auth from './auth' // register, login, logout
 import users from './users' // all users data
 import user from './user' // single user data
 import settings from './settings' // protected user settings data
+import item from './item' // single item data
 import items from './items' // all items data
 import images from './images' // all images data
-import search from './search'
+import search from './search' // search items
 
 const createRootReducer = (history) =>
   combineReducers({
@@ -16,6 +17,7 @@ const createRootReducer = (history) =>
     users,
     user,
     settings,
+    item,
     items,
     images,
     search

@@ -1,3 +1,3 @@
-import { RESET_ITEMS } from '../types'
+import { GET_ITEMS_RESET } from '../types'
 
-export default () => (dispatch) => dispatch({ type: RESET_ITEMS })
+export default () => (dispatch) => dispatch({ type: GET_ITEMS_RESET })
