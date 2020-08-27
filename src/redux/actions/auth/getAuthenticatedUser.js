@@ -1,14 +1,14 @@
 import axios from 'axios'
 
 import {
-  GET_AUTHENTICATED_USER_START,
+  GET_AUTHENTICATED_USER_STARTED,
   GET_AUTHENTICATED_USER_SUCCESS,
   GET_AUTHENTICATED_USER_FAILURE
 } from '../types'
 
 export default (body = {}) => {
   return async (dispatch, getState) => {
-    dispatch({ type: GET_AUTHENTICATED_USER_START })
+    dispatch({ type: GET_AUTHENTICATED_USER_STARTED })
     const state = getState()
     const username = state.auth.data.decodedAccessToken.username
 

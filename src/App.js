@@ -12,9 +12,7 @@ import { loadState, saveState } from './utils/storage'
 
 const store = configureStore(loadState())
 saveState(store.getState())
-store.subscribe(() => {
-  saveState(store.getState())
-})
+store.subscribe(() => saveState(store.getState()))
 
 /**
  * Setup the root App component

@@ -14,7 +14,7 @@ import {
   PageUsers,
   PageUserSettings,
   PageUserProfile,
-  PageUploadImage
+  PageUpload
 } from '../pages'
 
 import { ScrollToTop, GoogleAnalytics } from '.'
@@ -30,7 +30,7 @@ const RouterContainer = () => {
             <Route path='/debug' component={PageDebug} />
           )}
           {process.env.NODE_ENV === 'development' && (
-            <Route path='/upload-image' component={PageUploadImage} />
+            <Route path='/upload' component={PageUpload} />
           )}
 
           <Route exact path='/' component={PageHome} />

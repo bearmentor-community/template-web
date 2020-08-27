@@ -1,14 +1,14 @@
 import axios from 'axios'
 
 import {
-  GET_USER_SETTINGS_START,
+  GET_USER_SETTINGS_STARTED,
   GET_USER_SETTINGS_SUCCESS,
   GET_USER_SETTINGS_FAILURE
 } from '../types'
 
 const getUserSettings = (body) => {
   return async (dispatch, getState) => {
-    dispatch({ type: GET_USER_SETTINGS_START })
+    dispatch({ type: GET_USER_SETTINGS_STARTED })
     const state = getState()
     const id = state.auth.data.decodedAccessToken.id
     const token = state.auth.data.accessToken

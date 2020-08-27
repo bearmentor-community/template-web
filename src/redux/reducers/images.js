@@ -1,5 +1,5 @@
 import {
-  UPLOAD_IMAGE_START,
+  UPLOAD_IMAGE_STARTED,
   UPLOAD_IMAGE_SUCCESS,
   UPLOAD_IMAGE_FAILURE
 } from '../actions/types'
@@ -11,7 +11,7 @@ const initialState = {
 
 const images = (state = initialState, action) => {
   switch (action.type) {
-    case UPLOAD_IMAGE_START:
+    case UPLOAD_IMAGE_STARTED:
       return {
         ...state,
         isLoading: true,

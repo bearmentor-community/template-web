@@ -1,14 +1,14 @@
 import axios from 'axios'
 
 import {
-  UPLOAD_IMAGE_START,
+  UPLOAD_IMAGE_STARTED,
   UPLOAD_IMAGE_SUCCESS,
   UPLOAD_IMAGE_FAILURE
 } from '../types'
 
 const uploadImage = (body = {}) => {
   return async (dispatch) => {
-    dispatch({ type: UPLOAD_IMAGE_START })
+    dispatch({ type: UPLOAD_IMAGE_STARTED })
 
     const bodyFormData = new FormData()
     bodyFormData.append('image', body.image[0]) // File

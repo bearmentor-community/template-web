@@ -1,17 +1,17 @@
 [
   {
-    "name": "Customizable interface with color theme mode."
-  },
-  {
-    "name": "Simple authentication and authorization flow."
+    "name": "Flexible customizable interface with color theme mode."
   },
   {
     "name": "Get and display data resources such as users and items."
   },
   {
-    "name": "Edit profile and upload avatar picture."
+    "name": "Simple user authentication and authorization flow."
   },
   {
-    "name": "Development mode such as debug mode, upload, and not found."
+    "name": "Edit user profile and upload avatar picture."
+  },
+  {
+    "name": "Multi environment for development and production."
   }
 ]

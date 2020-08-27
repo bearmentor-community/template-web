@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form'
 import styled from '@xstyled/emotion'
 
 import { AuthForm, Section, Link } from '../components'
-
 import { login } from '../redux/actions/auth'
 
 const Error = styled.p`

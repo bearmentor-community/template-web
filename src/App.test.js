@@ -5,6 +5,6 @@ import App from './App'
 
 test('renders paragraph', () => {
   const { getByText } = render(<App />)
-  const paragraphElement = getByText(/Intergalactic/i)
+  const paragraphElement = getByText(/Template/i)
   expect(paragraphElement).toBeInTheDocument()
 })

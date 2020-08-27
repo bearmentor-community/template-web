@@ -3,10 +3,9 @@ import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import { getUserSettings, updateUserSettings } from '../redux/actions/settings'
-
 import { UserSettingsContainer } from '../containers'
 import { Page, Section, LoadingSpinner } from '../components'
+import { getUserSettings, updateUserSettings } from '../redux/actions/settings'
 
 const PageUserSettings = ({
   isAuthenticated,

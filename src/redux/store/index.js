@@ -19,14 +19,17 @@ import createRootReducer from '../reducers'
 const middlewares = [thunk]
 
 if (process.env.NODE_ENV === 'development') {
-  const { logger } = require('redux-logger')
+  const { createLogger } = require('redux-logger')
+  const logger = createLogger({
+    collapsed: true
+  })
   middlewares.push(logger)
 }
 
 /**
  * Configure store with browser history
  * So that both Redux and React Router can sync the history
- * Then history.method() is actionable in Redux actions/thunks
+ * Then history.method() is actionable in Redux actions and thunks
  */
 
 export const history = createBrowserHistory()

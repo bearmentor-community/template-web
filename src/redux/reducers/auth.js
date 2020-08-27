@@ -1,14 +1,14 @@
 import {
-  REGISTER_START,
+  REGISTER_STARTED,
   REGISTER_SUCCESS,
   REGISTER_FAILURE,
-  LOGIN_START,
+  LOGIN_STARTED,
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
-  LOGOUT_START,
+  LOGOUT_STARTED,
   LOGOUT_SUCCESS,
   LOGOUT_FAILURE,
-  GET_AUTHENTICATED_USER_START,
+  GET_AUTHENTICATED_USER_STARTED,
   GET_AUTHENTICATED_USER_SUCCESS,
   GET_AUTHENTICATED_USER_FAILURE
 } from '../actions/types'
@@ -22,7 +22,7 @@ const initialState = {
 
 const auth = (state = initialState, action) => {
   switch (action.type) {
-    case REGISTER_START:
+    case REGISTER_STARTED:
       return {
         ...state,
         isLoading: true,
@@ -40,7 +40,7 @@ const auth = (state = initialState, action) => {
         isLoading: false,
         error: action.payload
       }
-    case LOGIN_START:
+    case LOGIN_STARTED:
       return {
         ...state,
         isAuthenticated: false,
@@ -65,7 +65,7 @@ const auth = (state = initialState, action) => {
         isLoading: false,
         error: action.payload
       }
-    case LOGOUT_START:
+    case LOGOUT_STARTED:
       return {
         ...state,
         isLoading: true
@@ -78,7 +78,7 @@ const auth = (state = initialState, action) => {
       return {
         ...initialState
       }
-    case GET_AUTHENTICATED_USER_START:
+    case GET_AUTHENTICATED_USER_STARTED:
       return {
         ...state,
         isLoading: true,

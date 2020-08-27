@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { useParams, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import { getUserByUsername } from '../redux/actions/user'
 import { UserProfileContainer } from '../containers'
 import { Page, Section, NotFound, LoadingSpinner } from '../components'
+import { getUserByUsername } from '../redux/actions/user'
 
 const PageUserProfile = ({
   isLoading,

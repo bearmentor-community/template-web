@@ -3,19 +3,20 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { useForm } from 'react-hook-form'
 
+import { Page, Section, Buttons, Button } from '../components'
 import { uploadImage } from '../redux/actions/images'
 
-import { Page, Section } from '../components'
-
-const PageUploadImage = ({ isLoading, handleUploadImage }) => {
-  const { register, handleSubmit } = useForm()
+const PageUpload = ({ isLoading, handleUploadImage }) => {
+  const { register, handleSubmit, reset } = useForm()
   const onSubmit = (data) => {
     handleUploadImage(data)
+    reset()
   }
 
   return (
-    <Page title='Upload Image'>
+    <Page title='Upload'>
       <Section>
+        <h1>Upload Image</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
             <input
@@ -25,16 +26,18 @@ const PageUploadImage = ({ isLoading, handleUploadImage }) => {
               ref={register}
             />
           </div>
-          <div>
-            <input type='submit' value='Upload Image' />
-          </div>
+          <Buttons>
+            <Button type='submit' disabled={isLoading}>
+              {isLoading ? 'Uploading...' : 'Upload Image'}
+            </Button>
+          </Buttons>
         </form>
       </Section>
     </Page>
   )
 }
 
-PageUploadImage.propTypes = {
+PageUpload.propTypes = {
   isLoading: PropTypes.bool,
   handleUploadImage: PropTypes.func
 }
@@ -51,4 +54,4 @@ export default connect(
       // Remember to pass the data if the function requires it
     }
   }
-)(PageUploadImage)
+)(PageUpload)

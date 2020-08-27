@@ -2,12 +2,12 @@ import axios from 'axios'
 import { push } from 'connected-react-router'
 import ReactGA from 'react-ga'
 
-import { LOGIN_START, LOGIN_SUCCESS, LOGIN_FAILURE } from '../types'
+import { LOGIN_STARTED, LOGIN_SUCCESS, LOGIN_FAILURE } from '../types'
 import { decodeToken } from '../../../utils/jsonwebtoken'
 
 const login = (body = {}) => {
   return async (dispatch) => {
-    dispatch({ type: LOGIN_START })
+    dispatch({ type: LOGIN_STARTED })
 
     try {
       const response = await axios.post(

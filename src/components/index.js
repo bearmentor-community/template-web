@@ -1,8 +1,8 @@
 import Anchor from './Anchor'
 import AuthForm from './AuthForm'
 import Avatar from './Avatar'
-import Buttons from './Buttons'
 import Button from './Button'
+import Buttons from './Buttons'
 import Debug from './Debug'
 import DebugButtons from './DebugButtons'
 import Footer from './Footer'
@@ -19,15 +19,15 @@ import Page from './Page'
 import Section from './Section'
 import Toggle from './Toggle'
 import UserProfile from './UserProfile'
-import UserSettingsForm from './UserSettingsForm'
 import Users from './Users'
+import UserSettingsForm from './UserSettingsForm'
 
 export {
   Anchor,
   AuthForm,
   Avatar,
-  Buttons,
   Button,
+  Buttons,
   Debug,
   DebugButtons,
   Footer,
@@ -44,6 +44,6 @@ export {
   Section,
   Toggle,
   UserProfile,
-  UserSettingsForm,
-  Users
+  Users,
+  UserSettingsForm
 }

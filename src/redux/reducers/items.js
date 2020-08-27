@@ -1,5 +1,5 @@
 import {
-  GET_ITEMS_START,
+  GET_ITEMS_STARTED,
   GET_ITEMS_SUCCESS,
   GET_ITEMS_FAILURE,
   RESET_ITEMS
@@ -13,7 +13,7 @@ const initialState = {
 
 const items = (state = initialState, action) => {
   switch (action.type) {
-    case GET_ITEMS_START:
+    case GET_ITEMS_STARTED:
       return {
         ...state,
         isLoading: true,

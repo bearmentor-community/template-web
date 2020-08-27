@@ -1,8 +1,8 @@
 import {
-  GET_USER_SETTINGS_START,
+  GET_USER_SETTINGS_STARTED,
   GET_USER_SETTINGS_SUCCESS,
   GET_USER_SETTINGS_FAILURE,
-  UPDATE_USER_SETTINGS_START,
+  UPDATE_USER_SETTINGS_STARTED,
   UPDATE_USER_SETTINGS_SUCCESS,
   UPDATE_USER_SETTINGS_FAILURE
 } from '../actions/types'
@@ -15,7 +15,7 @@ const initialState = {
 
 const settings = (state = initialState, action) => {
   switch (action.type) {
-    case GET_USER_SETTINGS_START:
+    case GET_USER_SETTINGS_STARTED:
       return {
         ...state,
         isLoading: true,
@@ -34,7 +34,7 @@ const settings = (state = initialState, action) => {
         isLoading: false,
         error: action.payload
       }
-    case UPDATE_USER_SETTINGS_START:
+    case UPDATE_USER_SETTINGS_STARTED:
       return {
         ...state,
         isLoading: true,

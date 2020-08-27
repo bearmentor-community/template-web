@@ -1,5 +1,5 @@
 import {
-  GET_USERS_START,
+  GET_USERS_STARTED,
   GET_USERS_SUCCESS,
   GET_USERS_FAILURE,
   RESET_USERS
@@ -13,7 +13,7 @@ const initialState = {
 
 const items = (state = initialState, action) => {
   switch (action.type) {
-    case GET_USERS_START:
+    case GET_USERS_STARTED:
       return {
         ...state,
         isLoading: true,

@@ -59,8 +59,8 @@ const Header = ({ isAuthenticated, authenticatedUser }) => {
         </LinkAnchor>
         {process.env.NODE_ENV === 'development' && (
           <>
-            <LinkAnchor to='/upload-image'>
-              <span role='img' aria-label='Upload Image'>
+            <LinkAnchor to='/upload'>
+              <span role='img' aria-label='Upload'>
                 🖼️
               </span>
             </LinkAnchor>

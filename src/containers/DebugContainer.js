@@ -2,9 +2,8 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { getItems, resetItems } from '../redux/actions/items'
-
 import { DebugButtons, Debug } from '../components'
+import { getItems, resetItems } from '../redux/actions/items'
 
 const DebugContainer = ({
   isLoading,

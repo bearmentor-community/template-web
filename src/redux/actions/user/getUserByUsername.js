@@ -1,14 +1,14 @@
 import axios from 'axios'
 
 import {
-  GET_USER_BY_USERNAME_START,
+  GET_USER_BY_USERNAME_STARTED,
   GET_USER_BY_USERNAME_SUCCESS,
   GET_USER_BY_USERNAME_FAILURE
 } from '../types'
 
 const getUserByUsername = (username) => {
   return async (dispatch) => {
-    dispatch({ type: GET_USER_BY_USERNAME_START })
+    dispatch({ type: GET_USER_BY_USERNAME_STARTED })
 
     try {
       const response = await axios.get(

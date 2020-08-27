@@ -1,5 +1,5 @@
 import {
-  GET_USER_BY_USERNAME_START,
+  GET_USER_BY_USERNAME_STARTED,
   GET_USER_BY_USERNAME_SUCCESS,
   GET_USER_BY_USERNAME_FAILURE
 } from '../actions/types'
@@ -12,7 +12,7 @@ const initialState = {
 
 const user = (state = initialState, action) => {
   switch (action.type) {
-    case GET_USER_BY_USERNAME_START:
+    case GET_USER_BY_USERNAME_STARTED:
       return {
         ...state,
         isLoading: true,

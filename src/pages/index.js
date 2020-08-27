@@ -6,10 +6,10 @@ import PageLogin from './PageLogin'
 import PageLogout from './PageLogout'
 import PageNotFound from './PageNotFound'
 import PageRegister from './PageRegister'
+import PageUpload from './PageUpload'
 import PageUserProfile from './PageUserProfile'
 import PageUsers from './PageUsers'
 import PageUserSettings from './PageUserSettings'
-import PageUploadImage from './PageUploadImage'
 
 export {
   PageAbout,
@@ -20,8 +20,8 @@ export {
   PageLogout,
   PageNotFound,
   PageRegister,
+  PageUpload,
   PageUserProfile,
   PageUsers,
-  PageUserSettings,
-  PageUploadImage
+  PageUserSettings
 }

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+import { Section, Buttons, Button } from '../components'
 import { navigateBack } from '../redux/actions/navigation'
 import { logout } from '../redux/actions/auth'
-import { Section, Buttons, Button } from '../components'
 
 const LogoutContainer = ({
   isLoading,

@@ -4,9 +4,8 @@ import { connect } from 'react-redux'
 import { useForm } from 'react-hook-form'
 import styled from '@xstyled/emotion'
 
-import { register } from '../redux/actions/auth'
-
 import { AuthForm, Section, Link } from '../components'
+import { register } from '../redux/actions/auth'
 
 const Error = styled.p`
   color: textError;

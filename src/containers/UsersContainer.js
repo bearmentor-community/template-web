@@ -2,9 +2,8 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { getUsers } from '../redux/actions/users'
-
 import { Section, LoadingSpinner, Users } from '../components'
+import { getUsers } from '../redux/actions/users'
 
 const UsersContainer = ({ isLoading, handleGetUsers, users }) => {
   useEffect(() => {

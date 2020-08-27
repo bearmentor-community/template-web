@@ -2,9 +2,8 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { getItems } from '../redux/actions/items'
-
 import { Section, LoadingSpinner, Items } from '../components'
+import { getItems } from '../redux/actions/items'
 
 const ItemsContainer = ({ isLoading, handleGetItems, items }) => {
   useEffect(() => {
