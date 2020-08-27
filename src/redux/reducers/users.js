@@ -1,8 +1,8 @@
 import {
+  GET_USERS_RESET,
   GET_USERS_STARTED,
   GET_USERS_SUCCESS,
-  GET_USERS_FAILURE,
-  RESET_USERS
+  GET_USERS_FAILURE
 } from '../actions/types'
 
 const initialState = {
@@ -13,6 +13,10 @@ const initialState = {
 
 const items = (state = initialState, action) => {
   switch (action.type) {
+    case GET_USERS_RESET:
+      return {
+        ...initialState
+      }
     case GET_USERS_STARTED:
       return {
         ...state,
@@ -32,10 +36,7 @@ const items = (state = initialState, action) => {
         isLoading: false,
         error: action.payload
       }
-    case RESET_USERS:
-      return {
-        ...initialState
-      }
+
     default:
       return state
   }

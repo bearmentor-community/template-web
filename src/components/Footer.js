@@ -38,6 +38,9 @@ const Copyright = styled.p`
 `
 
 const Footer = () => {
+  const today = new Date()
+  const year = today.getFullYear()
+
   return (
     <FooterStyled>
       <SocialList>
@@ -50,7 +53,7 @@ const Footer = () => {
         })}
       </SocialList>
       <Copyright>
-        Copyright © 2020{' '}
+        Copyright © {year}{' '}
         <a href='https://github.com/azobu-projects/template'>Template</a> by{' '}
         <a href='https://github.com/azobu-projects'>Azobu Projects</a>
       </Copyright>

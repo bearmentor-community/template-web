@@ -6,9 +6,10 @@ import {
   GET_USER_SETTINGS_FAILURE
 } from '../types'
 
-const getUserSettings = (body) => {
+export default (body) => {
   return async (dispatch, getState) => {
     dispatch({ type: GET_USER_SETTINGS_STARTED })
+
     const state = getState()
     const id = state.auth.data.decodedAccessToken.id
     const token = state.auth.data.accessToken
@@ -37,5 +38,3 @@ const getUserSettings = (body) => {
     }
   }
 }
-
-export default getUserSettings

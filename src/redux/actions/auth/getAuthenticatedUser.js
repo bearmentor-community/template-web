@@ -9,13 +9,20 @@ import {
 export default (body = {}) => {
   return async (dispatch, getState) => {
     dispatch({ type: GET_AUTHENTICATED_USER_STARTED })
+
     const state = getState()
-    const username = state.auth.data.decodedAccessToken.username
+    const token = state.auth.data.accessToken
 
     try {
       // Get public user's profile
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/users/${username}`
+        `${process.env.REACT_APP_API_URL}/auth/profile`,
+        {
+          validateStatus: false,
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        }
       )
 
       dispatch({

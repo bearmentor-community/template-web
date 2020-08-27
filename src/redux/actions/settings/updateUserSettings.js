@@ -7,7 +7,7 @@ import {
   UPDATE_USER_SETTINGS_FAILURE
 } from '../types'
 
-const updateUserSettings = (user = {}) => {
+export default (user = {}) => {
   return async (dispatch, getState) => {
     dispatch({
       type: UPDATE_USER_SETTINGS_STARTED
@@ -41,7 +41,8 @@ const updateUserSettings = (user = {}) => {
         type: UPDATE_USER_SETTINGS_SUCCESS,
         payload: response.data.data.user
       })
-      dispatch(push(user.username))
+      // Redirect to new username, just in case
+      dispatch(push(response.data.data.user.username))
     } catch (error) {
       dispatch({
         type: UPDATE_USER_SETTINGS_FAILURE,
@@ -50,5 +51,3 @@ const updateUserSettings = (user = {}) => {
     }
   }
 }
-
-export default updateUserSettings
