@@ -6,7 +6,7 @@ import {
   UPLOAD_IMAGE_FAILURE
 } from '../types'
 
-const uploadImage = (body = {}) => {
+export default (body = {}) => {
   return async (dispatch) => {
     dispatch({ type: UPLOAD_IMAGE_STARTED })
 
@@ -38,5 +38,3 @@ const uploadImage = (body = {}) => {
     }
   }
 }
-
-export default uploadImage

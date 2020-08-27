@@ -5,7 +5,7 @@ import ReactGA from 'react-ga'
 import { LOGIN_STARTED, LOGIN_SUCCESS, LOGIN_FAILURE } from '../types'
 import { decodeToken } from '../../../utils/jsonwebtoken'
 
-const login = (body = {}) => {
+export default (body = {}) => {
   return async (dispatch) => {
     dispatch({ type: LOGIN_STARTED })
 
@@ -38,5 +38,3 @@ const login = (body = {}) => {
     }
   }
 }
-
-export default login

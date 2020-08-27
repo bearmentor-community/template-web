@@ -4,7 +4,7 @@ import { push } from 'connected-react-router'
 
 import { LOGOUT_STARTED, LOGOUT_SUCCESS, LOGOUT_FAILURE } from '../types'
 
-const logout = () => {
+export default () => {
   return async (dispatch) => {
     dispatch({ type: LOGOUT_STARTED })
 
@@ -19,5 +19,3 @@ const logout = () => {
     }
   }
 }
-
-export default logout

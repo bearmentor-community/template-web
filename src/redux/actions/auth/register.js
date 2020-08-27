@@ -4,7 +4,7 @@ import ReactGA from 'react-ga'
 
 import { REGISTER_STARTED, REGISTER_SUCCESS, REGISTER_FAILURE } from '../types'
 
-const register = (body = {}) => {
+export default (body = {}) => {
   return async (dispatch) => {
     dispatch({ type: REGISTER_STARTED })
 
@@ -27,5 +27,3 @@ const register = (body = {}) => {
     }
   }
 }
-
-export default register
