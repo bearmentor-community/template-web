@@ -6,6 +6,11 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const ItemStyled = styled.div``
 
+const ItemImageContainer = styled.div`
+  height: 480px;
+  width: 720px;
+`
+
 const ItemImage = styled(LazyLoadImage)`
   object-fit: cover;
 `
@@ -17,13 +22,16 @@ const ItemTitle = styled.h1`
 const Item = ({ item }) => {
   return (
     <ItemStyled>
-      <ItemImage
-        src={item.imageUrl}
-        alt={item.title}
-        effect='blur'
-        height={480}
-        width={720}
-      />
+      <ItemImageContainer>
+        <ItemImage
+          placeholderSrc='/assets/images/placeholder.png'
+          effect='opacity'
+          src={item.imageUrl}
+          alt={item.title}
+          height={480}
+          width={720}
+        />
+      </ItemImageContainer>
       <ItemTitle>{item.title}</ItemTitle>
       <div>{ReactHtmlParser(item.html)}</div>
     </ItemStyled>

@@ -33,6 +33,11 @@ const ItemSegment = styled.div`
   padding: 20px;
 `
 
+const ItemImageContainer = styled.div`
+  height: 200px;
+  width: 200px;
+`
+
 const ItemImage = styled(LazyLoadImage)`
   object-fit: cover;
 `
@@ -56,13 +61,16 @@ const Items = ({ items }) => {
         return (
           <ItemLink key={index} to={`/items/${item.slug}`}>
             <Item>
-              <ItemImage
-                src={item.imageUrl}
-                alt={item.title}
-                effect='blur'
-                height={200}
-                width={200}
-              />
+              <ItemImageContainer>
+                <ItemImage
+                  placeholderSrc='/assets/images/placeholder.png'
+                  effect='opacity'
+                  src={item.imageUrl}
+                  alt={item.title}
+                  height={200}
+                  width={200}
+                />
+              </ItemImageContainer>
               <ItemSegment>
                 <ItemTitle>{item.title}</ItemTitle>
                 {ReactHtmlParser(htmlSnippet, {
