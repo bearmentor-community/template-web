@@ -11,6 +11,7 @@ import {
   PageLogout,
   PageNotFound,
   PageRegister,
+  PageSearch,
   PageUsers,
   PageUserSettings,
   PageUserProfile,
@@ -37,6 +38,7 @@ const RouterContainer = () => {
           <Route path='/about' component={PageAbout} />
           <Route path='/users' component={PageUsers} />
           <Route path='/items' component={PageItems} />
+          <Route path='/search' component={PageSearch} />
           <Route path='/register' component={PageRegister} />
           <Route path='/login' component={PageLogin} />
           <Route path='/logout' component={PageLogout} />

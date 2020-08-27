@@ -6,6 +6,7 @@ import PageLogin from './PageLogin'
 import PageLogout from './PageLogout'
 import PageNotFound from './PageNotFound'
 import PageRegister from './PageRegister'
+import PageSearch from './PageSearch'
 import PageUpload from './PageUpload'
 import PageUserProfile from './PageUserProfile'
 import PageUsers from './PageUsers'
@@ -20,6 +21,7 @@ export {
   PageLogout,
   PageNotFound,
   PageRegister,
+  PageSearch,
   PageUpload,
   PageUserProfile,
   PageUsers,

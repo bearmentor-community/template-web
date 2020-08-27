@@ -9,6 +9,7 @@ import Footer from './Footer'
 import Header from './Header'
 import Hero from './Hero'
 import Items from './Items'
+import ItemsResults from './ItemsResults'
 import Link from './Link'
 import LinkAnchor from './LinkAnchor'
 import LinkAvatar from './LinkAvatar'
@@ -34,6 +35,7 @@ export {
   Header,
   Hero,
   Items,
+  ItemsResults,
   Link,
   LinkAnchor,
   LinkAvatar,

@@ -79,6 +79,7 @@ const Header = ({ isAuthenticated, authenticatedUser }) => {
         <LinkAnchor to='/about'>About</LinkAnchor>
         <LinkAnchor to='/users'>Users</LinkAnchor>
         <LinkAnchor to='/items'>Items</LinkAnchor>
+        <LinkAnchor to='/search'>Search</LinkAnchor>
       </HeaderSegment>
 
       <HeaderSegmentButtons>

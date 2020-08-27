@@ -10,6 +10,7 @@ import LogoutContainer from './LogoutContainer'
 import RegisterFormContainer from './RegisterFormContainer'
 import RouterContainer from './RouterContainer'
 import ScrollToTop from './ScrollToTop'
+import SearchContainer from './SearchContainer'
 import SEOContainer from './SEOContainer'
 import ThemeContainer from './ThemeContainer'
 import UserProfileContainer from './UserProfileContainer'
@@ -29,6 +30,7 @@ export {
   RegisterFormContainer,
   RouterContainer,
   ScrollToTop,
+  SearchContainer,
   SEOContainer,
   ThemeContainer,
   UserProfileContainer,
