@@ -4,12 +4,14 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import { routerMiddleware } from 'connected-react-router'
 import thunk from 'redux-thunk'
 
+import { loadState, saveState } from '../utils/webStorage'
+
 /**
  * Import the combined reducer that contains
  * router reducer (connected-react-router) and custom made reducers
  */
 
-import createRootReducer from '../reducers'
+import createRootReducer from './reducers'
 
 /**
  * Setup array of Redux middlewares
@@ -34,17 +36,15 @@ if (process.env.NODE_ENV === 'development') {
 
 export const history = createBrowserHistory()
 
-export default function configureStore(preloadedState) {
-  const store = createStore(
-    createRootReducer(history), // root reducer with router state
-    preloadedState, // initial state from browser storage
-    composeWithDevTools(
-      applyMiddleware(
-        routerMiddleware(history), // reducer for changing router in store
-        ...middlewares // the other middlewares
-      )
+export const store = createStore(
+  createRootReducer(history), // root reducer with router state
+  loadState(), // initial state from browser storage
+  composeWithDevTools(
+    applyMiddleware(
+      routerMiddleware(history), // reducer for changing router in store
+      ...middlewares // the other middlewares
     )
   )
+)
 
-  return store
-}
+store.subscribe(() => saveState(store.getState()))

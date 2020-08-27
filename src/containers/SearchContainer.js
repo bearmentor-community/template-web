@@ -58,7 +58,7 @@ const SearchContainer = ({
     handleReset()
     const parsedQuery = queryString.parse(location.search)
     parsedQuery.keyword && handleSearch(parsedQuery)
-  }, [location])
+  }, [handleReset, handleSearch, location])
 
   // Only redirect with query
   const onSubmit = (data) => {

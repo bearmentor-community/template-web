@@ -1,5 +1,6 @@
 import React from 'react'
-import { Router, Switch, Route } from 'react-router-dom'
+import { ConnectedRouter } from 'connected-react-router'
+import { Switch, Route } from 'react-router-dom'
 
 import { history } from '../redux/store'
 import {
@@ -22,7 +23,7 @@ import { ScrollToTop, GoogleAnalytics } from '.'
 
 const RouterContainer = () => {
   return (
-    <Router history={history}>
+    <ConnectedRouter history={history}>
       <>
         <ScrollToTop />
         {GoogleAnalytics.init() && <GoogleAnalytics.RouteTracker />}
@@ -47,7 +48,7 @@ const RouterContainer = () => {
           <Route path='*' exact component={PageNotFound} />
         </Switch>
       </>
-    </Router>
+    </ConnectedRouter>
   )
 }
 

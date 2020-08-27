@@ -3,16 +3,7 @@ import { Provider } from 'react-redux'
 import { HelmetProvider } from 'react-helmet-async'
 
 import { ThemeContainer, RouterContainer } from './containers'
-import configureStore from './redux/store'
-import { loadState, saveState } from './utils/storage'
-
-/**
- * Create store and synchronize with storage engine
- */
-
-const store = configureStore(loadState())
-saveState(store.getState())
-store.subscribe(() => saveState(store.getState()))
+import { store } from './redux/store'
 
 /**
  * Setup the root App component
@@ -20,15 +11,13 @@ store.subscribe(() => saveState(store.getState()))
 
 const App = () => {
   return (
-    <React.StrictMode>
-      <Provider store={store}>
-        <HelmetProvider>
-          <ThemeContainer>
-            <RouterContainer />
-          </ThemeContainer>
-        </HelmetProvider>
-      </Provider>
-    </React.StrictMode>
+    <Provider store={store}>
+      <HelmetProvider>
+        <ThemeContainer>
+          <RouterContainer />
+        </ThemeContainer>
+      </HelmetProvider>
+    </Provider>
   )
 }
 
