@@ -6,7 +6,7 @@ import styled from '@xstyled/emotion'
 import { useLocation, useHistory } from 'react-router-dom'
 import queryString from 'query-string'
 
-import { Section, ItemsResults, LoadingSpinner } from '../components'
+import { Section, Items, LoadingSpinner } from '../components'
 import { resetSearchItems, searchItems } from '../redux/actions/search'
 
 const Form = styled.form`
@@ -80,17 +80,15 @@ const SearchContainer = ({
       </Form>
 
       {isLoading && <LoadingSpinner />}
+      {!isLoading && items && items.length > 0 && <Items items={items} />}
       {!isLoading && query.keyword && items.length <= 0 && (
         <div>
-          <h3>Sorry, no items for "{query.keyword}"</h3>
+          <h2>Sorry, no items for "{query.keyword}"</h2>
           <p>
             The term you entered did not bring up any items. You may have
             mistyped your term.
           </p>
         </div>
-      )}
-      {!isLoading && items && items.length > 0 && (
-        <ItemsResults items={items} />
       )}
     </Section>
   )

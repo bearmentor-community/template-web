@@ -1,6 +1,7 @@
 import PageAbout from './PageAbout'
 import PageDebug from './PageDebug'
 import PageHome from './PageHome'
+import PageItem from './PageItem'
 import PageItems from './PageItems'
 import PageLogin from './PageLogin'
 import PageLogout from './PageLogout'
@@ -16,6 +17,7 @@ export {
   PageAbout,
   PageDebug,
   PageHome,
+  PageItem,
   PageItems,
   PageLogin,
   PageLogout,

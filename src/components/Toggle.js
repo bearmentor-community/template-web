@@ -11,7 +11,7 @@ const ToggleButton = styled.button`
   align-items: center;
   margin: 0 10;
   padding: 0;
-  transition: opacity 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   &:hover {
     opacity: 0.5;
   }

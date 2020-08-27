@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom'
 
 import { Avatar } from '../components'
 
-const LinkAvatarStyled = styled(Link)`
-  height: 32px;
-`
+const LinkAvatarStyled = styled(Link)``
 
 const LinkAvatar = ({ to = '/', user }) => {
   return (

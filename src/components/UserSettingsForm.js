@@ -46,7 +46,7 @@ const Submit = styled.input`
   font-weight: bold;
   padding: 3;
   width: 100%;
-  transition: background-color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   background-color: primary;
   &:hover {
     background-color: primaryAlt;

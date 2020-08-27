@@ -10,17 +10,13 @@ const GlobalStyleContainer = createGlobalStyle`
   body {
     color: text;
     background-color: background;
-    transition: background-color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   p, ul, ol {
-    font-size: 1.2em;
-    line-height: 1.8em;
-    margin: 30px 0;
     a {
-      
       color: primary;
       &:hover {
         color: primaryAlt;
@@ -42,7 +38,7 @@ const GlobalStyleContainer = createGlobalStyle`
     border-style: solid;
     border-color: border;
     border-radius: 5;
-    transition: outline-color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     &:focus {
       outline-color: primary;
     }

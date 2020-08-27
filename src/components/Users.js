@@ -5,7 +5,9 @@ import styled from '@xstyled/emotion'
 
 import { Avatar } from '../components'
 
-const UsersStyled = styled.div``
+const UsersStyled = styled.div`
+  width: 480px;
+`
 
 const UserLink = styled(Link)`
   display: block;
@@ -13,34 +15,74 @@ const UserLink = styled(Link)`
   color: text;
 `
 
-const Card = styled.div`
+const User = styled.div`
   display: flex;
-  align-items: center;
-  padding: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  border-width: 2px;
+  border-style: solid;
+  border-color: background;
+  border-radius: 5px;
+  background-color: background;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    border-color: primary;
+  }
+`
+
+const Info = styled.div`
+  margin-left: 20px;
+`
+
+const SubInfo = styled.div`
+  display: flex;
+  flex-direction: column;
 `
 
 const Name = styled.span`
+  display: flex;
+  align-items: flex-start;
   font-weight: bold;
-  margin-left: 10px;
+  font-size: 20px;
+  margin-bottom: 5px;
 `
 
-const Users = ({ users }) => {
+const Username = styled.span`
+  color: secondary;
+`
+
+const Bio = styled.span`
+  margin-top: 5px;
+`
+
+const Users = ({ users, auth }) => {
   return (
     <UsersStyled>
-      {users.map((user, index) => (
-        <UserLink key={index} to={user.username}>
-          <Card>
-            <Avatar user={user} size={50} />
-            <Name>{user.name}</Name>
-          </Card>
-        </UserLink>
-      ))}
+      {users.map((user, index) => {
+        return (
+          <UserLink key={index} to={user.username}>
+            <User>
+              <Avatar user={user} size={50} />
+              <Info>
+                <SubInfo>
+                  <Name>{user.name}</Name>
+                  <Username>@{user.username}</Username>
+                </SubInfo>
+                <SubInfo>
+                  <Bio>{user.bio}</Bio>
+                </SubInfo>
+              </Info>
+            </User>
+          </UserLink>
+        )
+      })}
     </UsersStyled>
   )
 }
 
 Users.propTypes = {
-  users: PropTypes.array.isRequired
+  users: PropTypes.array.isRequired,
+  auth: PropTypes.object
 }
 
 export default Users

@@ -26,7 +26,7 @@ const PageUserProfile = ({
       title={
         (isLoading && username) ||
         (!isLoading && user && userTitle) ||
-        (!isLoading && !user && 'Not Found')
+        (!isLoading && !user && 'Page Not Found')
       }
     >
       <Section>

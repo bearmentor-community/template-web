@@ -8,6 +8,7 @@ import DebugButtons from './DebugButtons'
 import Footer from './Footer'
 import Header from './Header'
 import Hero from './Hero'
+import Item from './Item'
 import Items from './Items'
 import ItemsResults from './ItemsResults'
 import Link from './Link'
@@ -17,6 +18,7 @@ import LinkButton from './LinkButton'
 import LoadingSpinner from './LoadingSpinner'
 import NotFound from './NotFound'
 import Page from './Page'
+import Paragraph from './Paragraph'
 import Section from './Section'
 import Toggle from './Toggle'
 import UserProfile from './UserProfile'
@@ -34,6 +36,7 @@ export {
   Footer,
   Header,
   Hero,
+  Item,
   Items,
   ItemsResults,
   Link,
@@ -43,6 +46,7 @@ export {
   LoadingSpinner,
   NotFound,
   Page,
+  Paragraph,
   Section,
   Toggle,
   UserProfile,

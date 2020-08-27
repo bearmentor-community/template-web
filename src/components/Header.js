@@ -8,12 +8,12 @@ import { LinkButton, LinkAnchor, LinkAvatar } from '../components'
 const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
+  padding: 20;
 `
 
 const HeaderSegment = styled.div`
   display: flex;
   align-items: center;
-  padding: 10;
   a {
     margin-right: 20;
   }
@@ -22,7 +22,6 @@ const HeaderSegment = styled.div`
 const HeaderSegmentButtons = styled.div`
   display: flex;
   align-items: center;
-  padding: 10;
   a {
     margin-left: 10;
   }
@@ -98,7 +97,7 @@ const Header = ({ isAuthenticated, authenticatedUser }) => {
         {isAuthenticated && authenticatedUser.username && (
           <>
             <LinkAvatar
-              to={authenticatedUser.username}
+              to={`/${authenticatedUser.username}`}
               user={authenticatedUser}
             />
             <LinkButton to='/logout'>Logout</LinkButton>

@@ -10,7 +10,7 @@ const PageStyled = styled.div`
   flex-direction: column;
   color: text;
   background-color: backgroundAlt;
-  transition: background-color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 `
 
 const Main = styled.main`
@@ -18,6 +18,12 @@ const Main = styled.main`
   margin: 0 auto;
   width: 100%;
   max-width: 720;
+  p,
+  ul,
+  ol {
+    font-size: 1.2em;
+    line-height: 1.8em;
+  }
 `
 
 const Page = ({

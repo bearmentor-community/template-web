@@ -4,6 +4,7 @@ import FooterContainer from './FooterContainer'
 import GlobalStyleContainer from './GlobalStyleContainer'
 import GoogleAnalytics from './GoogleAnalytics'
 import HeaderContainer from './HeaderContainer'
+import ItemContainer from './ItemContainer'
 import ItemsContainer from './ItemsContainer'
 import LoginFormContainer from './LoginFormContainer'
 import LogoutContainer from './LogoutContainer'
@@ -24,6 +25,7 @@ export {
   GlobalStyleContainer,
   GoogleAnalytics,
   HeaderContainer,
+  ItemContainer,
   ItemsContainer,
   LoginFormContainer,
   LogoutContainer,

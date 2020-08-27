@@ -7,6 +7,7 @@ import {
   PageAbout,
   PageDebug,
   PageHome,
+  PageItem,
   PageItems,
   PageLogin,
   PageLogout,
@@ -38,7 +39,8 @@ const RouterContainer = () => {
           <Route exact path='/' component={PageHome} />
           <Route path='/about' component={PageAbout} />
           <Route path='/users' component={PageUsers} />
-          <Route path='/items' component={PageItems} />
+          <Route exact path='/items' component={PageItems} />
+          <Route path='/items/:slug' component={PageItem} />
           <Route path='/search' component={PageSearch} />
           <Route path='/register' component={PageRegister} />
           <Route path='/login' component={PageLogin} />

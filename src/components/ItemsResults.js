@@ -10,7 +10,7 @@ const ItemsResults = ({ items }) => {
     <ItemsResultsStyled>
       {items.map((item, index) => (
         <div key={index}>
-          <h4>{item.title}</h4>
+          <h2>{item.title}</h2>
           <div>{ReactHtmlParser(item.html)}</div>
         </div>
       ))}
