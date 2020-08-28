@@ -5,10 +5,6 @@ import { HelmetProvider } from 'react-helmet-async'
 import { ThemeContainer, RouterContainer } from './containers'
 import { store } from './redux/store'
 
-/**
- * Setup the root App component
- */
-
 const App = () => {
   return (
     <Provider store={store}>

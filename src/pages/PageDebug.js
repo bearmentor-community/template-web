@@ -6,7 +6,7 @@ import { DebugContainer } from '../containers'
 const PageDebug = () => {
   return (
     <Page title='Debug'>
-      <Hero heading='Debug mode' />
+      <Hero heading='Debug Mode' />
       <DebugContainer />
     </Page>
   )

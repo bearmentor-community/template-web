@@ -18,12 +18,12 @@ const UserLink = styled(Link)`
 const User = styled.div`
   display: flex;
   padding: 20px;
-  margin: 20px 0;
+  margin: 10px 0;
+  background-color: background;
   border-width: 2px;
   border-style: solid;
-  border-color: background;
   border-radius: 5px;
-  background-color: background;
+  border-color: backgroundAlt;
   transition: all 0.2s ease-in-out;
   &:hover {
     border-color: primary;

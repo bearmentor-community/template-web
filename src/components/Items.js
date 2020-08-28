@@ -15,10 +15,12 @@ const ItemLink = styled(Link)`
 
 const Item = styled.div`
   display: flex;
+  overflow: hidden;
+  max-height: 200px;
   margin: 20px 0;
   border-width: 2px;
   border-style: solid;
-  border-color: background;
+  border-color: backgroundAlt;
   background-color: background;
   transition: all 0.2s ease-in-out;
   &:hover {
@@ -29,7 +31,7 @@ const Item = styled.div`
   }
 `
 
-const ItemSegment = styled.div`
+const ItemInfo = styled.div`
   padding: 20px;
 `
 
@@ -42,21 +44,27 @@ const ItemImage = styled(LazyLoadImage)`
   object-fit: cover;
 `
 
-const ItemTitle = styled.h2`
+const ItemTitle = styled.h1`
   margin-top: 0;
+`
+
+const ItemHTML = styled.div`
+  p {
+    font-size: 1.1em;
+  }
 `
 
 const Items = ({ items }) => {
   const htmlParserTransform = (node, index) => {
     if (node.type === 'tag' && node.name === 'a') {
-      return <span key={index}>{node.children[0].data}</span>
+      return node.children[0].data
     }
   }
 
   return (
     <ItemsStyled>
       {items.map((item, index) => {
-        const htmlSnippet = item.html.substr(0, 140) + '…'
+        const htmlSnippet = item.html.substr(0, 220) + '…'
 
         return (
           <ItemLink key={index} to={`/items/${item.slug}`}>
@@ -71,12 +79,14 @@ const Items = ({ items }) => {
                   width={200}
                 />
               </ItemImageContainer>
-              <ItemSegment>
+              <ItemInfo>
                 <ItemTitle>{item.title}</ItemTitle>
-                {ReactHtmlParser(htmlSnippet, {
-                  transform: htmlParserTransform
-                })}
-              </ItemSegment>
+                <ItemHTML>
+                  {ReactHtmlParser(htmlSnippet, {
+                    transform: htmlParserTransform
+                  })}
+                </ItemHTML>
+              </ItemInfo>
             </Item>
           </ItemLink>
         )

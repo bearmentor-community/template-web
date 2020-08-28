@@ -6,7 +6,7 @@ import { ItemsContainer } from '../containers'
 const PageItems = () => {
   return (
     <Page title='Items'>
-      <Hero heading='List of available items' />
+      <Hero heading='List of Available Items' />
       <ItemsContainer />
     </Page>
   )

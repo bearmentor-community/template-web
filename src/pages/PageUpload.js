@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { useForm } from 'react-hook-form'
 
-import { Page, Section, Buttons, Button } from '../components'
+import { Page, Hero, Section, Buttons, Button } from '../components'
 import { uploadImage } from '../redux/actions/images'
 
 const PageUpload = ({ isLoading, handleUploadImage }) => {
@@ -15,6 +15,7 @@ const PageUpload = ({ isLoading, handleUploadImage }) => {
 
   return (
     <Page title='Upload'>
+      <Hero heading='Upload Mode' />
       <Section>
         <h1>Upload Image</h1>
         <form onSubmit={handleSubmit(onSubmit)}>

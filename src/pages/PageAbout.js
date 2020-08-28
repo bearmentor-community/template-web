@@ -8,7 +8,7 @@ import features from '../data/features.json'
 const PageAbout = () => {
   return (
     <Page title='About'>
-      <Hero heading='About' />
+      <Hero heading='About This Template' />
       <h2>Template is a starter kit project to build a complete web app.</h2>
       <p>
         It is made highly opiniated by{' '}

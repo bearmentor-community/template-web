@@ -6,7 +6,7 @@ import { UsersContainer } from '../containers'
 const PageUsers = () => {
   return (
     <Page title='Users'>
-      <Hero heading='List of registered users' />
+      <Hero heading='List of Registered Users' />
       <UsersContainer />
     </Page>
   )
