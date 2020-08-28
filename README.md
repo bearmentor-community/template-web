@@ -1,6 +1,10 @@
-# ⚫ Template Web
+# ⭕ Template Web
 
-> Template description
+> Template Web is a quick starter kit project to build a complete web app using React and Redux.
+
+[![Website](https://img.shields.io/website-up-down-green-red/https/template.azobu.com.svg)](https://template.azobu.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/afd44825-3e55-4c8c-a0c3-5f012c13b706/deploy-status)](https://app.netlify.com/sites/azobu-template/deploys)
+![License](https://img.shields.io/github/license/azobu-projects/template-web)
 
 ## Repositories
 
