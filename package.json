@@ -7,7 +7,7 @@
     "test": "NODE_ENV=test react-scripts test",
     "start": "NODE_ENV=production PORT=8000 react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject",
+    "serve": "NODE_ENV=production PORT=8000 serve -s build",
     "lint": "eslint . --ext .js",
     "postinstall": "./env.sh"
   },
@@ -67,6 +67,7 @@
     "eslint-plugin-react": "7.20.3",
     "eslint-plugin-standard": "4.0.1",
     "prettier": "2.0.5",
+    "serve": "11.3.2",
     "sinon": "9.0.2"
   }
 }
