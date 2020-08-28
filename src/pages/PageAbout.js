@@ -18,21 +18,27 @@ const PageAbout = () => {
         development ecosystem.
       </p>
       <p>
-        Using only the most popular, battle-tested technologies, but still
-        practically achievable for building modern full stack web application:
+        Using only the most popular, battle-tested tools and technologies. Yet
+        still practically achievable for building modern full stack web
+        application:
       </p>
       <p>
-        JavaScript, Node.js, React, React Router, React Helmet, Redux, Redux Dev
-        Tools, Redux Logger, Redux Thunk, xstyled/emotion, Axios, Express,
-        Nodemon, Morgan, MongoDB, Mongoose, PostgreSQL, Sequelize, bcrypt, JSON
-        Web Token (JWT), dotenv-flow, Jest, Sinon, ESLint, Prettier, Standard,
-        and much more. Might be leveraging TypeScript, Passport, OAuth, Redis,
+        Git, GitHub, Markdown, HTML, CSS, JavaScript, Node.js, React, React
+        Router, React Helmet, Redux, Redux Dev Tools, Redux Logger, Redux Thunk,
+        CSS-in-JS (xstyled/emotion), Axios, Express, Nodemon, Morgan, MongoDB,
+        Mongoose, PostgreSQL, Sequelize, bcrypt, JSON Web Token (JWT),
+        dotenv-flow, Jest, Sinon, ESLint, Prettier, Standard, Netlify, Google
+        Cloud Platform, Nginx, Let's Encrypt, Cloudflare, and Uniregistry. and
+        much more. Might be leveraging TypeScript, Passport, OAuth, Redis,
         Docker, and complete test suite in the future.
       </p>
       <p>
-        The applications are deployed on Netlify and Google Cloud Platform,
-        accessible through{' '}
-        <Anchor href='https://template.azobu.com'>template.azobu.com</Anchor>
+        The applications are published at{' '}
+        <Anchor href='https://template.azobu.com'>template.azobu.com</Anchor>{' '}
+        and{' '}
+        <Anchor href='https://api.template.azobu.com'>
+          api.template.azobu.com
+        </Anchor>
       </p>
       <p>The repositories are located at:</p>
       <ul>

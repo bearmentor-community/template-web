@@ -1,9 +1,21 @@
 [
   {
+    "name": "Highly opiniated structure to start a project faster."
+  },
+  {
+    "name": "Optimized developer experience (DX) through npm/yarn scripts."
+  },
+  {
     "name": "Flexible customizable interface with color theme mode."
   },
   {
     "name": "Get and display data resources such as users and items."
+  },
+  {
+    "name": "Search items with adapted browser URL query."
+  },
+  {
+    "name": "Authentic and cool-looking initial seed users and items."
   },
   {
     "name": "Simple user authentication and authorization flow."
@@ -12,6 +24,6 @@
     "name": "Edit user profile and upload avatar picture."
   },
   {
-    "name": "Multi environment for development and production."
+    "name": "Multi environment configurations and variables for development, test, and production."
   }
 ]

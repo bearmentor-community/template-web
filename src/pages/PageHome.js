@@ -14,7 +14,8 @@ const PageHome = () => {
       <Intro>
         Template is a quick starter kit project to build a complete web app with
         JavaScript, Node.js, React, Redux, Express, MongoDB, PostgreSQL, and
-        REST API.
+        REST API. As well as deployment using Netlify, Google Cloud Platform,
+        Nginx, Let's Encrypt, Cloudflare, and Uniregistry.
       </Intro>
       <p>
         <Link to='/about'>Visit about page to learn more</Link>

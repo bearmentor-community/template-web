@@ -2,7 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
-const AvatarStyled = styled.img`
+const AvatarImageContainer = styled.div`
+  height: ${(props) => props.size};
+  width: ${(props) => props.size};
+`
+
+const AvatarImage = styled.img`
   height: ${(props) => props.size};
   width: ${(props) => props.size};
   background-color: background;
@@ -11,7 +16,11 @@ const AvatarStyled = styled.img`
 `
 
 const Avatar = ({ user, size = 32 }) => {
-  return <AvatarStyled src={user.avatarUrl} alt={user.name} size={size} />
+  return (
+    <AvatarImageContainer size={size}>
+      <AvatarImage src={user.avatarUrl} alt={user.name} size={size} />
+    </AvatarImageContainer>
+  )
 }
 
 Avatar.propTypes = {
