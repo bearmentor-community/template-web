@@ -30,6 +30,11 @@ const InputSubmit = styled.input`
   }
 `
 
+const ResultsCount = styled.span`
+  color: textAlt;
+  margin-top: 10px;
+`
+
 const NoItems = styled.div`
   width: 100%;
 `
@@ -59,6 +64,9 @@ const Search = ({
       </Form>
 
       {isLoading && <LoadingSpinner />}
+      {!isLoading && items && items.length > 0 && (
+        <ResultsCount>About {items.length} results</ResultsCount>
+      )}
       {!isLoading && items && items.length > 0 && <Items items={items} />}
       {!isLoading && query.keyword && items.length <= 0 && (
         <NoItems>

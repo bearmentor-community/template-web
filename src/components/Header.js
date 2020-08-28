@@ -56,6 +56,7 @@ const Header = ({ isAuthenticated, authenticatedUser }) => {
             <LogoText>Template</LogoText>
           </Logo>
         </LinkAnchor>
+
         {process.env.NODE_ENV === 'development' && (
           <>
             <LinkAnchor to='/upload'>
@@ -75,6 +76,7 @@ const Header = ({ isAuthenticated, authenticatedUser }) => {
             </LinkAnchor>
           </>
         )}
+
         <LinkAnchor to='/about'>About</LinkAnchor>
         <LinkAnchor to='/users'>Users</LinkAnchor>
         <LinkAnchor to='/items'>Items</LinkAnchor>
@@ -94,6 +96,7 @@ const Header = ({ isAuthenticated, authenticatedUser }) => {
             </LinkButton>
           </>
         )}
+
         {isAuthenticated && authenticatedUser.username && (
           <>
             <LinkAvatar

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { useForm } from 'react-hook-form'
 import styled from '@xstyled/emotion'
+import { DevTool } from '@hookform/devtools'
 
 import { AuthForm, Section, Link } from '../components'
 import { register } from '../redux/actions/auth'
@@ -13,7 +14,9 @@ const Error = styled.p`
 `
 
 const RegisterFormContainer = ({ isLoading, data, error, handleRegister }) => {
-  const { register, handleSubmit, errors } = useForm()
+  const { register, handleSubmit, errors, control } = useForm({
+    criteriaMode: 'all'
+  })
 
   const submitData = (data) => {
     handleRegister(data)
@@ -28,6 +31,7 @@ const RegisterFormContainer = ({ isLoading, data, error, handleRegister }) => {
           </Error>
         </Section>
       )}
+
       <AuthForm
         fields={{ name: true, username: true, email: true, password: true }}
         isLoading={isLoading}
@@ -38,11 +42,15 @@ const RegisterFormContainer = ({ isLoading, data, error, handleRegister }) => {
         submitText='Create New Account'
         submitTextLoading='Creating account...'
       />
+
       <Section>
         <p>
           Already registered? <Link to='/login'>Login here</Link>
         </p>
       </Section>
+
+      {/* Only show React Hook Form DevTool in development */}
+      {process.env.NODE_ENV === 'development' && <DevTool control={control} />}
     </>
   )
 }

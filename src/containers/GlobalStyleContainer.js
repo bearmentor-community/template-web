@@ -43,7 +43,7 @@ const GlobalStyleContainer = createGlobalStyle`
       outline-color: primary;
     }
     &:disabled {
-      color: text;
+      color: textDisabled;
     }
   }
 `

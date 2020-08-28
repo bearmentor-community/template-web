@@ -66,7 +66,7 @@ const AuthForm = ({
             autoComplete='name'
             placeholder='Full Name'
             ref={register({
-              required: 'Sorry, but name is required',
+              required: 'Sorry, please tell your name',
               pattern: {
                 value: /^[a-zA-Z\s]*$/i,
                 message: 'Please provide a name with only alphabet and space'
@@ -86,7 +86,7 @@ const AuthForm = ({
             autoComplete='username'
             placeholder='username'
             ref={register({
-              required: 'Sorry, but username is required',
+              required: 'Sorry, please set your username',
               pattern: {
                 value: /^[a-zA-Z0-9_]*$/i,
                 message:
@@ -106,7 +106,7 @@ const AuthForm = ({
             type='email'
             autoComplete='email'
             ref={register({
-              required: 'Sorry, but email is required',
+              required: 'Sorry, please tell your email address',
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                 message: 'Please provide a valid email'
@@ -125,11 +125,15 @@ const AuthForm = ({
             name='password'
             type='password'
             autoComplete='password'
-            placeholder='*****'
+            placeholder='********'
             ref={register({
-              required: 'Sorry, but password is required'
+              required: 'Sorry, please set your password',
+              minLength: 8
             })}
           />
+          {errors.password?.type === 'minLength' && (
+            <Error>Sorry, the password have to be at least 8 characters</Error>
+          )}
           {errors.password && <Error>{errors.password.message}</Error>}
         </Field>
       )}

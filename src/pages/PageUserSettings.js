@@ -6,13 +6,15 @@ import { connect } from 'react-redux'
 import { UserSettingsContainer } from '../containers'
 import { Page, Section, LoadingSpinner } from '../components'
 import { getUserSettings, updateUserSettings } from '../redux/actions/settings'
+import { getAuthenticatedUser } from '../redux/actions/auth'
 
 const PageUserSettings = ({
   isAuthenticated,
   isLoading,
   user,
   handleGetUserSettings,
-  handleUpdateUserSettings
+  handleUpdateUserSettings,
+  handleGetAuthenticatedUser
 }) => {
   useEffect(() => {
     handleGetUserSettings()
@@ -28,6 +30,7 @@ const PageUserSettings = ({
             isLoading={isLoading}
             user={user}
             handleUpdateUserSettings={handleUpdateUserSettings}
+            handleGetAuthenticatedUser={handleGetAuthenticatedUser}
           />
         )}
       </Section>
@@ -39,8 +42,9 @@ PageUserSettings.propTypes = {
   isAuthenticated: PropTypes.bool,
   isLoading: PropTypes.bool,
   user: PropTypes.object,
-  handleGetUserSettings: PropTypes.func,
-  handleUpdateUserSettings: PropTypes.func
+  handleGetUserSettings: PropTypes.func.isRequired,
+  handleUpdateUserSettings: PropTypes.func.isRequired,
+  handleGetAuthenticatedUser: PropTypes.func.isRequired
 }
 
 export default connect(
@@ -54,7 +58,8 @@ export default connect(
   (dispatch) => {
     return {
       handleGetUserSettings: () => dispatch(getUserSettings()),
-      handleUpdateUserSettings: (data) => dispatch(updateUserSettings(data))
+      handleUpdateUserSettings: (data) => dispatch(updateUserSettings(data)),
+      handleGetAuthenticatedUser: () => dispatch(getAuthenticatedUser())
       // Remember to pass the data if the function requires it
     }
   }

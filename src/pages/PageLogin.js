@@ -5,8 +5,13 @@ import { connect } from 'react-redux'
 
 import { Page, Hero } from '../components'
 import { LoginFormContainer } from '../containers'
+import { getAuthenticatedUser } from '../redux/actions/auth'
 
-const PageLogin = ({ isAuthenticated, username }) => {
+const PageLogin = ({
+  isAuthenticated,
+  username,
+  handleGetAuthenticatedUser
+}) => {
   if (!isAuthenticated) {
     return (
       <Page title='Login'>
@@ -15,6 +20,7 @@ const PageLogin = ({ isAuthenticated, username }) => {
       </Page>
     )
   } else {
+    isAuthenticated && handleGetAuthenticatedUser()
     return <Redirect to={username} />
   }
 }
@@ -24,9 +30,16 @@ PageLogin.propTypes = {
   username: PropTypes.string
 }
 
-export default connect((state) => {
-  return {
-    isAuthenticated: state.auth.isAuthenticated,
-    username: state.auth.data.user ? state.auth.data.user.username : ''
+export default connect(
+  (state) => {
+    return {
+      isAuthenticated: state.auth.isAuthenticated,
+      username: state.auth.data.user ? state.auth.data.user.username : ''
+    }
+  },
+  (dispatch) => {
+    return {
+      handleGetAuthenticatedUser: () => dispatch(getAuthenticatedUser())
+    }
   }
-})(PageLogin)
+)(PageLogin)

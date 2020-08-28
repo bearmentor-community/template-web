@@ -5,7 +5,7 @@ import styled from '@xstyled/emotion'
 import dayjs from 'dayjs'
 import { DevTool } from '@hookform/devtools'
 
-import { Section, UserSettingsForm } from '../components'
+import { UserSettingsForm } from '../components'
 
 const Error = styled.p`
   color: textError;
@@ -21,7 +21,8 @@ const UserSettingsContainer = ({
   isLoading,
   user,
   error,
-  handleUpdateUserSettings
+  handleUpdateUserSettings,
+  handleGetAuthenticatedUser
 }) => {
   const { register, handleSubmit, errors, control } = useForm({
     mode: 'onChange',
@@ -33,16 +34,18 @@ const UserSettingsContainer = ({
     }
   })
 
-  const submitData = (data) => {
-    handleUpdateUserSettings(data)
+  const submitData = async (data) => {
+    await handleUpdateUserSettings(data)
+    handleGetAuthenticatedUser()
+    // Get last updated authenticated user after update user settings completed
   }
 
   return (
-    <Section>
+    <>
       {error && (
-        <Section>
+        <div>
           <Error>There is an error. Please check and try again.</Error>
-        </Section>
+        </div>
       )}
 
       {!isLoading && user && (
@@ -66,7 +69,7 @@ const UserSettingsContainer = ({
 
       {/* Only show React Hook Form DevTool in development */}
       {process.env.NODE_ENV === 'development' && <DevTool control={control} />}
-    </Section>
+    </>
   )
 }
 
@@ -74,7 +77,8 @@ UserSettingsContainer.propTypes = {
   isLoading: PropTypes.bool,
   user: PropTypes.object,
   error: PropTypes.object,
-  handleUpdateUserSettings: PropTypes.func
+  handleUpdateUserSettings: PropTypes.func.isRequired,
+  handleGetAuthenticatedUser: PropTypes.func.isRequired
 }
 
 export default UserSettingsContainer

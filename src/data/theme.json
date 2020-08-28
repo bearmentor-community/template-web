@@ -6,6 +6,7 @@
     "secondaryAlt": "#5c5c70",
     "text": "#000",
     "textAlt": "#555",
+    "textDisabled": "#aaa",
     "textError": "#e02460",
     "background": "#fff",
     "backgroundAlt": "#eee",
@@ -16,6 +17,7 @@
         "backgroundAlt": "#111",
         "text": "#fff",
         "textAlt": "#aaa",
+        "textDisabled": "#aaa",
         "border": "#333"
       }
     }
