@@ -6,7 +6,7 @@ import { Page, Hero } from '../components'
 const PageSearch = () => {
   return (
     <Page title='Search'>
-      <Hero heading='Search' />
+      <Hero heading='Search Items' />
       <SearchContainer />
     </Page>
   )
