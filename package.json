@@ -7,9 +7,9 @@
     "start": "NODE_ENV=production PORT=8000 react-scripts start",
     "build": "NODE_ENV=production react-scripts build",
     "serve": "NODE_ENV=production PORT=8000 serve -s build",
-    "test": "NODE_ENV=test react-scripts test --maxWorkers=2 --ci --coverage --reporters=default --reporters=jest-junit",
+    "test": "NODE_ENV=test react-scripts test --maxWorkers=2 --ci --coverage --reporters=default",
     "lint": "eslint . --ext .js",
-    "postinstall": "./env.sh"
+    "postinstall": "./postinstall.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,7 +49,6 @@
     "react-redux": "7.2.1",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1",
-    "react-syntax-highlighter": "13.2.1",
     "redux": "4.0.5",
     "redux-devtools-extension": "2.13.8",
     "redux-logger": "3.0.6",
