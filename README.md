@@ -33,73 +33,87 @@ You should clone all of the required repositories:
 
 ## Tech Stack
 
+### Primary
+
 All the frontend/web dependencies sorted by priority:
 
-- Git — Distributed version control system
-  - GitHub — Provides hosting for software development and version control using Git
-- JavaScript — The primary programming language
-  - Node.js — JavaScript runtime environment and package manager
-  - npm, Yarn — JavaScript runtime environment and package manager
-- REST API — REpresentational State Transfer, architectural style for distributed hypermedia systems
-- React — JavaScript library for building user interfaces
-  - Webpack — JavaScript module bundler
-  - Babel — Transcompiler for next generation JavaScript
-- Redux — Predictable state container for JavaScript apps
-- React Redux — Official React binding for Redux
-- React Router — Declarative routing for React
-- React Hook Form — Simple React forms handling and validation
-- Connected React Router — Redux binding for React Router v4
-  - `query-string` — Parse and stringify URL query strings
-- Redux DevTools Extension — Tools for debugging Redux state changes
-- Redux Logger — Logger for Redux
-- Redux Thunk — Redux middleware for asynchronous actions with Thunk
-- React Helmet Async — Thread-safe Helmet for React 16+
-- React-GA — React Google Analytics Module
-- CSS-in-JS — Pattern which CSS is composed using JavaScript
-  - xstyled — Consistent theme based CSS for styled-components and emotion
-  - Emotion — Library designed for writing CSS styles with JavaScript
-- Axios — Promise based HTTP client for the browser and Mode.js
-- JSON Web Token (JWT) — Compact URL-safe means of representing claims
-  - `jwt-decode` — Library that helps decoding JWT
-- `dayjs` — Small immutable date time library alternative to Moment.js
-- React HTML Parser — Converts HTML strings directly into React components
-- React Lazy Load Image Component — React Component to lazy load images and components using a HOC
-- Draft.js — Rich Text Editor Framework for React
-- Serve — Static file serving and directory listing.
-- ESLint — Pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript
-  - Prettier — Opinionated code formatter and extension for code editor
-  - Standard — JavaScript style guide, linter, and formatter
-- Netlify — All-in-one platform for automating modern web projects
-- Cloudflare — Enterprise-grade authoritative DNS service
-- Uniregistry — Retail domain name registrar
+- **Git** — Distributed version control system
+  - **GitHub** — Provides hosting for software development and version control using Git
+- **JavaScript** — The primary programming language
+  - **Node.js** — JavaScript runtime environment and package manager
+  - **npm, Yarn** — JavaScript runtime environment and package manager
+- **REST API** — REpresentational State Transfer, architectural style for distributed hypermedia systems
+- **React** — JavaScript library for building user interfaces
+  - **Webpack** — JavaScript module bundler
+  - **Babel** — Transcompiler for next generation JavaScript
+- **Redux** — Predictable state container for JavaScript apps
+- **React Redux** — Official React binding for Redux
+- **React Router** — Declarative routing for React
+- **React Hook Form** — Simple React forms handling and validation
+- **Connected React Router** — Redux binding for React Router v4
+  - **`query-string`** — Parse and stringify URL query strings
+- **Redux DevTools Extension** — Tools for debugging Redux state changes
+- **Redux Logger** — Logger for Redux
+- **Redux Thunk** — Redux middleware for asynchronous actions with Thunk
+- **React Helmet (Async)** — Document head manager to enhance SEO
+- **CSS-in-JS** — Pattern which CSS is composed using JavaScript
+  - **Styled System** — Style props for rapid UI development
+  - **xstyled** — Consistent theme based on Styled System for `styled-components` and `emotion`
+  - **Emotion** — Library designed for writing CSS styles with JavaScript
+- **Axios** — Promise based HTTP client for the browser and Mode.js
+- **React-GA** — React Google Analytics Module
+- **Sentry** — Application monitoring and error tracking software
+- **LogRocket** — Logging and Session Replay for JavaScript Apps
+- **JSON Web Token (JWT)** — Compact URL-safe means of representing claims
+  - **`jwt-decode`** — Library that helps decoding JWT
+- **`dayjs`** — Small immutable date time library alternative to Moment.js
+- **React HTML Parser** — Converts HTML strings directly into React components
+- **React Lazy Load Image Component** — React Component to lazy load images and components using a HOC
+- **Draft.js** — Rich Text Editor Framework for React
+- **Serve** — Static website serving for local development
+- **ESLint** — Pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript
+  - **Prettier** — Opinionated code formatter and extension for code editor
+  - **Standard** — JavaScript style guide, linter, and formatter
+- **Netlify** — All-in-one platform for automating modern web projects
+- **Cloudflare** — Enterprise-grade authoritative DNS service
+- **Uniregistry** — Retail domain name registrar
+
+### Alternative
 
 Alternative or future dependencies:
 
-- Maps API
-  - Google Maps — Web mapping service developed by Google
-  - Mapbox — Mapping platform for custom designed maps
-- D3.js — JavaScript library for producing dynamic, interactive data visualizations
+- **Maps API**
+  - **Google Maps** — Web mapping service developed by Google
+  - **Mapbox** — Mapping platform for custom designed maps
+- **D3.js** — JavaScript library for producing dynamic, interactive data visualizations
 - Alternative of REST API:
-  - GraphQL API — Data query and manipulation language for APIs
-    - Apollo — Data graph platform to unify APIs, microservices, and databases with GraphQL
-- Cypress — JavaScript end-to-end testing framework
-- Jest — Delightful JavaScript testing framework
-- React Testing Library — Very light-weight solution for testing React components
-- Sinon — Standalone test spies, stubs and mocks for JavaScript
-- TypeScript — Typed JavaScript at application-scale JavaScript
-- Redux Saga — Redux middleware for asynchronous actions or side effects with Saga
-- Marked.js — Markdown parser and compiler
-- Docker — Virtualization to deliver software in packages called containers
-  - Docker Compose — Provides a way to document and configure all of the app service dependencies
+  - **GraphQL API** — Data query and manipulation language for APIs
+    - **Apollo** — Data graph platform to unify APIs, microservices, and databases with GraphQL
+- **Cypress** — JavaScript end-to-end testing framework
+- **Jest** — Delightful JavaScript testing framework
+- **React** Testing Library — Very light-weight solution for testing React components
+- **Sinon** — Standalone test spies, stubs and mocks for JavaScript
+- **TypeScript** — Typed JavaScript at application-scale JavaScript
+- **Redux Saga** — Redux middleware for asynchronous actions or side effects with Saga
+- **Marked.js** — Markdown parser and compiler
+- **New Relic** — Single source of truth for infrastructure monitoring, APM agents, browser monitoring, and logging
+- **Docker** — Virtualization to deliver software in packages called containers
+  - **Docker Compose** — Provides a way to document and configure all of the app service dependencies
+
+### Avoided
 
 Never be dependencies:
 
-- Other non-JavaScript family languages
+- **Other non-JavaScript family languages**
   - Avoid Elm, ReasonML, and others. Template is scope limited to raw JavaScript or TypeScript-related. For that other matters it's better to create different repositories.
-- Other non-React libraries/frameworks
+- **Other non-React libraries/frameworks**
+  - Avoid Preact as some of the React features and integrations are missing
   - Avoid jQuery and non-familiar ones
-- Other non-Redux state management solutions
+- **Other non-Redux state management solutions**
+  - Avoid Redux Toolkit as it is less flexible than plain Redux
   - Avoid MobX and non-familiar ones
+- **High-level framework or wrapper for React**
+  - Avoid Next.js and GatsbyJS because Template is focused on less magic and faster build time.
 
 For dependencies in the API part, [see `template-api`](https://github.com/azobu-projects/template-api).
 
