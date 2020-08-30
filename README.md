@@ -78,6 +78,7 @@ Alternative or future dependencies:
 - Maps API
   - Google Maps — Web mapping service developed by Google
   - Mapbox — Mapping platform for custom designed maps
+- D3.js — JavaScript library for producing dynamic, interactive data visualizations
 - Alternative of REST API:
   - GraphQL API — Data query and manipulation language for APIs
     - Apollo — Data graph platform to unify APIs, microservices, and databases with GraphQL
@@ -94,8 +95,11 @@ Alternative or future dependencies:
 Never be dependencies:
 
 - Other non-JavaScript family languages
+  - Avoid Elm, ReasonML, and others. Template is scope limited to raw JavaScript or TypeScript-related. For that other matters it's better to create different repositories.
+- Other non-React libraries/frameworks
+  - Avoid jQuery and non-familiar ones
 - Other non-Redux state management solutions
-- Other non-React frameworks
+  - Avoid MobX and non-familiar ones
 
 For dependencies in the API part, [see `template-api`](https://github.com/azobu-projects/template-api).
 
