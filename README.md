@@ -42,6 +42,8 @@ All the frontend/web dependencies sorted by priority:
   - npm, Yarn — JavaScript runtime environment and package manager
 - REST API — REpresentational State Transfer, architectural style for distributed hypermedia systems
 - React — JavaScript library for building user interfaces
+  - Webpack — JavaScript module bundler
+  - Babel — Transcompiler for next generation JavaScript
 - Redux — Predictable state container for JavaScript apps
 - React Redux — Official React binding for Redux
 - React Router — Declarative routing for React
