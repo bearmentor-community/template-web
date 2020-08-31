@@ -22,6 +22,7 @@ const DebugContainer = ({
         handleResetData={handleResetData}
         isLoading={isLoading}
       />
+
       <Debug data={data} />
     </>
   )

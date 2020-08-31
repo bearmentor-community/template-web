@@ -11,7 +11,10 @@ const ThemeContainer = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GoogleFontLoader
-        fonts={[{ font: 'Open Sans', weights: [400, '700'] }]}
+        fonts={[
+          { font: 'Open Sans', weights: [400, 700] },
+          { font: 'Rubik', weights: [700] }
+        ]}
       />
       <GlobalStyleContainer />
       <ColorModeProvider>{children}</ColorModeProvider>

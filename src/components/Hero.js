@@ -7,6 +7,7 @@ const Heading = styled.h1`
   font-size: 48;
   text-align: center;
   color: text;
+  font-family: 'Rubik', sans-serif;
 `
 
 const Hero = ({ heading }) => {
