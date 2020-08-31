@@ -21,7 +21,7 @@ const IconLinkedIn = ({ colorMode, theme }) => (
 
 IconLinkedIn.propTypes = {
   colorMode: PropTypes.string.isRequired,
-  theme: PropTypes.string.isRequired
+  theme: PropTypes.object.isRequired
 }
 
 export default IconLinkedIn

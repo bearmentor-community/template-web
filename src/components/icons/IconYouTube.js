@@ -22,7 +22,7 @@ const IconYouTube = ({ colorMode, theme }) => (
 
 IconYouTube.propTypes = {
   colorMode: PropTypes.string.isRequired,
-  theme: PropTypes.string.isRequired
+  theme: PropTypes.object.isRequired
 }
 
 export default IconYouTube
