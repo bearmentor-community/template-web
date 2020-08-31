@@ -5,7 +5,7 @@ import { DebugContainer } from '../containers'
 
 const PageDebug = () => {
   return (
-    <Page title='Debug'>
+    <Page title='Debug' fluid>
       <Hero heading='Debug Mode' />
       <DebugContainer />
     </Page>

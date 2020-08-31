@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
 import { SEOContainer, HeaderContainer, FooterContainer } from '../containers'
+import site from '../site.json'
 
 const PageStyled = styled.div`
   display: flex;
@@ -17,7 +18,7 @@ const Main = styled.main`
   flex: 1;
   margin: 0 auto;
   width: 100%;
-  max-width: 720;
+  max-width: ${({ fluid }) => (!fluid ? '720px' : '100%')};
   p,
   ul,
   ol {
@@ -27,10 +28,11 @@ const Main = styled.main`
 `
 
 const Page = ({
+  fluid = false,
   title,
   description,
   image,
-  article,
+  article = false,
   header = true,
   footer = true,
   children
@@ -43,14 +45,18 @@ const Page = ({
         image={image}
         article
       />
+
       {header && <HeaderContainer />}
-      <Main>{children}</Main>
+
+      <Main fluid={fluid}>{children}</Main>
+
       {footer && <FooterContainer />}
     </PageStyled>
   )
 }
 
 Page.propTypes = {
+  fluid: PropTypes.bool,
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
@@ -58,6 +64,15 @@ Page.propTypes = {
   header: PropTypes.bool,
   footer: PropTypes.bool,
   children: PropTypes.any.isRequired
+}
+
+Page.defaultProps = {
+  fluid: false,
+  description: site.defaultDescription,
+  image: site.defaultImage,
+  article: false,
+  header: true,
+  footer: true
 }
 
 export default Page

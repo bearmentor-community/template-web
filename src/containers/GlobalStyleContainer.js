@@ -4,7 +4,7 @@ const GlobalStyleContainer = createGlobalStyle`
   html, body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
 
   body {
@@ -16,6 +16,7 @@ const GlobalStyleContainer = createGlobalStyle`
   }
 
   p, ul, ol {
+    margin: 1rem 0;
     a {
       color: primary;
       &:hover {
@@ -33,7 +34,7 @@ const GlobalStyleContainer = createGlobalStyle`
   }
 
   input, button, textarea {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     border-width: 2px;
     border-style: solid;
     border-color: border;

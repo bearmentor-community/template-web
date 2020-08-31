@@ -2,8 +2,8 @@
   "name": "Template",
   "defaultTitle": "Template",
   "defaultDescription": "Description of template",
-  "siteUrl": "https://template.azobu.com",
   "defaultImage": "../public/images/image.jpg",
+  "siteUrl": "https://template.azobu.com",
   "twitterUsername": "@AzobuHQ",
   "facebookUsername": "@AzobuHQ",
   "facebookAppId": ""

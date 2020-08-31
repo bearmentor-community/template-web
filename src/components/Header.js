@@ -4,6 +4,7 @@ import styled from '@xstyled/emotion'
 
 import { ColorModeToggle } from '../containers'
 import { LinkButton, LinkAnchor, LinkAvatar } from '../components'
+import { IconBug, IconImage, IconNone } from '../components/icons'
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -31,8 +32,9 @@ const Logo = styled.span`
   display: flex;
   align-items: center;
   transition: opacity 0.2s ease-in-out;
+  opacity: 1;
   &:hover {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 `
 
@@ -60,19 +62,13 @@ const Header = ({ isAuthenticated, authenticatedUser }) => {
         {process.env.NODE_ENV === 'development' && (
           <>
             <LinkAnchor to='/upload'>
-              <span role='img' aria-label='Upload'>
-                🖼️
-              </span>
+              <IconImage />
             </LinkAnchor>
             <LinkAnchor to='/debug'>
-              <span role='img' aria-label='Debug'>
-                🐞
-              </span>
+              <IconBug />
             </LinkAnchor>
             <LinkAnchor to='/not-found'>
-              <span role='img' aria-label='Not Found'>
-                🚫
-              </span>
+              <IconNone />
             </LinkAnchor>
           </>
         )}

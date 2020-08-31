@@ -9,9 +9,9 @@ const LinkAnchorStyled = styled(Link)`
   font-size: 18;
   font-weight: bold;
   text-decoration: none;
-  color: text;
+  color: secondary;
   &:hover {
-    color: textAlt;
+    color: secondaryAlt;
   }
   img {
     margin-right: 10;

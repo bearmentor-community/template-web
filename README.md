@@ -61,6 +61,8 @@ All the frontend/web dependencies sorted by priority:
   - **xstyled** — Consistent theme based on Styled System for `styled-components` and `emotion`
   - **Emotion** — Library designed for writing CSS styles with JavaScript
 - **Axios** — Promise based HTTP client for the browser and Mode.js
+  - **React Query** — ...
+  - **SWR** — ...
 - **React-GA** — React Google Analytics Module
 - **Sentry** — Application monitoring and error tracking software
 - **LogRocket** — Logging and Session Replay for JavaScript Apps

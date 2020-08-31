@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from '@xstyled/emotion'
 
-import icons from '../data/socials.json'
+import socials from '../data/socials.json'
+import SocialIcon from '../components/icons/SocialIcon'
 
 const FooterStyled = styled.footer`
   display: flex;
@@ -20,16 +21,9 @@ const SocialList = styled.div`
 `
 
 const SocialLink = styled.a`
-  margin: 0 10;
-`
-
-const SocialImage = styled.img`
-  height: 30;
-  width: 30;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    opacity: 0.5;
-  }
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
 `
 
 const Copyright = styled.p`
@@ -44,14 +38,15 @@ const Footer = () => {
   return (
     <FooterStyled>
       <SocialList>
-        {icons.map((icon, index) => {
+        {socials.map((social, index) => {
           return (
-            <SocialLink key={index} href={icon.url} target='_blank'>
-              <SocialImage src={icon.imageUrl} alt={icon.title} />
+            <SocialLink key={index} href={social.url} target='_blank'>
+              <SocialIcon title={social.title} />
             </SocialLink>
           )
         })}
       </SocialList>
+
       <Copyright>
         Copyright © {year}{' '}
         <a href='https://github.com/azobu-projects/template'>Template</a> by{' '}
