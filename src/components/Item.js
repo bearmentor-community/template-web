@@ -23,14 +23,7 @@ const Item = ({ item }) => {
   return (
     <ItemStyled>
       <ItemImageContainer>
-        <ItemImage
-          placeholderSrc='/assets/images/placeholder.png'
-          effect='opacity'
-          src={item.imageUrl}
-          alt={item.title}
-          height={480}
-          width={720}
-        />
+        <ItemImage effect='opacity' src={item.imageUrl} alt={item.title} />
       </ItemImageContainer>
       <ItemTitle>{item.title}</ItemTitle>
       <div>{ReactHtmlParser(item.html)}</div>

@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development PORT=8000 react-scripts start",
-    "start": "NODE_ENV=production PORT=8000 react-scripts start",
-    "build": "NODE_ENV=production react-scripts build",
-    "serve": "NODE_ENV=production PORT=8000 serve -s build",
-    "test": "NODE_ENV=test react-scripts test --maxWorkers=2 --ci --coverage --reporters=default",
+    "dev": "PORT=8000 react-scripts start",
+    "start": "PORT=8000 react-scripts start",
+    "build": "react-scripts build",
+    "serve": "PORT=8000 serve -s build",
+    "test": "react-scripts test --maxWorkers=2 --ci --coverage --reporters=default",
     "lint": "eslint . --ext .js",
     "postinstall": "./postinstall.sh"
   },

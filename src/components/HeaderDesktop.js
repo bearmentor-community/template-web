@@ -45,7 +45,6 @@ const LogoImage = styled.img`
 const LogoText = styled.span`
   font-weight: bold;
   color: #8f8fa3;
-  padding-right: 30;
 `
 
 const Header = ({ isAuthenticated, authenticatedUser }) => {
@@ -72,7 +71,6 @@ const Header = ({ isAuthenticated, authenticatedUser }) => {
             </LinkAnchor>
           </>
         )}
-
         <LinkAnchor to='/about'>About</LinkAnchor>
         <LinkAnchor to='/users'>Users</LinkAnchor>
         <LinkAnchor to='/items'>Items</LinkAnchor>

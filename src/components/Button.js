@@ -6,7 +6,7 @@ import styled, { css } from '@xstyled/emotion'
 const ButtonStyled = styled.button`
   cursor: pointer;
   border: none;
-  border-radius: 100;
+  border-radius: 5px;
   color: #fff;
   font-weight: bold;
   padding: 10 20;

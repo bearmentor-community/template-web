@@ -10,7 +10,7 @@ const FooterStyled = styled.footer`
   align-items: center;
   background-color: backgroundAlt;
   color: textAlt;
-  margin-top: 200;
+  margin-top: 100;
   padding: 20 0;
 `
 
@@ -21,14 +21,15 @@ const SocialList = styled.div`
 `
 
 const SocialLink = styled.a`
-  margin: 0 5px;
+  margin: 0 10px;
   display: flex;
   align-items: center;
 `
 
 const Copyright = styled.p`
   margin: 0;
-  font-size: 1em;
+  font-size: 0.8em;
+  text-align: center;
 `
 
 const Footer = () => {

@@ -1,13 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from '@xstyled/emotion'
+import { breakpoints } from '@xstyled/system'
+import styled, { css } from '@xstyled/emotion'
 
 const Heading = styled.h1`
-  margin: 50;
-  font-size: 48;
   text-align: center;
   color: text;
-  font-family: 'Rubik', sans-serif;
+  ${breakpoints({
+    xs: css`
+      margin-bottom: 30px;
+      font-size: 2em;
+      text-align: left;
+    `,
+    md: css`
+      margin-bottom: 50px;
+      font-size: 2.5em;
+      text-align: center;
+    `,
+    lg: css`
+      font-size: 3em;
+    `
+  })}
 `
 
 const Hero = ({ heading }) => {

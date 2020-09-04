@@ -1,6 +1,8 @@
+/* eslint-disable indent */
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from '@xstyled/emotion'
+import { breakpoints } from '@xstyled/system'
+import styled, { css } from '@xstyled/emotion'
 
 import { SEOContainer, HeaderContainer, FooterContainer } from '../containers'
 import site from '../site.json'
@@ -16,14 +18,33 @@ const PageStyled = styled.div`
 
 const Main = styled.main`
   flex: 1;
-  margin: 0 auto;
-  width: 100%;
-  max-width: ${({ fluid }) => (!fluid ? '720px' : '100%')};
+  ${breakpoints({
+    xs: css`
+      padding: 20px;
+      max-width: 100%;
+    `,
+    md: css`
+      padding: 0;
+      margin: 0 auto;
+      width: 720px;
+    `
+  })}
+
   p,
   ul,
   ol {
-    font-size: 1.2em;
-    line-height: 1.8em;
+    ${breakpoints({
+      xs: css`
+        font-size: 1em;
+        line-height: 1.8em;
+      `,
+      md: css`
+        font-size: 1.2em;
+      `
+    })};
+  }
+  ul {
+    padding-left: 2em;
   }
 `
 

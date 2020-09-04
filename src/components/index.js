@@ -6,7 +6,8 @@ import Buttons from './Buttons'
 import Debug from './Debug'
 import DebugButtons from './DebugButtons'
 import Footer from './Footer'
-import Header from './Header'
+import HeaderDesktop from './HeaderDesktop'
+import HeaderMobile from './HeaderMobile'
 import Hero from './Hero'
 import Item from './Item'
 import Items from './Items'
@@ -34,7 +35,8 @@ export {
   Debug,
   DebugButtons,
   Footer,
-  Header,
+  HeaderDesktop,
+  HeaderMobile,
   Hero,
   Item,
   Items,

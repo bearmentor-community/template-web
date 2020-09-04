@@ -59,7 +59,7 @@ const Bio = styled.textarea`
   max-height: 200px;
   padding: 2;
   border: 2;
-  border-radius: 5;
+  border-radius: 5px;
   border-color: border;
   resize: vertical;
 `

@@ -9,7 +9,7 @@ const PageAbout = () => {
   return (
     <Page title='About'>
       <Hero heading='About This Template' />
-      <h2>Template is a starter kit project to build a complete web app.</h2>
+      <h2>Starter kit project to build a complete web app</h2>
       <p>
         It is made highly opiniated by{' '}
         <Anchor href='https://mhaidarhanif.com'>M Haidar Hanif</Anchor> from{' '}
@@ -32,22 +32,23 @@ const PageAbout = () => {
         much more. Might be leveraging TypeScript, Passport, OAuth, Redis,
         Docker, and complete test suite in the future.
       </p>
-      <p>
-        The applications are published at{' '}
-        <Anchor href='https://template.azobu.com'>template.azobu.com</Anchor>{' '}
-        and{' '}
-        <Anchor href='https://api.template.azobu.com'>
-          api.template.azobu.com
-        </Anchor>
-      </p>
+      <p>The applications are published at:</p>
+      <ul>
+        <li>
+          <Anchor href='https://template.azobu.com'>template.azobu.com</Anchor>
+        </li>
+        <li>
+          <Anchor href='https://api.template.azobu.com'>
+            api.template.azobu.com
+          </Anchor>
+        </li>
+      </ul>
       <p>The repositories are located at:</p>
       <ul>
         {repositories.map((repo, index) => {
           return (
             <li key={index}>
-              <Anchor href={repo.url}>
-                <code>{repo.text}</code>
-              </Anchor>
+              <Anchor href={repo.url}>{repo.text}</Anchor>
             </li>
           )
         })}

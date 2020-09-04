@@ -1,16 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { useUp } from '@xstyled/emotion'
 
-import { Header } from '../components'
+import { HeaderDesktop, HeaderMobile } from '../components'
 
 const HeaderContainer = ({ isAuthenticated, authenticatedUser }) => {
-  return (
-    <Header
-      isAuthenticated={isAuthenticated}
-      authenticatedUser={authenticatedUser}
-    />
-  )
+  const desktop = useUp('md')
+
+  if (desktop) {
+    return (
+      <HeaderDesktop
+        isAuthenticated={isAuthenticated}
+        authenticatedUser={authenticatedUser}
+      />
+    )
+  } else {
+    return (
+      <HeaderMobile
+        isAuthenticated={isAuthenticated}
+        authenticatedUser={authenticatedUser}
+      />
+    )
+  }
 }
 
 HeaderContainer.propTypes = {
