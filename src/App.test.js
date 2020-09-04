@@ -1,10 +1,8 @@
-// import React from 'react'
-// import { render } from '@testing-library/react'
-// import App from './App'
+import React from 'react'
+import { shallow } from 'enzyme'
 
-test('Render content', () => {
-  // const { getByText } = render(<App />)
-  // const paragraphElement = getByText(/Template/i)
-  // expect(paragraphElement).toBeInTheDocument()
-  expect(true).toBe(true)
+import App from './App'
+
+it('renders without crashing', () => {
+  shallow(<App />)
 })

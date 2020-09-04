@@ -7,8 +7,10 @@
     "start": "PORT=8000 react-scripts start",
     "build": "react-scripts build",
     "serve": "PORT=8000 serve -s build",
-    "test": "react-scripts test --maxWorkers=2 --ci --coverage --reporters=default",
     "lint": "eslint . --ext .js",
+    "test:watch": "react-scripts test --maxWorkers=2 --ci --coverage --reporters=default",
+    "test:coverage": "react-scripts test --maxWorkers=2 --ci --coverage --reporters=default --watchAll=false",
+    "test": "react-scripts test --maxWorkers=2 --ci --watchAll=false",
     "postinstall": "./postinstall.sh"
   },
   "eslintConfig": {
@@ -58,6 +60,8 @@
   },
   "devDependencies": {
     "@hookform/devtools": "2.0.5",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.4",
     "eslint-config-prettier": "6.11.0",
     "eslint-config-standard": "14.1.1",
     "eslint-plugin-import": "2.22.0",
@@ -68,6 +72,7 @@
     "eslint-plugin-react": "7.20.3",
     "eslint-plugin-standard": "4.0.1",
     "prettier": "2.0.5",
+    "react-test-renderer": "16.13.1",
     "serve": "11.3.2",
     "sinon": "9.0.2"
   }
