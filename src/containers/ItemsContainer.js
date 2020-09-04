@@ -14,7 +14,9 @@ const ItemsContainer = ({ isLoading, handleGetItems, items }) => {
     <Section>
       {isLoading && <LoadingSpinner />}
       {!isLoading && items && items.length > 0 && <Items items={items} />}
-      {!isLoading && items.length <= 0 && <p>Sorry, items are empty</p>}
+      {!isLoading && items.length <= 0 && (
+        <p>Sorry, items are empty. You might have to refresh the page.</p>
+      )}
     </Section>
   )
 }

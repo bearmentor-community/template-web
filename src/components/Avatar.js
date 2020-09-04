@@ -11,7 +11,10 @@ const AvatarImage = styled.img`
   height: ${(props) => props.size};
   width: ${(props) => props.size};
   background-color: background;
-  border-color: primary;
+  object-fit: cover;
+  border-width: 1px;
+  border-style: solid;
+  border-color: backgroundAlt;
   border-radius: 50%;
 `
 

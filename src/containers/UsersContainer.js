@@ -16,7 +16,9 @@ const UsersContainer = ({ isLoading, handleGetUsers, users, auth }) => {
       {!isLoading && users && users.length > 0 && (
         <Users users={users} auth={auth} />
       )}
-      {!isLoading && users.length <= 0 && <p>Sorry, users are empty</p>}
+      {!isLoading && users.length <= 0 && (
+        <p>Sorry, users are empty. You might have to refresh the page.</p>
+      )}
     </Section>
   )
 }

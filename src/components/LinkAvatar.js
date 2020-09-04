@@ -7,10 +7,14 @@ const LinkAvatarStyled = styled(Link)``
 
 const AvatarImage = styled.img`
   display: block;
-  object-fit: cover;
-  border-radius: 50%;
   height: 32px;
   width: 32px;
+  background-color: background;
+  object-fit: cover;
+  border-width: 1px;
+  border-style: solid;
+  border-color: backgroundAlt;
+  border-radius: 50%;
 `
 
 const LinkAvatar = ({ to = '/', user }) => {

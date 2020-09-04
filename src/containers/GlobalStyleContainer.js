@@ -62,6 +62,10 @@ const GlobalStyleContainer = createGlobalStyle`
   pre, code {
     font-family: 'Inconsolata', monospace;
   }
+
+  img[src=''], img:not([src]) {
+    opacity: 0;
+  }
 `
 
 export default GlobalStyleContainer
