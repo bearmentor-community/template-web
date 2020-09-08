@@ -31,7 +31,7 @@ The complete list of all features are located at [`azobu-projects/template`](htt
 - [🎁 Support](#-support-)
 - [📝 License](#license-)
 
-## 📦 Repositories [🔝](#-template)
+## 📦 Repositories [🔝](#-template-web)
 
 You should clone all of the required repositories:
 
@@ -39,7 +39,7 @@ You should clone all of the required repositories:
 - [`template-web`](https://github.com/azobu-projects/template-web): Frontend application
 - [`template-api`](https://github.com/azobu-projects/template-api): Backend application
 
-## 🧱 Tech Stack [🔝](#-template)
+## 🧱 Tech Stack [🔝](#-template-web)
 
 ### Primary
 
@@ -129,7 +129,7 @@ Never be dependencies:
 
 - The JWT is still just an `accessToken`, there's no `refreshToken` yet. Also it should be saved in `Cookie` rather in `localStorage`.
 
-## 🏛️ Application Structure [🔝](#-template)
+## 🏛️ Application Structure [🔝](#-template-web)
 
 ```sh
 template-web
@@ -166,7 +166,7 @@ template-web
 
 There are various dotfiles related to environment variables, Prettier, ESLint, and Git ignore.
 
-## 🏁 Getting Started [🔝](#-template)
+## 🏁 Getting Started [🔝](#-template-web)
 
 ### Installation
 
@@ -273,19 +273,19 @@ REACT_APP_API_URL=https://api.example.com
 REACT_APP_GOOGLE_ANALYTICS_UA=UA-xxxxxxxxx-x
 ```
 
-## 👤 Authors [🔝](#-template)
+## 👤 Authors [🔝](#-template-web)
 
 - [M Haidar Hanif](https://mhaidarhanif.com) ([@mhaidarh](https://github.com/mhaidarh))
 - [Azobu Team](https://azobu.com) ([@azobu](https://github.com/azobu))
 
-## 🤝 Contribution [🔝](#-template)
+## 🤝 Contribution [🔝](#-template-web)
 
 Contributions, issues, and feature requests are welcome!
 
-## 🎁 Support [🔝](#-template)
+## 🎁 Support [🔝](#-template-web)
 
 Give a ⭐️ if this project helped or inspired you!
 
-## 📝 License [🔝](#-template)
+## 📝 License [🔝](#-template-web)
 
 See [LICENSE](./LICENSE)
