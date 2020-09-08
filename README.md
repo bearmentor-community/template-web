@@ -6,6 +6,11 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/afd44825-3e55-4c8c-a0c3-5f012c13b706/deploy-status)](https://app.netlify.com/sites/azobu-template/deploys)
 ![License](https://img.shields.io/github/license/azobu-projects/template-web)
 
+| Template Web                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------ |
+| [![Web](https://raw.githubusercontent.com/azobu-projects/template/master/screenshots/template-home.jpg)](https://template.azobu.com) |
+| [template.azobu.com](https://template.azobu.com)                                                                                     |
+
 The complete list of all features are located at [`azobu-projects/template`](https://github.com/azobu-projects/template) or live on [template.azobu.com](https://template.azobu.com/about)
 
 ## Table of Contents
