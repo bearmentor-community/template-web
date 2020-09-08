@@ -15,23 +15,23 @@ The complete list of all features are located at [`azobu-projects/template`](htt
 
 ## Table of Contents
 
-- [📦 Repositories](#-repositories)
-- [🧱 Tech Stack](#-tech-stack)
-- [🏛️ Application Structure](#-application-structure)
-- [🏁 Getting Started](#-getting-started)
+- [📦 Repositories](#-repositories-)
+- [🧱 Tech Stack](#-tech-stack-)
+- [🏛️ Application Structure](#-application-structure-)
+- [🏁 Getting Started](#-getting-started-)
   - [Installation](#installation)
-  - [Setup Environment Variables](#setup-environment-variables)
+  - [Setup Environment](#setup-environment-)
   - [Run](#run)
   - [Lint](#lint)
   - [Test](#test)
   - [Build](#build)
   - [Deployment](#deployment)
-- [👤 Authors](#-authors)
-- [🤝 Contribution](#-contribution)
-- [🎁 Support](#-support)
-- [📝 License](#license)
+- [👤 Authors](#-authors-)
+- [🤝 Contribution](#-contribution-)
+- [🎁 Support](#-support-)
+- [📝 License](#license-)
 
-## 📦 Repositories
+## 📦 Repositories [🔝](#-template)
 
 You should clone all of the required repositories:
 
@@ -39,7 +39,7 @@ You should clone all of the required repositories:
 - [`template-web`](https://github.com/azobu-projects/template-web): Frontend application
 - [`template-api`](https://github.com/azobu-projects/template-api): Backend application
 
-## 🧱 Tech Stack
+## 🧱 Tech Stack [🔝](#-template)
 
 ### Primary
 
@@ -129,7 +129,7 @@ Never be dependencies:
 
 - The JWT is still just an `accessToken`, there's no `refreshToken` yet. Also it should be saved in `Cookie` rather in `localStorage`.
 
-## 🏛️ Application Structure
+## 🏛️ Application Structure [🔝](#-template)
 
 ```sh
 template-web
@@ -166,7 +166,7 @@ template-web
 
 There are various dotfiles related to environment variables, Prettier, ESLint, and Git ignore.
 
-## 🏁 Getting Started
+## 🏁 Getting Started [🔝](#-template)
 
 ### Installation
 
@@ -180,7 +180,7 @@ This will automatically run `postinstall.sh` script which creates `.env.*.local`
 
 You should also install and run `template-api` before continuing if you want to get real data from the API.
 
-### Setup Environment Variables
+### Setup Environment
 
 For development, edit `.env.development.local` file:
 
@@ -273,19 +273,19 @@ REACT_APP_API_URL=https://api.example.com
 REACT_APP_GOOGLE_ANALYTICS_UA=UA-xxxxxxxxx-x
 ```
 
-## 👤 Authors
+## 👤 Authors [🔝](#-template)
 
 - [M Haidar Hanif](https://mhaidarhanif.com) ([@mhaidarh](https://github.com/mhaidarh))
 - [Azobu Team](https://azobu.com) ([@azobu](https://github.com/azobu))
 
-## 🤝 Contribution
+## 🤝 Contribution [🔝](#-template)
 
 Contributions, issues, and feature requests are welcome!
 
-## 🎁 Support
+## 🎁 Support [🔝](#-template)
 
 Give a ⭐️ if this project helped or inspired you!
 
-## 📝 License
+## 📝 License [🔝](#-template)
 
 See [LICENSE](./LICENSE)
