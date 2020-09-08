@@ -26,9 +26,7 @@ const RegisterFormContainer = ({ isLoading, data, error, handleRegister }) => {
     <>
       {error && (
         <Section>
-          <Error>
-            The email and password might be wrong. Please check and try again.
-          </Error>
+          <Error>{error}</Error>
         </Section>
       )}
 

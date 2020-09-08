@@ -8,6 +8,7 @@ const GlobalStyleContainer = createGlobalStyle`
 
   html, body {
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
   }

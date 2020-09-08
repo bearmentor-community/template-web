@@ -72,11 +72,13 @@ const auth = (state = initialState, action) => {
       }
     case LOGOUT_SUCCESS:
       return {
-        ...initialState
+        ...initialState,
+        isLoading: false
       }
     case LOGOUT_FAILURE:
       return {
-        ...initialState
+        ...state,
+        isLoading: false
       }
     case GET_AUTHENTICATED_USER_STARTED:
       return {

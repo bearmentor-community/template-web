@@ -8,7 +8,6 @@ const FooterStyled = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: backgroundAlt;
   color: textAlt;
   margin-top: 100;
   padding: 20 0;

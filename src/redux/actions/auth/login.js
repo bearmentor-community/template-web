@@ -33,7 +33,8 @@ export default (body = {}) => {
     } catch (error) {
       dispatch({
         type: LOGIN_FAILURE,
-        payload: error
+        payload:
+          'Sorry, login is failed. Please check you email and password again.'
       })
     }
   }

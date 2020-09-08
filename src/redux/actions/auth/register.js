@@ -22,7 +22,8 @@ export default (body = {}) => {
     } catch (error) {
       dispatch({
         type: REGISTER_FAILURE,
-        payload: error
+        payload:
+          'Sorry, registration is failed. Please check your information again.'
       })
     }
   }
