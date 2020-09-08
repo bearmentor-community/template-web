@@ -10,10 +10,10 @@ The complete list of all features are located at [`azobu-projects/template`](htt
 
 ## Table of Contents
 
-- [Repositories](#repositories)
-- [Tech Stack](#tech-stack)
-- [Application Structure](#application-structure)
-- [Getting Started](#getting-started)
+- [📦 Repositories](#-repositories)
+- [🧱 Tech Stack](#-tech-stack)
+- [🏛️ Application Structure](#-application-structure)
+- [🏁 Getting Started](#-getting-started)
   - [Installation](#installation)
   - [Setup Environment Variables](#setup-environment-variables)
   - [Run](#run)
@@ -21,8 +21,12 @@ The complete list of all features are located at [`azobu-projects/template`](htt
   - [Test](#test)
   - [Build](#build)
   - [Deployment](#deployment)
+- [👤 Authors](#-authors)
+- [🤝 Contribution](#-contribution)
+- [🎁 Support](#-support)
+- [📝 License](#license)
 
-## Repositories
+## 📦 Repositories
 
 You should clone all of the required repositories:
 
@@ -30,7 +34,7 @@ You should clone all of the required repositories:
 - [`template-web`](https://github.com/azobu-projects/template-web): Frontend application
 - [`template-api`](https://github.com/azobu-projects/template-api): Backend application
 
-## Tech Stack
+## 🧱 Tech Stack
 
 ### Primary
 
@@ -120,7 +124,7 @@ Never be dependencies:
 
 - The JWT is still just an `accessToken`, there's no `refreshToken` yet. Also it should be saved in `Cookie` rather in `localStorage`.
 
-## Application Structure
+## 🏛️ Application Structure
 
 ```sh
 template-web
@@ -157,7 +161,7 @@ template-web
 
 There are various dotfiles related to environment variables, Prettier, ESLint, and Git ignore.
 
-## Getting Started
+## 🏁 Getting Started
 
 ### Installation
 
@@ -167,7 +171,9 @@ Install dependencies using `yarn`:
 yarn
 ```
 
-You should also install and run `template-api` before continuing.
+This will automatically run `postinstall.sh` script which creates `.env.*.local` files which also can be run with `yarn postinstall`.
+
+You should also install and run `template-api` before continuing if you want to get real data from the API.
 
 ### Setup Environment Variables
 
@@ -189,6 +195,8 @@ REACT_APP_GOOGLE_ANALYTICS_UA=UA-xxxxxxxxx-x
 
 ```sh
 yarn dev
+# or
+yarn start
 ```
 
 Access the web app on <http://localhost:8000>.
@@ -209,6 +217,18 @@ yarn lint --fix
 
 ```sh
 yarn test
+```
+
+Watch for changes:
+
+```sh
+yarn test:watch
+```
+
+Generate coverage:
+
+```sh
+yarn test:coverage
 ```
 
 ### Build
@@ -248,15 +268,19 @@ REACT_APP_API_URL=https://api.example.com
 REACT_APP_GOOGLE_ANALYTICS_UA=UA-xxxxxxxxx-x
 ```
 
-## Tips
-
-- [Hot reloading with create-react-app without ejecting](https://medium.com/@brianhan/hot-reloading-cra-without-eject-b54af352c642)
-
-## Authors
+## 👤 Authors
 
 - [M Haidar Hanif](https://mhaidarhanif.com) ([@mhaidarh](https://github.com/mhaidarh))
 - [Azobu Team](https://azobu.com) ([@azobu](https://github.com/azobu))
 
-## License
+## 🤝 Contribution
+
+Contributions, issues, and feature requests are welcome!
+
+## 🎁 Support
+
+Give a ⭐️ if this project helped or inspired you!
+
+## 📝 License
 
 See [LICENSE](./LICENSE)

@@ -6,11 +6,11 @@
     "dev": "PORT=8000 react-scripts start",
     "start": "PORT=8000 react-scripts start",
     "build": "react-scripts build",
-    "serve": "PORT=8000 serve -s build",
+    "serve": "serve -s build",
     "lint": "eslint . --ext .js",
-    "test:watch": "react-scripts test --maxWorkers=2 --ci --coverage --reporters=default",
-    "test:coverage": "react-scripts test --maxWorkers=2 --ci --coverage --reporters=default --watchAll=false",
-    "test": "react-scripts test --maxWorkers=2 --ci --watchAll=false",
+    "test": "react-scripts test --ci --watchAll=false",
+    "test:watch": "react-scripts test",
+    "test:coverage": "react-scripts test --ci --watchAll=false --coverage --reporters=default",
     "postinstall": "./postinstall.sh"
   },
   "eslintConfig": {
