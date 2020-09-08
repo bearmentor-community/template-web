@@ -1,6 +1,6 @@
 # ⭕ Template Web
 
-> Template Web is a quick starter kit project to build a complete web app using React and Redux.
+> [Template Web](https://template.azobu.com) is a quick starter kit project to build a complete web app using React and Redux.
 
 [![Website](https://img.shields.io/website-up-down-green-red/https/template.azobu.com.svg)](https://template.azobu.com)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/afd44825-3e55-4c8c-a0c3-5f012c13b706/deploy-status)](https://app.netlify.com/sites/azobu-template/deploys)
@@ -10,7 +10,6 @@ The complete list of all features are located at [`azobu-projects/template`](htt
 
 ## Table of Contents
 
-- Introduction
 - [Repositories](#repositories)
 - [Tech Stack](#tech-stack)
 - [Application Structure](#application-structure)
@@ -107,7 +106,7 @@ Alternative or future dependencies:
 Never be dependencies:
 
 - **Other non-JavaScript family languages**
-  - Avoid Elm, ReasonML, and others. Template is scope limited to raw JavaScript or TypeScript-related. For that other matters it's better to create different repositories.
+  - Avoid Elm, ReasonML, and others. Template Web is scope limited to JavaScript or TypeScript ecosystem. For that other matters it's better to create different repositories.
 - **Other non-React libraries/frameworks**
   - Avoid Preact as some of the React features and integrations are missing
   - Avoid jQuery and non-familiar ones
@@ -115,9 +114,11 @@ Never be dependencies:
   - Avoid Redux Toolkit as it is less flexible than plain Redux
   - Avoid MobX and non-familiar ones
 - **High-level framework or wrapper for React**
-  - Avoid Next.js and GatsbyJS because Template is focused on less magic and faster build time.
+  - Avoid Next.js and GatsbyJS because Template Web is focused on less magic and faster build time.
 
-For dependencies in the API part, [see `template-api`](https://github.com/azobu-projects/template-api).
+### Known Limitations
+
+- The JWT is still just an `accessToken`, there's no `refreshToken` yet. Also it should be saved in `Cookie` rather in `localStorage`.
 
 ## Application Structure
 
