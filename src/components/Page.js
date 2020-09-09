@@ -18,24 +18,16 @@ const PageStyled = styled.div`
 
 const Main = styled.main`
   flex: 1;
-  ${breakpoints({
-    xs: css`
-      padding: 20px;
-      max-width: 100%;
-    `,
-    md: css`
-      padding: 0;
-      margin: 0 auto;
-      width: 720px;
-    `
-  })}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
 
   p,
   ul,
   ol {
     ${breakpoints({
       xs: css`
-        font-size: 1em;
         line-height: 1.8em;
       `,
       md: css`

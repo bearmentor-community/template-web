@@ -1,13 +1,16 @@
 import React from 'react'
 
-import { Page, Hero } from '../components'
+import { Page, Hero, Content } from '../components'
 import { ItemsContainer } from '../containers'
 
 const PageItems = () => {
   return (
     <Page title='Items'>
       <Hero heading='List of Available Items' />
-      <ItemsContainer />
+
+      <Content>
+        <ItemsContainer />
+      </Content>
     </Page>
   )
 }

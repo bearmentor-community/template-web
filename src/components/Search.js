@@ -23,8 +23,8 @@ const InputSubmit = styled.input`
   color: #fff;
   font-weight: bold;
   padding: 10 20;
-  transition: all 0.2s ease-in-out;
   background-color: secondary;
+  transition: all 0.2s ease-in-out;
   &:hover {
     background-color: secondaryAlt;
   }
@@ -53,8 +53,10 @@ const Search = ({
     <>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <InputText
+          id='keyword'
           name='keyword'
           type='text'
+          autoFocus={true}
           ref={register({
             required: true,
             maxLength: 100

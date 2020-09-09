@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import { Page, Hero } from '../components'
+import { Page, Hero, Content, Section } from '../components'
 import { RegisterFormContainer } from '../containers'
 
 const PageRegister = ({ isAuthenticated }) => {
@@ -11,7 +11,12 @@ const PageRegister = ({ isAuthenticated }) => {
     return (
       <Page title='Register'>
         <Hero heading='Create your new account' />
-        <RegisterFormContainer />
+
+        <Content>
+          <Section>
+            <RegisterFormContainer />
+          </Section>
+        </Content>
       </Page>
     )
   } else {

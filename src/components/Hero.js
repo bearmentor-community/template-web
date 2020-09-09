@@ -3,21 +3,25 @@ import PropTypes from 'prop-types'
 import { breakpoints } from '@xstyled/system'
 import styled, { css } from '@xstyled/emotion'
 
+const HeroStyled = styled.section`
+  margin-top: 30px;
+`
+
 const Heading = styled.h1`
   text-align: center;
   color: text;
+
   ${breakpoints({
     xs: css`
-      margin-bottom: 30px;
+      padding: 0 20px;
+      margin-bottom: 10px;
+      font-size: 1.8em;
+    `,
+    sm: css`
       font-size: 2em;
-      text-align: left;
     `,
     md: css`
       margin-bottom: 50px;
-      font-size: 2.5em;
-      text-align: center;
-    `,
-    lg: css`
       font-size: 3em;
     `
   })}
@@ -25,9 +29,9 @@ const Heading = styled.h1`
 
 const Hero = ({ heading }) => {
   return (
-    <section>
+    <HeroStyled>
       <Heading>{heading}</Heading>
-    </section>
+    </HeroStyled>
   )
 }
 

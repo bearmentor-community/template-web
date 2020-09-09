@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Item } from '../components'
+import { ItemDetail } from '../components'
 
 const ItemContainer = ({ item }) => {
-  return <Item item={item} />
+  return <ItemDetail item={item} />
 }
 
 ItemContainer.propTypes = {

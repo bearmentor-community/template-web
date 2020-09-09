@@ -14,6 +14,7 @@ import ScrollToTop from './ScrollToTop'
 import SearchContainer from './SearchContainer'
 import SEOContainer from './SEOContainer'
 import ThemeContainer from './ThemeContainer'
+import UploadContainer from './UploadContainer'
 import UserProfileContainer from './UserProfileContainer'
 import UsersContainer from './UsersContainer'
 import UserSettingsContainer from './UserSettingsContainer'
@@ -35,6 +36,7 @@ export {
   SearchContainer,
   SEOContainer,
   ThemeContainer,
+  UploadContainer,
   UserProfileContainer,
   UsersContainer,
   UserSettingsContainer

@@ -13,7 +13,7 @@ const Error = styled.p`
 `
 
 const Info = styled.p`
-  font-size: 1em;
+  font-size: 0.8em;
   margin: 0;
 `
 
@@ -51,18 +51,20 @@ const UserSettingsContainer = ({
       {!isLoading && user && (
         <>
           <UserSettingsForm
-            user={user}
             isLoading={isLoading}
+            user={user}
             register={register}
             handleSubmit={handleSubmit}
             errors={errors}
             submitData={submitData}
           />
           <Info>
-            Joined since {dayjs(user.createdAt).format('DD MMMM YYYY HH:mm')}
+            Joined since{' '}
+            {dayjs(user.createdAt).format('D MMMM YYYY [at] HH:mm')}
           </Info>
           <Info>
-            Last updated {dayjs(user.updatedAt).format('DD MMMM YYYY HH:mm')}
+            Last updated{' '}
+            {dayjs(user.updatedAt).format('D MMMM YYYY [at] HH:mm')}
           </Info>
         </>
       )}

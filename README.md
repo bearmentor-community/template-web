@@ -29,7 +29,7 @@ The complete list of all features are located at [`azobu-projects/template`](htt
 - [👤 Authors](#-authors-)
 - [🤝 Contribution](#-contribution-)
 - [🎁 Support](#-support-)
-- [📝 License](#license-)
+- [📝 License](#-license-)
 
 ## 📦 Repositories [🔝](#table-of-contents)
 
@@ -114,15 +114,15 @@ Alternative or future dependencies:
 
 Never be dependencies:
 
-- [**Other non-JavaScript family languages**
+- **Other non-JavaScript family languages**
   - Avoid Elm, ReasonML, and others. Template Web is scope limited to JavaScript or TypeScript ecosystem. For that other matters it's better to create different repositories.
-- [**Other non-React libraries/frameworks**
+- **Other non-React libraries/frameworks**
   - Avoid Preact as some of the React features and integrations are missing
   - Avoid jQuery and non-familiar ones
-- [**Other non-Redux state management solutions**
+- **Other non-Redux state management solutions**
   - Avoid Redux Toolkit as it is less flexible than plain Redux
   - Avoid MobX and non-familiar ones
-- [**High-level framework or wrapper for React**
+- **High-level framework or wrapper for React**
   - Avoid Next.js and GatsbyJS because Template Web is focused on less magic and faster build time.
 
 ### Known Limitations

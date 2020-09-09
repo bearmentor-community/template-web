@@ -1,4 +1,5 @@
 import {
+  AUTH_CLEAR,
   REGISTER_STARTED,
   REGISTER_SUCCESS,
   REGISTER_FAILURE,
@@ -22,6 +23,10 @@ const initialState = {
 
 const auth = (state = initialState, action) => {
   switch (action.type) {
+    case AUTH_CLEAR:
+      return {
+        ...initialState
+      }
     case REGISTER_STARTED:
       return {
         ...state,

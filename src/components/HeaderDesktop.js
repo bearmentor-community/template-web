@@ -16,7 +16,7 @@ const HeaderSegment = styled.div`
   display: flex;
   align-items: center;
   a {
-    margin-right: 20;
+    margin-right: 15px;
   }
 `
 
@@ -24,14 +24,14 @@ const HeaderSegmentButtons = styled.div`
   display: flex;
   align-items: center;
   a {
-    margin-left: 10;
+    margin-left: 10px;
   }
 `
 
 const Logo = styled.span`
   display: flex;
   align-items: center;
-  transition: opacity 0.2s ease-in-out;
+  transition: inherit;
   opacity: 1;
   &:hover {
     opacity: 0.8;
@@ -39,12 +39,13 @@ const Logo = styled.span`
 `
 
 const LogoImage = styled.img`
-  height: 30;
+  height: 40;
 `
 
 const LogoText = styled.span`
   font-weight: bold;
   color: #8f8fa3;
+  margin-left: 10px;
 `
 
 const Header = ({ isAuthenticated, authenticatedUser }) => {

@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
+import { ColorModeToggle } from '../containers'
 import { LinkAnchor, LinkAvatar, LinkButton } from '../components'
 
 const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
-  padding: 20;
+  padding: 10px;
 `
 
 const HeaderSegment = styled.div`
@@ -15,10 +16,18 @@ const HeaderSegment = styled.div`
   align-items: center;
 `
 
+const HeaderSegmentButtons = styled.div`
+  display: flex;
+  align-items: center;
+  a {
+    margin-left: 10px;
+  }
+`
+
 const Logo = styled.span`
   display: flex;
   align-items: center;
-  transition: opacity 0.2s ease-in-out;
+  transition: inherit;
   opacity: 1;
   &:hover {
     opacity: 0.8;
@@ -26,7 +35,7 @@ const Logo = styled.span`
 `
 
 const LogoImage = styled.img`
-  height: 30;
+  height: 40;
 `
 
 const HeaderMobile = ({ isAuthenticated, authenticatedUser }) => {
@@ -40,7 +49,9 @@ const HeaderMobile = ({ isAuthenticated, authenticatedUser }) => {
         </LinkAnchor>
       </HeaderSegment>
 
-      <HeaderSegment>
+      <HeaderSegmentButtons>
+        <ColorModeToggle />
+
         {!isAuthenticated && (
           <>
             <LinkButton variant='secondary' to='/login'>
@@ -50,15 +61,12 @@ const HeaderMobile = ({ isAuthenticated, authenticatedUser }) => {
         )}
 
         {isAuthenticated && authenticatedUser.username && (
-          <>
-            <LinkAvatar
-              to={`/${authenticatedUser.username}`}
-              user={authenticatedUser}
-            />
-            <LinkButton to='/logout'>Logout</LinkButton>
-          </>
+          <LinkAvatar
+            to={`/${authenticatedUser.username}`}
+            user={authenticatedUser}
+          />
         )}
-      </HeaderSegment>
+      </HeaderSegmentButtons>
     </HeaderStyled>
   )
 }

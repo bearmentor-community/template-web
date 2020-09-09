@@ -13,9 +13,6 @@ const LinkAnchorStyled = styled(Link)`
   &:hover {
     color: secondaryAlt;
   }
-  img {
-    margin-right: 10;
-  }
 `
 
 const LinkAnchor = ({ to, children }) => {

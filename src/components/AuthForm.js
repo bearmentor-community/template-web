@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
 const Form = styled.form`
-  max-width: 480;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 480px;
 `
 
 const Field = styled.div`
@@ -15,7 +15,6 @@ const Field = styled.div`
 
 const Label = styled.label`
   font-weight: bold;
-  font-size: 1.2em;
   margin-bottom: 2;
 `
 
@@ -32,8 +31,8 @@ const Submit = styled.input`
   font-weight: bold;
   padding: 3;
   width: 100%;
-  transition: all 0.2s ease-in-out;
   background-color: primary;
+  transition: all 0.2s ease-in-out;
   &:hover {
     background-color: primaryAlt;
   }
@@ -57,6 +56,27 @@ const AuthForm = ({
 }) => {
   return (
     <Form onSubmit={handleSubmit(submitData)}>
+      {fields.email && (
+        <Field>
+          <Label htmlFor='email'>Email Address</Label>
+          <Input
+            name='email'
+            type='email'
+            autoComplete='email'
+            autoFocus={true}
+            ref={register({
+              required: 'Sorry, please tell your email address',
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                message: 'Please provide a valid email'
+              }
+            })}
+            placeholder='name@example.com'
+          />
+          {errors.email && <Error>{errors.email.message}</Error>}
+        </Field>
+      )}
+
       {fields.name && (
         <Field>
           <Label htmlFor='name'>Name</Label>
@@ -65,6 +85,7 @@ const AuthForm = ({
             type='text'
             autoComplete='name'
             placeholder='Full Name'
+            aria-invalid={errors.name ? 'true' : 'false'}
             ref={register({
               required: 'Sorry, please tell your name',
               pattern: {
@@ -85,6 +106,7 @@ const AuthForm = ({
             type='text'
             autoComplete='username'
             placeholder='username'
+            aria-invalid={errors.username ? 'true' : 'false'}
             ref={register({
               required: 'Sorry, please set your username',
               pattern: {
@@ -98,26 +120,6 @@ const AuthForm = ({
         </Field>
       )}
 
-      {fields.email && (
-        <Field>
-          <Label htmlFor='email'>Email Address</Label>
-          <Input
-            name='email'
-            type='email'
-            autoComplete='email'
-            ref={register({
-              required: 'Sorry, please tell your email address',
-              pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                message: 'Please provide a valid email'
-              }
-            })}
-            placeholder='name@example.com'
-          />
-          {errors.email && <Error>{errors.email.message}</Error>}
-        </Field>
-      )}
-
       {fields.password && (
         <Field>
           <Label htmlFor='password'>Password</Label>
@@ -126,6 +128,7 @@ const AuthForm = ({
             type='password'
             autoComplete='password'
             placeholder='********'
+            aria-invalid={errors.password ? 'true' : 'false'}
             ref={register({
               required: 'Sorry, please set your password',
               minLength: 8
@@ -141,6 +144,7 @@ const AuthForm = ({
       <Submit
         type='submit'
         value={isLoading ? submitTextLoading : submitText}
+        disabled={isLoading}
       />
 
       {authError && (

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import { Page, Hero } from '../components'
 import { LoginFormContainer } from '../containers'
+import { Page, Hero, Content, Section } from '../components'
 import { getAuthenticatedUser } from '../redux/actions/auth'
 
 const PageLogin = ({
@@ -16,7 +16,12 @@ const PageLogin = ({
     return (
       <Page title='Login'>
         <Hero heading='Login to your account' />
-        <LoginFormContainer />
+
+        <Content>
+          <Section>
+            <LoginFormContainer />
+          </Section>
+        </Content>
       </Page>
     )
   } else {

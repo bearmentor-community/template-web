@@ -1,13 +1,16 @@
 import React from 'react'
 
 import { SearchContainer } from '../containers'
-import { Page, Hero } from '../components'
+import { Page, Hero, Content } from '../components'
 
 const PageSearch = () => {
   return (
     <Page title='Search'>
       <Hero heading='Search Items' />
-      <SearchContainer />
+
+      <Content>
+        <SearchContainer />
+      </Content>
     </Page>
   )
 }

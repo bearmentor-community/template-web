@@ -4,36 +4,40 @@ import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import { UserSettingsContainer } from '../containers'
-import { Page, Section, LoadingSpinner } from '../components'
+import { Page, Content, Section, LoadingSpinner } from '../components'
 import { getUserSettings, updateUserSettings } from '../redux/actions/settings'
 import { getAuthenticatedUser } from '../redux/actions/auth'
 
 const PageUserSettings = ({
   isAuthenticated,
   isLoading,
+  error,
   user,
   handleGetUserSettings,
   handleUpdateUserSettings,
   handleGetAuthenticatedUser
 }) => {
   useEffect(() => {
-    handleGetUserSettings()
-  }, [handleGetUserSettings])
+    isAuthenticated && handleGetUserSettings()
+  }, [isAuthenticated, handleGetUserSettings])
 
   return (
     <Page title='User Settings'>
-      <Section>
-        {!isAuthenticated && <Redirect to='/' />}
-        {isLoading && <LoadingSpinner />}
-        {!isLoading && user && (
-          <UserSettingsContainer
-            isLoading={isLoading}
-            user={user}
-            handleUpdateUserSettings={handleUpdateUserSettings}
-            handleGetAuthenticatedUser={handleGetAuthenticatedUser}
-          />
-        )}
-      </Section>
+      <Content>
+        <Section>
+          {!isAuthenticated && <Redirect to='/' />}
+          {isAuthenticated && isLoading && <LoadingSpinner />}
+          {isAuthenticated && !isLoading && user && (
+            <UserSettingsContainer
+              isLoading={isLoading}
+              error={error}
+              user={user}
+              handleUpdateUserSettings={handleUpdateUserSettings}
+              handleGetAuthenticatedUser={handleGetAuthenticatedUser}
+            />
+          )}
+        </Section>
+      </Content>
     </Page>
   )
 }
@@ -41,6 +45,7 @@ const PageUserSettings = ({
 PageUserSettings.propTypes = {
   isAuthenticated: PropTypes.bool,
   isLoading: PropTypes.bool,
+  error: PropTypes.object,
   user: PropTypes.object,
   handleGetUserSettings: PropTypes.func.isRequired,
   handleUpdateUserSettings: PropTypes.func.isRequired,
@@ -52,6 +57,7 @@ export default connect(
     return {
       isAuthenticated: state.auth.isAuthenticated,
       isLoading: state.settings.isLoading,
+      error: state.settings.error,
       user: state.settings.data
     }
   },

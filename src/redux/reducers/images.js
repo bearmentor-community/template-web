@@ -6,7 +6,8 @@ import {
 
 const initialState = {
   isLoading: false,
-  error: null
+  error: null,
+  data: null
 }
 
 const images = (state = initialState, action) => {
@@ -15,13 +16,15 @@ const images = (state = initialState, action) => {
       return {
         ...state,
         isLoading: true,
-        error: null
+        error: null,
+        data: null
       }
     case UPLOAD_IMAGE_SUCCESS:
       return {
         ...state,
         isLoading: false,
-        error: null
+        error: null,
+        data: action.payload
       }
     case UPLOAD_IMAGE_FAILURE:
       return {

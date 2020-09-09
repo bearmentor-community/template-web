@@ -9,7 +9,8 @@ const Form = styled.form`
   flex-direction: column;
   align-items: center;
   margin-top: 50;
-  width: 350px;
+  width: 100%;
+  max-width: 480px;
   & > * {
     margin: 10 0;
   }
@@ -46,8 +47,8 @@ const Submit = styled.input`
   font-weight: bold;
   padding: 3;
   width: 100%;
-  transition: all 0.2s ease-in-out;
   background-color: primary;
+  transition: inherit;
   &:hover {
     background-color: primaryAlt;
   }
@@ -70,6 +71,7 @@ const Error = styled.span`
 `
 
 const UserSettingsForm = ({
+  isLoading,
   user,
   register,
   handleSubmit,
@@ -97,6 +99,7 @@ const UserSettingsForm = ({
           type='text'
           autoComplete='name'
           placeholder='Full Name'
+          aria-invalid={errors.name ? 'true' : 'false'}
           ref={register({
             required: 'Sorry, but name is required',
             pattern: {
@@ -115,6 +118,7 @@ const UserSettingsForm = ({
           type='text'
           autoComplete='username'
           placeholder='username'
+          aria-invalid={errors.username ? 'true' : 'false'}
           ref={register({
             required: 'Sorry, but username is required',
             pattern: {
@@ -129,7 +133,11 @@ const UserSettingsForm = ({
 
       <Field>
         <Label htmlFor='bio'>Bio</Label>
-        <Bio name='bio' ref={register()} />
+        <Bio
+          name='bio'
+          aria-invalid={errors.bio ? 'true' : 'false'}
+          ref={register()}
+        />
         {errors.bio && <Error>{errors.bio.message}</Error>}
       </Field>
 
@@ -140,6 +148,7 @@ const UserSettingsForm = ({
           name='email'
           type='email'
           autoComplete='email'
+          aria-invalid={errors.email ? 'true' : 'false'}
           ref={register({
             required: 'Sorry, but email is required',
             pattern: {
@@ -152,12 +161,17 @@ const UserSettingsForm = ({
         {errors.email && <Error>{errors.email.message}</Error>}
       </Field>
 
-      <Submit type='submit' value='Save Changes' />
+      <Submit
+        type='submit'
+        value={isLoading ? 'Saving Changes' : 'Save Changes'}
+        disabled={isLoading}
+      />
     </Form>
   )
 }
 
 UserSettingsForm.propTypes = {
+  isLoading: PropTypes.bool,
   user: PropTypes.object,
   register: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,

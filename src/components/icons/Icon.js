@@ -12,7 +12,7 @@ const getFillHover = ({ social, accent }) =>
 const IconStyled = styled.svg`
   display: block;
   fill: ${getFill};
-  transition: all 0.2s ease-in-out;
+  transition: inherit;
   &:hover {
     fill: ${getFillHover};
   }
@@ -21,7 +21,7 @@ const IconStyled = styled.svg`
 const IconContainer = ({ social, accent, children }) => {
   return (
     <IconStyled
-      width={social ? '2em' : '1.2em'}
+      width={social ? '1.5em' : '1.2em'}
       viewBox={social ? '0 0 50 50' : '0 0 24 24'}
       social={social}
       accent={accent}

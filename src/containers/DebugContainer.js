@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { DebugButtons, Debug } from '../components'
+import { Buttons, Button, Debug } from '../components'
 import { getItems, resetItems } from '../redux/actions/items'
 
 const DebugContainer = ({
@@ -17,11 +17,11 @@ const DebugContainer = ({
 
   return (
     <>
-      <DebugButtons
-        handleGetData={handleGetData}
-        handleResetData={handleResetData}
-        isLoading={isLoading}
-      />
+      <Buttons>
+        <Button onClick={handleGetData}>Get Data</Button>
+        <Button onClick={handleResetData}>Reset Data</Button>
+        {isLoading && <span>Loading...</span>}
+      </Buttons>
 
       <Debug data={data} />
     </>

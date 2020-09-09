@@ -1,13 +1,16 @@
 import React from 'react'
 
-import { Page, Hero } from '../components'
 import { UsersContainer } from '../containers'
+import { Page, Hero, Content } from '../components'
 
 const PageUsers = () => {
   return (
     <Page title='Users'>
       <Hero heading='List of Registered Users' />
-      <UsersContainer />
+
+      <Content>
+        <UsersContainer />
+      </Content>
     </Page>
   )
 }

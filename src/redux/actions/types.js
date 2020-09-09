@@ -1,6 +1,9 @@
 // Navigation
 export const NAVIGATE_BACK = 'NAVIGATE_BACK'
 
+// Auth
+export const AUTH_CLEAR = 'AUTH_CLEAR'
+
 // Register new user
 export const REGISTER_STARTED = 'REGISTER_STARTED'
 export const REGISTER_SUCCESS = 'REGISTER_SUCCESS'

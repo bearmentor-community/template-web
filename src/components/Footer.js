@@ -1,5 +1,6 @@
 import React from 'react'
-import styled from '@xstyled/emotion'
+import { breakpoints } from '@xstyled/system'
+import styled, { css } from '@xstyled/emotion'
 
 import socials from '../data/socials.json'
 import SocialIcon from '../components/icons/SocialIcon'
@@ -20,9 +21,17 @@ const SocialList = styled.div`
 `
 
 const SocialLink = styled.a`
-  margin: 0 10px;
   display: flex;
   align-items: center;
+
+  ${breakpoints({
+    xs: css`
+      margin: 0 5px;
+    `,
+    sm: css`
+      margin: 0 10px;
+    `
+  })}
 `
 
 const Copyright = styled.p`

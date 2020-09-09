@@ -2,34 +2,24 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { useForm } from 'react-hook-form'
-import styled from '@xstyled/emotion'
-import { DevTool } from '@hookform/devtools'
 
-import { AuthForm, Section, Link } from '../components'
+import { AuthForm, Alert, Link } from '../components'
 import { register } from '../redux/actions/auth'
-
-const Error = styled.p`
-  color: textError;
-  margin-bottom: 20px;
-`
+import useAuthClear from '../hooks/useAuthClear'
 
 const RegisterFormContainer = ({ isLoading, data, error, handleRegister }) => {
-  const { register, handleSubmit, errors, control } = useForm({
+  useAuthClear()
+
+  const { register, handleSubmit, errors } = useForm({
     criteriaMode: 'all'
   })
 
-  const submitData = (data) => {
-    handleRegister(data)
+  const submitData = (body) => {
+    handleRegister(body)
   }
 
   return (
     <>
-      {error && (
-        <Section>
-          <Error>{error}</Error>
-        </Section>
-      )}
-
       <AuthForm
         fields={{ name: true, username: true, email: true, password: true }}
         isLoading={isLoading}
@@ -41,14 +31,11 @@ const RegisterFormContainer = ({ isLoading, data, error, handleRegister }) => {
         submitTextLoading='Creating account...'
       />
 
-      <Section>
-        <p>
-          Already registered? <Link to='/login'>Login here</Link>
-        </p>
-      </Section>
+      {error && <Alert>Sorry, registration is failed. Please try again.</Alert>}
 
-      {/* Only show React Hook Form DevTool in development */}
-      {process.env.NODE_ENV === 'development' && <DevTool control={control} />}
+      <p>
+        Already registered? <Link to='/login'>Login here</Link>
+      </p>
     </>
   )
 }
@@ -70,7 +57,7 @@ export default connect(
   },
   (dispatch) => {
     return {
-      handleRegister: (data) => dispatch(register(data))
+      handleRegister: (body) => dispatch(register(body))
     }
   }
 )(RegisterFormContainer)

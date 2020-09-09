@@ -1,4 +1,11 @@
 {
+  "breakpoints": {
+    "xs": 0,
+    "sm": 576,
+    "md": 768,
+    "lg": 992,
+    "xl": 1200
+  },
   "colors": {
     "primary": "#5cadd6",
     "primaryAlt": "#297aa3",
@@ -11,6 +18,8 @@
     "textDisabled": "#aaa",
     "textError": "#e02460",
     "border": "#ccc",
+    "valid": "#40bf6a",
+    "invalid": "#c91d1d",
     "modes": {
       "dark": {
         "background": "#000",

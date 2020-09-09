@@ -8,9 +8,10 @@ const GlobalStyleContainer = createGlobalStyle`
 
   html, body {
     font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   body {
@@ -22,7 +23,6 @@ const GlobalStyleContainer = createGlobalStyle`
   }
 
   h1,h2,h3,h4,h5,h6 {
-    font-family: 'Inter', sans-serif;
     line-height: 1.2em;
   }
 
@@ -45,15 +45,16 @@ const GlobalStyleContainer = createGlobalStyle`
   }
 
   input, button, textarea {
-    font-family: 'Inter', sans-serif;
+    font-family: inherit;
     font-size: 1em;
     border-width: 2px;
     border-style: solid;
     border-color: border;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
+    outline: none;
     &:focus {
-      outline-color: primary;
+      border-color: primary;
     }
     &:disabled {
       color: textDisabled;

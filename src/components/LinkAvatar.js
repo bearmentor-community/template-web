@@ -7,8 +7,8 @@ const LinkAvatarStyled = styled(Link)``
 
 const AvatarImage = styled.img`
   display: block;
-  height: 32px;
-  width: 32px;
+  height: 40px;
+  width: 40px;
   background-color: background;
   object-fit: cover;
   border-width: 1px;

@@ -27,7 +27,7 @@ const Item = styled.div`
   border-style: solid;
   border-color: backgroundAlt;
   background-color: background;
-  transition: all 0.2s ease-in-out;
+  transition: inherit;
   &:hover {
     border-color: primary;
   }

@@ -2,15 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
-const ToggleButton = styled.button`
+const ToggleButton = styled.a`
   cursor: pointer;
   background: none;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 10;
-  padding: 0;
+  padding: 10px;
+  user-select: none;
   transition: all 0.2s ease-in-out;
   &:hover {
     opacity: 0.5;
