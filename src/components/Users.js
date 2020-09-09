@@ -6,14 +6,21 @@ import styled from '@xstyled/emotion'
 import { User } from '../components'
 
 const UsersStyled = styled.div`
-  width: 100%;
   max-width: 480px;
+  width: 100%;
 `
 
 const UserLink = styled(Link)`
   display: block;
   text-decoration: none;
   color: text;
+  margin: 10px 0;
+  & h1 {
+    /* transition: all 0.2s ease-in-out; */
+  }
+  &:hover h1 {
+    color: primary;
+  }
 `
 
 const Users = ({ users, auth }) => {

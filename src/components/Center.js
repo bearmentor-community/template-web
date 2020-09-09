@@ -2,18 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
-const SectionStyled = styled.section`
+const CenterStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
-const Section = ({ children }) => {
-  return <SectionStyled>{children}</SectionStyled>
+const Center = ({ children }) => {
+  return <CenterStyled>{children}</CenterStyled>
 }
 
-Section.propTypes = {
+Center.propTypes = {
   children: PropTypes.any.isRequired
 }
 
-export default Section
+export default Center

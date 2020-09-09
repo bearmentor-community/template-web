@@ -21,7 +21,8 @@ import LoadingSpinner from './LoadingSpinner'
 import NotFound from './NotFound'
 import Page from './Page'
 import Paragraph from './Paragraph'
-import Section from './Section'
+import SearchForm from './SearchForm'
+import Center from './Center'
 import SyntaxBlock from './SyntaxBlock'
 import Toggle from './Toggle'
 import UserProfile from './UserProfile'
@@ -53,7 +54,8 @@ export {
   NotFound,
   Page,
   Paragraph,
-  Section,
+  SearchForm,
+  Center,
   SyntaxBlock,
   Toggle,
   UserProfile,

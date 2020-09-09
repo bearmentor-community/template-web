@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import { UserSettingsContainer } from '../containers'
-import { Page, Content, Section, LoadingSpinner } from '../components'
+import { Page, Alert, Content, Center, LoadingSpinner } from '../components'
 import { getUserSettings, updateUserSettings } from '../redux/actions/settings'
 import { getAuthenticatedUser } from '../redux/actions/auth'
 
@@ -24,7 +24,10 @@ const PageUserSettings = ({
   return (
     <Page title='User Settings'>
       <Content>
-        <Section>
+        <Center>
+          {error && (
+            <Alert>There is an error. Please check and try again.</Alert>
+          )}
           {!isAuthenticated && <Redirect to='/' />}
           {isAuthenticated && isLoading && <LoadingSpinner />}
           {isAuthenticated && !isLoading && user && (
@@ -36,7 +39,7 @@ const PageUserSettings = ({
               handleGetAuthenticatedUser={handleGetAuthenticatedUser}
             />
           )}
-        </Section>
+        </Center>
       </Content>
     </Page>
   )

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import { Section, Paragraph, Buttons, Button } from '../components'
+import { Paragraph, Buttons, Button } from '../components'
 import { navigateBack } from '../redux/actions/navigation'
 import { logout } from '../redux/actions/auth'
 
@@ -17,7 +17,7 @@ const LogoutContainer = ({
     <>
       {!isAuthenticated && <Redirect to='/' />}
       {!isLoading && isAuthenticated && (
-        <Section>
+        <>
           <Paragraph>You can always log back in at any time.</Paragraph>
           <Buttons>
             <Button variant='secondary' onClick={handleNavigateBack}>
@@ -27,13 +27,9 @@ const LogoutContainer = ({
               Logout
             </Button>
           </Buttons>
-        </Section>
+        </>
       )}
-      {isLoading && (
-        <Section>
-          <h2>Logging out...</h2>
-        </Section>
-      )}
+      {isLoading && <h2>Logging out...</h2>}
     </>
   )
 }

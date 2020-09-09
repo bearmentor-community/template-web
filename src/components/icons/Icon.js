@@ -18,10 +18,10 @@ const IconStyled = styled.svg`
   }
 `
 
-const IconContainer = ({ social, accent, children }) => {
+const IconContainer = ({ width, social, accent, children }) => {
   return (
     <IconStyled
-      width={social ? '1.5em' : '1.2em'}
+      width={social ? '1.5em' : width || '1.2em'}
       viewBox={social ? '0 0 50 50' : '0 0 24 24'}
       social={social}
       accent={accent}
@@ -32,6 +32,7 @@ const IconContainer = ({ social, accent, children }) => {
 }
 
 IconContainer.propTypes = {
+  width: PropTypes.string,
   social: PropTypes.bool,
   accent: PropTypes.string,
   children: PropTypes.any.isRequired

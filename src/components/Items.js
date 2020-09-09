@@ -7,17 +7,20 @@ import { breakpoints } from '@xstyled/system'
 import styled, { css, useUp } from '@xstyled/emotion'
 
 const ItemsStyled = styled.div`
-  ${breakpoints({
-    xs: css``,
-    md: css``
-  })}
+  width: 100%;
 `
 
 const ItemLink = styled(Link)`
   display: block;
   text-decoration: none;
   color: text;
-  margin: 20px 0;
+  margin: 10px 0;
+  & h1 {
+    transition: all 0.2s ease-in-out;
+  }
+  &:hover h1 {
+    color: primary;
+  }
 `
 
 const Item = styled.div`
@@ -36,10 +39,10 @@ const Item = styled.div`
   }
   ${breakpoints({
     xs: css`
-      max-height: 100px;
+      flex-direction: column;
     `,
     md: css`
-      max-height: 200px;
+      flex-direction: row;
     `
   })}
 `
@@ -49,6 +52,7 @@ const ItemInfo = styled.div`
   ${breakpoints({
     xs: css`
       display: flex;
+      flex-direction: row;
       align-items: center;
       padding: 20px;
     `,
@@ -59,21 +63,37 @@ const ItemInfo = styled.div`
   })}
 `
 
-const ItemImageContainer = styled.div``
-
 const ItemImage = styled(LazyLoadImage)`
   object-fit: cover;
+  ${breakpoints({
+    xs: css`
+      width: 100%;
+      max-height: 300px;
+    `,
+    md: css`
+      width: 200px;
+      height: 100%;
+    `
+  })}
 `
 
 const ItemTitle = styled.h1`
   color: text;
   margin: 0;
+  ${breakpoints({
+    xs: css`
+      font-size: 1.5em;
+    `,
+    md: css`
+      font-size: 2em;
+    `
+  })}
 `
 
 const ItemHTML = styled.div`
   color: textAlt;
   p {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 `
 
@@ -92,15 +112,11 @@ const Items = ({ items }) => {
         return (
           <ItemLink key={index} to={`/items/${item.slug}`}>
             <Item>
-              <ItemImageContainer>
-                <ItemImage
-                  effect='opacity'
-                  src={item.imageUrl}
-                  alt={item.title}
-                  height={200}
-                  width={200}
-                />
-              </ItemImageContainer>
+              <ItemImage
+                effect='opacity'
+                src={item.imageUrl}
+                alt={item.title}
+              />
               <ItemInfo>
                 <ItemTitle>{item.title}</ItemTitle>
                 {desktop && (

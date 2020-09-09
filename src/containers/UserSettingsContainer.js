@@ -1,21 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useForm } from 'react-hook-form'
-import styled from '@xstyled/emotion'
 import dayjs from 'dayjs'
-import { DevTool } from '@hookform/devtools'
 
-import { UserSettingsForm } from '../components'
-
-const Error = styled.p`
-  color: textError;
-  margin-bottom: 20px;
-`
-
-const Info = styled.p`
-  font-size: 0.8em;
-  margin: 0;
-`
+import { UserSettingsForm, Alert } from '../components'
 
 const UserSettingsContainer = ({
   isLoading,
@@ -24,7 +12,7 @@ const UserSettingsContainer = ({
   handleUpdateUserSettings,
   handleGetAuthenticatedUser
 }) => {
-  const { register, handleSubmit, errors, control } = useForm({
+  const { register, handleSubmit, errors } = useForm({
     mode: 'onChange',
     defaultValues: {
       name: user.name,
@@ -42,12 +30,6 @@ const UserSettingsContainer = ({
 
   return (
     <>
-      {error && (
-        <div>
-          <Error>There is an error. Please check and try again.</Error>
-        </div>
-      )}
-
       {!isLoading && user && (
         <>
           <UserSettingsForm
@@ -58,19 +40,17 @@ const UserSettingsContainer = ({
             errors={errors}
             submitData={submitData}
           />
-          <Info>
+
+          <Alert variant='info'>
             Joined since{' '}
             {dayjs(user.createdAt).format('D MMMM YYYY [at] HH:mm')}
-          </Info>
-          <Info>
+          </Alert>
+          <Alert variant='info'>
             Last updated{' '}
             {dayjs(user.updatedAt).format('D MMMM YYYY [at] HH:mm')}
-          </Info>
+          </Alert>
         </>
       )}
-
-      {/* Only show React Hook Form DevTool in development */}
-      {process.env.NODE_ENV === 'development' && <DevTool control={control} />}
     </>
   )
 }

@@ -1,14 +1,18 @@
 import React from 'react'
 
-import { Page, Hero } from '../components'
-
 import { LogoutContainer } from '../containers'
+import { Page, Hero, Content, Center } from '../components'
 
 const PageLogout = () => {
   return (
     <Page title='Logout' header={false} footer={false}>
       <Hero heading='Logout of Template?' />
-      <LogoutContainer />
+
+      <Content>
+        <Center>
+          <LogoutContainer />
+        </Center>
+      </Content>
     </Page>
   )
 }

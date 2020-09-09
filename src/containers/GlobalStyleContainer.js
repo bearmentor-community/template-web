@@ -17,7 +17,7 @@ const GlobalStyleContainer = createGlobalStyle`
   body {
     color: text;
     background-color: background;
-    transition: all 0.2s ease-in-out;
+    /* transition: all 0.2s ease-in-out; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -63,6 +63,7 @@ const GlobalStyleContainer = createGlobalStyle`
 
   pre, code {
     font-family: 'Inconsolata', monospace;
+    margin: 0;
   }
 
   img[src=''], img:not([src]) {

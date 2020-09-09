@@ -4,10 +4,19 @@ import { connect } from 'react-redux'
 import { useForm } from 'react-hook-form'
 import { useLocation, useHistory } from 'react-router-dom'
 import queryString from 'query-string'
+import styled from '@xstyled/emotion'
 
+import { SearchForm, Alert, Items, LoadingSpinner } from '../components'
 import { resetSearchItems, searchItems } from '../redux/actions/search'
-import { Section } from '../components'
-import Search from '../components/Search'
+
+const ResultsCount = styled.p`
+  color: textAlt;
+  margin: 10px 0;
+`
+
+const NoItems = styled.div`
+  width: 100%;
+`
 
 const SearchContainer = ({
   isLoading,
@@ -22,7 +31,7 @@ const SearchContainer = ({
 
   // Set default values in the form inputs
   const parsedQuery = queryString.parse(location.search)
-  const { register, handleSubmit } = useForm({
+  const { register, errors, handleSubmit } = useForm({
     defaultValues: { keyword: parsedQuery.keyword || '' }
   })
 
@@ -40,18 +49,32 @@ const SearchContainer = ({
   }
 
   return (
-    <Section>
-      <Search
+    <>
+      <SearchForm
         isLoading={isLoading}
         register={register}
-        error={error}
         query={query}
-        items={items}
         handleReset={handleReset}
         handleSubmit={handleSubmit}
         onSubmit={onSubmit}
       />
-    </Section>
+
+      {errors.keyword && <Alert>{errors.keyword.message}</Alert>}
+      {isLoading && <LoadingSpinner />}
+      {!isLoading && items && items.length > 0 && (
+        <ResultsCount>About {items.length} results</ResultsCount>
+      )}
+      {!isLoading && items && items.length > 0 && <Items items={items} />}
+      {!isLoading && query.keyword && items.length <= 0 && (
+        <NoItems>
+          <h2>Sorry, no items for "{query.keyword}"</h2>
+          <p>
+            The term you entered did not bring up any items. You may have
+            mistyped your term.
+          </p>
+        </NoItems>
+      )}
+    </>
   )
 }
 

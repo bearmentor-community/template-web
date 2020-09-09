@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import { ItemContainer } from '../containers'
-import { Page, Section, NotFound, LoadingSpinner } from '../components'
+import { Page, Center, NotFound, LoadingSpinner } from '../components'
 import { getItem } from '../redux/actions/item'
 
 const PageUserProfile = ({ isLoading, item, handleGetItem }) => {
@@ -22,11 +22,11 @@ const PageUserProfile = ({ isLoading, item, handleGetItem }) => {
         (!isLoading && !item && 'Item Not Found')
       }
     >
-      <Section>
+      <Center>
         {isLoading && <LoadingSpinner />}
         {!isLoading && item && <ItemContainer item={item} />}
         {!isLoading && !item && <NotFound />}
-      </Section>
+      </Center>
     </Page>
   )
 }

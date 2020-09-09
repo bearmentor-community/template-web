@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import { LoginFormContainer } from '../containers'
-import { Page, Hero, Content, Section } from '../components'
+import { Page, Hero, Content, Center } from '../components'
 import { getAuthenticatedUser } from '../redux/actions/auth'
 
 const PageLogin = ({
@@ -18,9 +18,9 @@ const PageLogin = ({
         <Hero heading='Login to your account' />
 
         <Content>
-          <Section>
+          <Center>
             <LoginFormContainer />
-          </Section>
+          </Center>
         </Content>
       </Page>
     )

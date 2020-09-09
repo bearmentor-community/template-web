@@ -5,20 +5,23 @@ import styled from '@xstyled/emotion'
 const AvatarImageContainer = styled.div`
   height: ${(props) => props.size};
   width: ${(props) => props.size};
+  margin: 0;
 `
 
 const AvatarImage = styled.img`
   height: ${(props) => props.size};
   width: ${(props) => props.size};
+  transition: all 0.2s ease-in-out;
   background-color: background;
   object-fit: cover;
+  box-sizing: border-box;
   border-width: 1px;
   border-style: solid;
   border-color: backgroundAlt;
   border-radius: 50%;
 `
 
-const Avatar = ({ user, size = 32 }) => {
+const Avatar = ({ user, size = 150 }) => {
   return (
     <AvatarImageContainer size={size}>
       <AvatarImage src={user.avatarUrl} alt={user.name} size={size} />

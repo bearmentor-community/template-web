@@ -1,17 +1,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from '@xstyled/emotion'
+import { variant } from '@xstyled/system'
+import styled, { css } from '@xstyled/emotion'
 
 const AlertStyled = styled.p`
-  color: textError;
   margin: 0;
+  font-size: 0.8em;
+  ${variant({
+    default: 'error',
+    variants: {
+      error: css`
+        color: textError;
+      `,
+      info: css`
+        color: textDisabled;
+      `
+    }
+  })}
 `
 
-const Alert = ({ children }) => {
-  return <AlertStyled>{children}</AlertStyled>
+const Alert = ({ variant = 'error', children }) => {
+  return <AlertStyled variant={variant}>{children}</AlertStyled>
 }
 
 Alert.propTypes = {
+  variant: PropTypes.string,
   children: PropTypes.any.isRequired
 }
 

@@ -11,6 +11,12 @@ const UploadArea = styled.div`
   margin-bottom: 10px;
 `
 
+const UploadInput = styled.input`
+  cursor: pointer;
+  padding: 2;
+  color: #555;
+`
+
 const UploadContainer = ({ isLoading, error, data, handleUploadImage }) => {
   const { register, handleSubmit, reset } = useForm()
 
@@ -23,7 +29,7 @@ const UploadContainer = ({ isLoading, error, data, handleUploadImage }) => {
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <UploadArea>
-          <input
+          <UploadInput
             name='image'
             type='file'
             accept='image/jpeg,image/png,image/gif'

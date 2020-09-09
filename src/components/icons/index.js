@@ -8,6 +8,7 @@ import IconYouTube from './IconYouTube'
 import IconBug from './IconBug'
 import IconImage from './IconImage'
 import IconNone from './IconNone'
+import IconSearch from './IconSearch'
 
 export {
   IconAzobu,
@@ -19,5 +20,6 @@ export {
   IconYouTube,
   IconBug,
   IconImage,
-  IconNone
+  IconNone,
+  IconSearch
 }

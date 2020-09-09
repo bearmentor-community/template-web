@@ -7,6 +7,7 @@ import { getItems, resetItems } from '../redux/actions/items'
 
 const DebugContainer = ({
   isLoading,
+  error,
   handleGetData,
   handleResetData,
   data
@@ -23,6 +24,8 @@ const DebugContainer = ({
         {isLoading && <span>Loading...</span>}
       </Buttons>
 
+      <p>{error && JSON.stringify(error)}</p>
+
       <Debug data={data} />
     </>
   )
@@ -30,6 +33,7 @@ const DebugContainer = ({
 
 DebugContainer.propTypes = {
   isLoading: PropTypes.bool.isRequired,
+  error: PropTypes.any,
   handleGetData: PropTypes.func.isRequired,
   handleResetData: PropTypes.func.isRequired,
   data: PropTypes.any
@@ -39,6 +43,7 @@ export default connect(
   (state) => {
     return {
       isLoading: state.items.isLoading,
+      error: state.items.error,
       data: state.items.data
     }
   },

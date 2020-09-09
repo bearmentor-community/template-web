@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { UsersContainer } from '../containers'
-import { Page, Hero, Content } from '../components'
+import { Page, Hero, Content, Center } from '../components'
 
 const PageUsers = () => {
   return (
@@ -9,7 +9,9 @@ const PageUsers = () => {
       <Hero heading='List of Registered Users' />
 
       <Content>
-        <UsersContainer />
+        <Center>
+          <UsersContainer />
+        </Center>
       </Content>
     </Page>
   )

@@ -18,10 +18,6 @@ const PageStyled = styled.div`
 
 const Main = styled.main`
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 100%;
 
   p,
   ul,
@@ -41,7 +37,6 @@ const Main = styled.main`
 `
 
 const Page = ({
-  fluid = false,
   title,
   description,
   image,
@@ -61,7 +56,7 @@ const Page = ({
 
       {header && <HeaderContainer />}
 
-      <Main fluid={fluid}>{children}</Main>
+      <Main>{children}</Main>
 
       {footer && <FooterContainer />}
     </PageStyled>
@@ -69,7 +64,6 @@ const Page = ({
 }
 
 Page.propTypes = {
-  fluid: PropTypes.bool,
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
@@ -80,7 +74,6 @@ Page.propTypes = {
 }
 
 Page.defaultProps = {
-  fluid: false,
   description: site.defaultDescription,
   image: site.defaultImage,
   article: false,

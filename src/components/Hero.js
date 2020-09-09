@@ -10,6 +10,7 @@ const HeroStyled = styled.section`
 const Heading = styled.h1`
   text-align: center;
   color: text;
+  transition: all 0.2s ease-in-out;
 
   ${breakpoints({
     xs: css`

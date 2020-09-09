@@ -7,7 +7,6 @@ import { Avatar } from '../components'
 const UserStyled = styled.div`
   display: flex;
   padding: 15px;
-  margin: 10px 0;
   background-color: background;
   border-width: 2px;
   border-style: solid;
@@ -20,7 +19,7 @@ const UserStyled = styled.div`
 `
 
 const Info = styled.div`
-  margin-left: 20px;
+  margin-left: 10px;
 `
 
 const SubInfo = styled.div`
@@ -28,11 +27,12 @@ const SubInfo = styled.div`
   flex-direction: column;
 `
 
-const Name = styled.span`
+const Name = styled.h1`
   display: flex;
   align-items: flex-start;
   font-weight: bold;
   font-size: 20px;
+  margin-top: 0;
   margin-bottom: 0.1rem;
 `
 

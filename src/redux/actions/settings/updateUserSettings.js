@@ -21,7 +21,7 @@ export default (user = {}) => {
     bodyFormData.append('name', user.name) // string
     bodyFormData.append('username', user.username) // string
     bodyFormData.append('bio', user.bio) // string
-    // for (const pair of bodyFormData.entries()) console.log(`${pair[0]}: ${pair[1]}`)
+    // for (const pair of bodyFormData.entries()) console.info(`${pair[0]}: ${pair[1]}`)
 
     try {
       const response = await axios.put(

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { Section, LoadingSpinner, Users } from '../components'
+import { LoadingSpinner, Users } from '../components'
 import { getUsers } from '../redux/actions/users'
 
 const UsersContainer = ({ isLoading, handleGetUsers, users, auth }) => {
@@ -11,15 +11,15 @@ const UsersContainer = ({ isLoading, handleGetUsers, users, auth }) => {
   }, [handleGetUsers])
 
   return (
-    <Section>
+    <>
       {isLoading && <LoadingSpinner />}
-      {!isLoading && users.length <= 0 && (
-        <p>Sorry, users are empty. You might have to refresh the page.</p>
-      )}
       {!isLoading && users && users.length > 0 && (
         <Users users={users} auth={auth} />
       )}
-    </Section>
+      {!isLoading && users.length <= 0 && (
+        <p>Sorry, users are empty. You might have to refresh the page.</p>
+      )}
+    </>
   )
 }
 

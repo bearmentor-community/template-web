@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import { Page, Hero, Content, Section } from '../components'
+import { Page, Hero, Content, Center } from '../components'
 import { RegisterFormContainer } from '../containers'
 
 const PageRegister = ({ isAuthenticated }) => {
@@ -13,9 +13,9 @@ const PageRegister = ({ isAuthenticated }) => {
         <Hero heading='Create your new account' />
 
         <Content>
-          <Section>
+          <Center>
             <RegisterFormContainer />
-          </Section>
+          </Center>
         </Content>
       </Page>
     )

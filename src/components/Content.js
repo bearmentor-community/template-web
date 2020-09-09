@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
 const ContentStyled = styled.div`
-  padding: 10px;
+  padding: 0 10px;
   max-width: 720px;
-  width: 100%;
+  margin: 0 auto;
 `
 
 const Content = ({ children }) => {
