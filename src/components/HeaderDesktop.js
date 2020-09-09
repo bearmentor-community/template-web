@@ -33,6 +33,7 @@ const Logo = styled.span`
   align-items: center;
   transition: inherit;
   opacity: 1;
+  margin-right: 10px;
   &:hover {
     opacity: 0.8;
   }
@@ -43,9 +44,10 @@ const LogoImage = styled.img`
 `
 
 const LogoText = styled.span`
+  font-size: 1.2em;
   font-weight: bold;
-  color: #8f8fa3;
-  margin-left: 10px;
+  color: secondary;
+  margin: 0 10px;
 `
 
 const Header = ({ isAuthenticated, authenticatedUser }) => {

@@ -28,7 +28,7 @@ const LogoutContainer = ({
               onClick={handleLogout}
               disabled={isLoading}
             >
-              {isLoading ? 'Logout' : 'Logging out...'}
+              {!isLoading ? 'Logout' : 'Logging out...'}
             </Button>
           </Buttons>
         </>
