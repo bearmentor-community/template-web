@@ -4,7 +4,7 @@ import { useParams, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import { UserProfileContainer } from '../containers'
-import { Page, Content, NotFound, LoadingSpinner } from '../components'
+import { Page, Content, Center, NotFound, LoadingSpinner } from '../components'
 import { getUserByUsername } from '../redux/actions/user'
 
 const PageUserProfile = ({
@@ -30,10 +30,14 @@ const PageUserProfile = ({
       }
     >
       <Content>
-        {slug[0] === '@' && <Redirect to={username} />}
-        {isLoading && <LoadingSpinner />}
-        {!isLoading && user && <UserProfileContainer user={user} auth={auth} />}
-        {!isLoading && !user && <NotFound />}
+        <Center>
+          {slug[0] === '@' && <Redirect to={username} />}
+          {isLoading && <LoadingSpinner />}
+          {!isLoading && user && (
+            <UserProfileContainer user={user} auth={auth} />
+          )}
+          {!isLoading && !user && <NotFound />}
+        </Center>
       </Content>
     </Page>
   )

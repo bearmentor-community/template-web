@@ -23,13 +23,16 @@ const LogoutContainer = ({
             <Button variant='secondary' onClick={handleNavigateBack}>
               Cancel
             </Button>
-            <Button variant='primary' onClick={handleLogout}>
-              Logout
+            <Button
+              variant='primary'
+              onClick={handleLogout}
+              disabled={isLoading}
+            >
+              {isLoading ? 'Logout' : 'Logging out...'}
             </Button>
           </Buttons>
         </>
       )}
-      {isLoading && <h2>Logging out...</h2>}
     </>
   )
 }

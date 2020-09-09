@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Page, Hero, Content } from '../components'
+import { Page, Hero, Content, Center } from '../components'
 import { ItemsContainer } from '../containers'
 
 const PageItems = () => {
@@ -9,7 +9,9 @@ const PageItems = () => {
       <Hero heading='List of Available Items' />
 
       <Content>
-        <ItemsContainer />
+        <Center>
+          <ItemsContainer />
+        </Center>
       </Content>
     </Page>
   )

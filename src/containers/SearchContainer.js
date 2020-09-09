@@ -6,7 +6,7 @@ import { useLocation, useHistory } from 'react-router-dom'
 import queryString from 'query-string'
 import styled from '@xstyled/emotion'
 
-import { SearchForm, Alert, Items, LoadingSpinner } from '../components'
+import { SearchForm, Center, Alert, Items, LoadingSpinner } from '../components'
 import { resetSearchItems, searchItems } from '../redux/actions/search'
 
 const ResultsCount = styled.p`
@@ -59,8 +59,10 @@ const SearchContainer = ({
         onSubmit={onSubmit}
       />
 
-      {errors.keyword && <Alert>{errors.keyword.message}</Alert>}
-      {isLoading && <LoadingSpinner />}
+      <Center>
+        {errors.keyword && <Alert>{errors.keyword.message}</Alert>}
+        {isLoading && <LoadingSpinner />}
+      </Center>
       {!isLoading && items && items.length > 0 && (
         <ResultsCount>About {items.length} results</ResultsCount>
       )}
