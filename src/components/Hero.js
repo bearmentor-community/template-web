@@ -15,15 +15,15 @@ const Heading = styled.h1`
   ${breakpoints({
     xs: css`
       padding: 0 20px;
-      margin-bottom: 30px;
+      margin: 30px 0;
       font-size: 2em;
     `,
     sm: css`
-      margin-bottom: 40px;
+      margin: 40px 0;
       font-size: 2.5em;
     `,
     md: css`
-      margin-bottom: 50px;
+      margin: 50px 0;
       font-size: 3em;
     `
   })}

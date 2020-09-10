@@ -14,6 +14,7 @@ const Profile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 `
 
 const Name = styled.h1`
@@ -31,7 +32,6 @@ const Username = styled.h2`
 
 const Bio = styled.p`
   text-align: center;
-  margin-bottom: 30px;
   font-size: 1.2em;
 `
 
@@ -44,8 +44,9 @@ const UserProfile = ({ user, auth }) => {
         <Avatar user={user} size={150} />
         <Name>{user.name}</Name>
         <Username>{user.username}</Username>
+        <Bio>{user.bio}</Bio>
       </Profile>
-      <Bio>{user.bio}</Bio>
+
       {isSameWithAuthenticated && (
         <LinkButton to='/settings' variant='tertiary'>
           Edit Profile
