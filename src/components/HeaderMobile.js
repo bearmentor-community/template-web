@@ -8,7 +8,6 @@ const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
 `
 
 const Segment = styled.div``
@@ -24,6 +23,7 @@ const Logo = styled.span`
   align-items: center;
   transition: inherit;
   opacity: 1;
+  margin-left: 10px;
   &:hover {
     opacity: 0.8;
   }
@@ -47,9 +47,10 @@ const MenuButton = styled.button`
   padding: 10px 15px;
   transition: all 0.2s ease-in-out;
   color: text;
-  border-color: backgroundAlt;
-  &:focus {
-    border-color: primary;
+  border: none;
+  border-radius: 0;
+  &:hover {
+    color: primary;
   }
 `
 

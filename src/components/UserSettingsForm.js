@@ -41,13 +41,14 @@ const InputFile = styled.input`
 
 const Submit = styled.input`
   cursor: pointer;
-  border: none;
   color: #fff;
   font-size: 1.2em;
   font-weight: bold;
   padding: 3;
   width: 100%;
   background-color: primary;
+  border: none;
+  margin: 10px 0;
   transition: inherit;
   &:hover {
     background-color: primaryAlt;

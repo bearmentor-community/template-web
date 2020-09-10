@@ -19,6 +19,39 @@ const PageAbout = () => {
           be a template and starter kit for professional developers in web
           development ecosystem.
         </p>
+
+        <p>The applications are published at:</p>
+        <ul>
+          <li>
+            <Anchor href='https://template.azobu.com'>
+              template.azobu.com
+            </Anchor>
+          </li>
+          <li>
+            <Anchor href='https://api.template.azobu.com'>
+              api.template.azobu.com
+            </Anchor>
+          </li>
+        </ul>
+
+        <p>Overview of the features:</p>
+        <ul>
+          {features.map((feature, index) => (
+            <li key={index}>{feature.name}</li>
+          ))}
+        </ul>
+
+        <p>The repositories are located at:</p>
+        <ul>
+          {repositories.map((repo, index) => {
+            return (
+              <li key={index}>
+                <Anchor href={repo.url}>{repo.text}</Anchor>
+              </li>
+            )
+          })}
+        </ul>
+
         <p>
           Using only the most popular, battle-tested tools and technologies. Yet
           still practically achievable for building modern full stack web
@@ -34,35 +67,7 @@ const PageAbout = () => {
           Uniregistry. and much more. Might be leveraging TypeScript, Passport,
           OAuth, Redis, Docker, and complete test suite in the future.
         </p>
-        <p>The applications are published at:</p>
-        <ul>
-          <li>
-            <Anchor href='https://template.azobu.com'>
-              template.azobu.com
-            </Anchor>
-          </li>
-          <li>
-            <Anchor href='https://api.template.azobu.com'>
-              api.template.azobu.com
-            </Anchor>
-          </li>
-        </ul>
-        <p>The repositories are located at:</p>
-        <ul>
-          {repositories.map((repo, index) => {
-            return (
-              <li key={index}>
-                <Anchor href={repo.url}>{repo.text}</Anchor>
-              </li>
-            )
-          })}
-        </ul>
-        <p>Overview of the features:</p>
-        <ul>
-          {features.map((feature, index) => (
-            <li key={index}>{feature.name}</li>
-          ))}
-        </ul>
+
         <p>Thank you and enjoy!</p>
       </Content>
     </Page>

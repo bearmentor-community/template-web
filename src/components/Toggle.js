@@ -5,6 +5,7 @@ import styled from '@xstyled/emotion'
 const ToggleButton = styled.a`
   cursor: pointer;
   background: none;
+
   border: none;
   display: flex;
   justify-content: center;
@@ -17,7 +18,8 @@ const ToggleButton = styled.a`
 `
 
 const Image = styled.img`
-  height: 20;
+  padding: 2px;
+  height: 20px;
 `
 
 const icon = {
