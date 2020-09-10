@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
-import { MenuMobile, LinkAnchor, LinkAvatar } from '../components'
+import { MenuMobile, LinkAnchor } from '../components'
 
 const HeaderStyled = styled.header`
   display: flex;
