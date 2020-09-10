@@ -9,12 +9,11 @@ const MenuMobileStyled = styled.ul`
   background-color: backgroundAlt;
   padding: 0;
   border: 0;
-  margin-top: 10px;
-  list-style-type: none;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  flex: 100%;
+  list-style-type: none;
   left: 0;
   right: 0;
   pointer-events: none;
@@ -23,13 +22,13 @@ const MenuMobileStyled = styled.ul`
   opacity: 1;
   box-shadow: primary;
   transition: all 0.2s ease-in-out;
+  z-index: 10;
 
   display: ${({ isActive }) => (isActive ? 'flex' : 'none')};
   pointer-events: ${({ isActive }) => (isActive ? 'auto' : 'none')};
   transform: ${({ isActive }) =>
     isActive ? 'translateY(0)' : 'translateY(-100%)'};
   opacity: ${({ isActive }) => (isActive ? '1' : '0')};
-  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 
   li {
     display: flex;
@@ -42,7 +41,7 @@ const MenuMobileStyled = styled.ul`
 
   li a {
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     width: 100%;
   }
 `

@@ -8,8 +8,7 @@ const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  height: 40px;
+  padding: 0 10px;
 `
 
 const Segment = styled.div``
@@ -46,7 +45,6 @@ const MenuButton = styled.button`
   background-color: backgroundAlt;
   color: #fff;
   padding: 10px 15px;
-  margin-left: 10px;
   transition: all 0.2s ease-in-out;
   color: text;
   border-color: backgroundAlt;
@@ -56,7 +54,7 @@ const MenuButton = styled.button`
 `
 
 const HeaderMobile = ({ isAuthenticated, authenticatedUser }) => {
-  const [isMenuActive, setIsMenuActive] = useState(true)
+  const [isMenuActive, setIsMenuActive] = useState(false)
 
   const changeIsMenuActive = () => {
     setIsMenuActive(!isMenuActive)
