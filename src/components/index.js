@@ -18,6 +18,7 @@ import LinkAnchor from './LinkAnchor'
 import LinkAvatar from './LinkAvatar'
 import LinkButton from './LinkButton'
 import LoadingSpinner from './LoadingSpinner'
+import MenuMobile from './MenuMobile'
 import NotFound from './NotFound'
 import Page from './Page'
 import Paragraph from './Paragraph'
@@ -51,6 +52,7 @@ export {
   LinkAvatar,
   LinkButton,
   LoadingSpinner,
+  MenuMobile,
   NotFound,
   Page,
   Paragraph,

@@ -9,7 +9,7 @@ const ButtonStyled = styled.button`
   border-radius: 5px;
   color: #fff;
   font-weight: bold;
-  padding: 10 20;
+  padding: 10px 20px;
   background-color: none;
   transition: all 0.2s ease-in-out;
   ${variant({
@@ -36,6 +36,10 @@ const ButtonStyled = styled.button`
           color: primaryAlt;
           border-color: primaryAlt;
         }
+      `,
+      transparent: css`
+        background-color: transparent;
+        color: text;
       `
     }
   })}

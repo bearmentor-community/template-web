@@ -9,7 +9,6 @@ const ToggleButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   user-select: none;
   transition: all 0.2s ease-in-out;
   &:hover {

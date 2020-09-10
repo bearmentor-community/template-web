@@ -1,25 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
-import { ColorModeToggle } from '../containers'
-import { LinkAnchor, LinkAvatar, LinkButton } from '../components'
+import { MenuMobile, LinkAnchor, LinkAvatar } from '../components'
 
 const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
+  height: 40px;
 `
 
-const HeaderSegment = styled.div`
-  display: flex;
-  align-items: center;
-`
+const Segment = styled.div``
 
-const HeaderSegmentButtons = styled.div`
-  display: flex;
-  align-items: center;
-  a {
+const SegmentButtons = styled.div`
+  & > a {
     margin-left: 10px;
   }
 `
@@ -35,38 +31,59 @@ const Logo = styled.span`
 `
 
 const LogoImage = styled.img`
-  height: 40;
+  height: 30px;
+`
+
+const LogoText = styled.span`
+  font-size: 1.2em;
+  font-weight: bold;
+  color: secondary;
+  margin: 0 5px;
+`
+
+const MenuButton = styled.button`
+  cursor: pointer;
+  background-color: backgroundAlt;
+  color: #fff;
+  padding: 10px 15px;
+  margin-left: 10px;
+  transition: all 0.2s ease-in-out;
+  color: text;
+  border-color: backgroundAlt;
+  &:focus {
+    border-color: primary;
+  }
 `
 
 const HeaderMobile = ({ isAuthenticated, authenticatedUser }) => {
+  const [isMenuActive, setIsMenuActive] = useState(true)
+
+  const changeIsMenuActive = () => {
+    setIsMenuActive(!isMenuActive)
+  }
+
   return (
     <HeaderStyled>
-      <HeaderSegment>
+      <Segment>
         <LinkAnchor to='/'>
           <Logo>
             <LogoImage src='/assets/images/icon.svg' alt='Logo' />
+            <LogoText>Template</LogoText>
           </Logo>
         </LinkAnchor>
-      </HeaderSegment>
+      </Segment>
 
-      <HeaderSegmentButtons>
-        <ColorModeToggle />
+      <SegmentButtons>
+        <MenuButton variant='transparent' onClick={changeIsMenuActive}>
+          ☰
+        </MenuButton>
 
-        {!isAuthenticated && (
-          <>
-            <LinkButton variant='secondary' to='/login'>
-              Login
-            </LinkButton>
-          </>
-        )}
-
-        {isAuthenticated && authenticatedUser.username && (
-          <LinkAvatar
-            to={`/${authenticatedUser.username}`}
-            user={authenticatedUser}
-          />
-        )}
-      </HeaderSegmentButtons>
+        <MenuMobile
+          isActive={isMenuActive}
+          isAuthenticated={isAuthenticated}
+          authenticatedUser={authenticatedUser}
+        />
+      </SegmentButtons>
     </HeaderStyled>
   )
 }

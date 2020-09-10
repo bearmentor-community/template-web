@@ -10,7 +10,7 @@ const LinkButtonStyled = styled(Link)`
   border-radius: 5px;
   color: #fff;
   font-weight: bold;
-  padding: 10 20;
+  padding: 10px 20px;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   ${variant({

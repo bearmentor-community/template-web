@@ -14,10 +14,6 @@ const ResultsCount = styled.p`
   margin: 10px 0;
 `
 
-const NoItems = styled.div`
-  width: 100%;
-`
-
 const SearchContainer = ({
   isLoading,
   error,
@@ -60,21 +56,28 @@ const SearchContainer = ({
       />
 
       <Center>
-        {errors.keyword && <Alert>{errors.keyword.message}</Alert>}
+        {!isLoading && !errors.keyword && (
+          <Alert variant='info'>
+            Searches across the entire items collection
+          </Alert>
+        )}
         {isLoading && <LoadingSpinner />}
+        {!isLoading && errors.keyword && (
+          <Alert>{errors.keyword.message}</Alert>
+        )}
       </Center>
       {!isLoading && items && items.length > 0 && (
         <ResultsCount>About {items.length} results</ResultsCount>
       )}
       {!isLoading && items && items.length > 0 && <Items items={items} />}
       {!isLoading && query.keyword && items.length <= 0 && (
-        <NoItems>
+        <div>
           <h2>Sorry, no items for "{query.keyword}"</h2>
           <p>
             The term you entered did not bring up any items. You may have
             mistyped your term.
           </p>
-        </NoItems>
+        </div>
       )}
     </>
   )
