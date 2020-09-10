@@ -44,7 +44,7 @@ const MenuButton = styled.button`
   cursor: pointer;
   background-color: backgroundAlt;
   color: #fff;
-  padding: 10px 15px;
+  padding: 15px 20px;
   transition: all 0.2s ease-in-out;
   color: text;
   border: none;
