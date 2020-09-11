@@ -23,11 +23,11 @@ const GlobalStyleContainer = createGlobalStyle`
   }
 
   h1,h2,h3,h4,h5,h6 {
-    line-height: 1.2em;
+    line-height: 1.25em;
   }
 
   p, ul, ol {
-    margin: 1rem 0;
+    margin-top: 1rem;
     a {
       color: primary;
       &:hover {
@@ -44,15 +44,28 @@ const GlobalStyleContainer = createGlobalStyle`
     }
   }
 
+  label {
+    font-weight: 700;
+    margin-bottom: 2;
+  }
+
+  input, textarea {
+    font-size: 1.2em;
+  }
+
+  button {
+    font-size: 1em;
+  }
+
   input, button, textarea {
     font-family: inherit;
-    font-size: 1em;
-    border-width: 2px;
+    border-width: 3px;
     border-style: solid;
     border-color: border;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
     outline: none;
+    padding: 10px;
     &:focus {
       border-color: primary;
     }
@@ -68,6 +81,10 @@ const GlobalStyleContainer = createGlobalStyle`
 
   img[src=''], img:not([src]) {
     opacity: 0;
+  }
+
+  mark {
+    background-color: inherit;
   }
 `
 

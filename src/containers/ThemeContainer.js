@@ -12,8 +12,8 @@ const ThemeContainer = ({ children }) => {
     <ThemeProvider theme={theme}>
       <GoogleFontLoader
         fonts={[
-          { font: 'Inter', weights: [400, 700] },
-          { font: 'Inconsolata', weights: [400, 700] }
+          { font: 'Inter', weights: [400, 500, 700, 900] },
+          { font: 'Inconsolata', weights: [400] }
         ]}
       />
       <GlobalStyleContainer />

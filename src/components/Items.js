@@ -13,8 +13,8 @@ const ItemsStyled = styled.div`
 const ItemLink = styled(Link)`
   display: block;
   text-decoration: none;
-  color: text;
   margin: 10px 0;
+  color: text;
   & h1 {
     transition: all 0.2s ease-in-out;
   }
@@ -26,11 +26,11 @@ const ItemLink = styled(Link)`
 const Item = styled.div`
   display: flex;
   overflow: hidden;
-  border-width: 2px;
+  border-width: 3px;
   border-style: solid;
   border-color: backgroundAlt;
   background-color: background;
-  transition: inherit;
+  transition: all 0.2s ease-in-out;
   &:hover {
     border-color: primary;
   }
@@ -49,12 +49,12 @@ const Item = styled.div`
 
 const ItemInfo = styled.div`
   padding: 20px;
+  display: flex;
+
   ${breakpoints({
     xs: css`
-      display: flex;
       flex-direction: row;
       align-items: center;
-      padding: 20px;
     `,
     md: css`
       flex-direction: column;
@@ -91,7 +91,7 @@ const ItemTitle = styled.h1`
 `
 
 const ItemHTML = styled.div`
-  color: textAlt;
+  color: text;
   p {
     font-size: 1em;
   }

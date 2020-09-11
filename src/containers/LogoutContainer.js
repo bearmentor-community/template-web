@@ -18,7 +18,7 @@ const LogoutContainer = ({
       {!isAuthenticated && <Redirect to='/' />}
       {!isLoading && isAuthenticated && (
         <>
-          <Paragraph>You can always log back in at any time.</Paragraph>
+          <Paragraph>You can log back in at any time</Paragraph>
           <Buttons>
             <Button variant='secondary' onClick={handleNavigateBack}>
               Cancel

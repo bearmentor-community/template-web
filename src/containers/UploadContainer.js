@@ -13,7 +13,6 @@ const UploadArea = styled.div`
 
 const UploadInput = styled.input`
   cursor: pointer;
-  padding: 2;
   color: #555;
 `
 
@@ -35,6 +34,9 @@ const UploadContainer = ({ isLoading, error, data, handleUploadImage }) => {
             accept='image/jpeg,image/png,image/gif'
             ref={register}
           />
+          <aside>
+            <small>JPG, GIF, or PNG. Max size of 500 KB</small>
+          </aside>
         </UploadArea>
 
         <Buttons>
@@ -44,15 +46,14 @@ const UploadContainer = ({ isLoading, error, data, handleUploadImage }) => {
         </Buttons>
       </form>
 
-      {!isLoading && error && <SyntaxBlock data={error} />}
-      {!isLoading && !error && data && <SyntaxBlock data={data} />}
+      <SyntaxBlock data={data || error} />
     </>
   )
 }
 
 UploadContainer.propTypes = {
   isLoading: PropTypes.bool,
-  error: PropTypes.bool,
+  error: PropTypes.object,
   data: PropTypes.object,
   handleUploadImage: PropTypes.func
 }
@@ -60,9 +61,9 @@ UploadContainer.propTypes = {
 export default connect(
   (state) => {
     return {
-      isLoading: state.images.isLoading,
-      error: state.images.error,
-      data: state.images.data
+      isLoading: state.images.isLoading || false,
+      error: state.images.error || {},
+      data: state.images.data || {}
     }
   },
   (dispatch) => {

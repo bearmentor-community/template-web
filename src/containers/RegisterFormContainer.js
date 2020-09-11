@@ -27,14 +27,14 @@ const RegisterFormContainer = ({ isLoading, data, error, handleRegister }) => {
         handleSubmit={handleSubmit}
         errors={errors}
         submitData={submitData}
-        submitText='Create New Account'
+        submitText='Create Account'
         submitTextLoading='Creating account...'
       />
 
       {error && <Alert>Sorry, registration is failed. Please try again.</Alert>}
 
       <p>
-        Already registered? <Link to='/login'>Login here</Link>
+        Have an account? <Link to='/login'>Login here</Link>
       </p>
     </>
   )

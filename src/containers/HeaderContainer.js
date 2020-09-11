@@ -1,28 +1,45 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { useUp } from '@xstyled/emotion'
+import styled, { useUp } from '@xstyled/emotion'
 
 import { HeaderDesktop, HeaderMobile } from '../components'
+
+const HeaderContainerStyled = styled.header`
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: inherit;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: borderAlt;
+  background-color: ${({ desktop }) =>
+    desktop ? 'backgroundGlass' : 'backgroundAlt'};
+  backdrop-filter: saturate(180%) blur(5px);
+`
 
 const HeaderContainer = ({ isAuthenticated, authenticatedUser }) => {
   const desktop = useUp('md')
 
-  if (desktop) {
-    return (
-      <HeaderDesktop
-        isAuthenticated={isAuthenticated}
-        authenticatedUser={authenticatedUser}
-      />
-    )
-  } else {
-    return (
-      <HeaderMobile
-        isAuthenticated={isAuthenticated}
-        authenticatedUser={authenticatedUser}
-      />
-    )
-  }
+  return (
+    <HeaderContainerStyled desktop={desktop}>
+      {desktop ? (
+        <HeaderDesktop
+          isAuthenticated={isAuthenticated}
+          authenticatedUser={authenticatedUser}
+        />
+      ) : (
+        <HeaderMobile
+          isAuthenticated={isAuthenticated}
+          authenticatedUser={authenticatedUser}
+        />
+      )}
+    </HeaderContainerStyled>
+  )
 }
 
 HeaderContainer.propTypes = {

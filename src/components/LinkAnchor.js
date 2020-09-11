@@ -7,15 +7,12 @@ import styled, { css } from '@xstyled/emotion'
 const LinkAnchorStyled = styled(Link)`
   align-items: center;
   display: flex;
-  font-size: 18;
-  font-weight: bold;
   text-decoration: none;
-  color: secondary;
-  &:hover {
-    color: secondaryAlt;
-  }
+  font-size: 18px;
+  font-weight: 500;
+
   ${variant({
-    default: 'secondary',
+    default: 'text',
     variants: {
       primary: css`
         color: primary;
@@ -31,6 +28,12 @@ const LinkAnchorStyled = styled(Link)`
       `,
       danger: css`
         color: textError;
+      `,
+      text: css`
+        color: text;
+        &:hover {
+          color: textAlt;
+        }
       `
     }
   })}

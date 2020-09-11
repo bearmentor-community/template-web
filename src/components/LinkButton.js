@@ -6,11 +6,12 @@ import styled, { css } from '@xstyled/emotion'
 
 const LinkButtonStyled = styled(Link)`
   cursor: pointer;
+  display: inline-block;
   border: none;
   border-radius: 5px;
   color: #fff;
-  font-weight: bold;
-  padding: 10px 20px;
+  font-weight: 700;
+  padding: 5px 10px;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   ${variant({
@@ -30,7 +31,8 @@ const LinkButtonStyled = styled(Link)`
       `,
       tertiary: css`
         color: primary;
-        border: 2;
+        border-width: 3px;
+        border-style: solid;
         border-color: primary;
         &:hover {
           color: primaryAlt;
@@ -41,7 +43,7 @@ const LinkButtonStyled = styled(Link)`
   })}
 `
 
-const LinkButton = ({ variant, to, children }) => {
+const LinkButton = ({ variant = 'primary', to, children }) => {
   return (
     <LinkButtonStyled to={to} variant={variant}>
       {children}

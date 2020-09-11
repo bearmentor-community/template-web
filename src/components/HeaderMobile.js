@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
-import { MenuMobile, LinkAnchor } from '../components'
+import { LinkAnchor, MenuMobile } from '../components'
 
-const HeaderStyled = styled.header`
+const HeaderMobileStyled = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 10px 5px 10px 10px;
 `
 
 const Segment = styled.div``
@@ -23,7 +25,6 @@ const Logo = styled.span`
   align-items: center;
   transition: inherit;
   opacity: 1;
-  margin-left: 10px;
   &:hover {
     opacity: 0.8;
   }
@@ -35,22 +36,30 @@ const LogoImage = styled.img`
 
 const LogoText = styled.span`
   font-size: 1.2em;
-  font-weight: bold;
+  font-weight: 700;
   color: secondary;
   margin: 0 5px;
 `
 
 const MenuButton = styled.button`
   cursor: pointer;
+  font-weight: 900;
   background-color: backgroundAlt;
   color: #fff;
-  padding: 15px 20px;
-  transition: all 0.2s ease-in-out;
-  color: text;
+  padding: 5px;
   border: none;
   border-radius: 0;
+  color: text;
+  transition: all 0.2s ease-in-out;
   &:hover {
-    color: primary;
+    color: textAlt;
+  }
+  span {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `
 
@@ -62,7 +71,7 @@ const HeaderMobile = ({ isAuthenticated, authenticatedUser }) => {
   }
 
   return (
-    <HeaderStyled>
+    <HeaderMobileStyled>
       <Segment>
         <LinkAnchor to='/'>
           <Logo>
@@ -74,7 +83,7 @@ const HeaderMobile = ({ isAuthenticated, authenticatedUser }) => {
 
       <SegmentButtons>
         <MenuButton variant='transparent' onClick={changeIsMenuActive}>
-          ☰
+          <span>{isMenuActive ? '✕' : '☰'}</span>
         </MenuButton>
 
         <MenuMobile
@@ -83,7 +92,7 @@ const HeaderMobile = ({ isAuthenticated, authenticatedUser }) => {
           authenticatedUser={authenticatedUser}
         />
       </SegmentButtons>
-    </HeaderStyled>
+    </HeaderMobileStyled>
   )
 }
 

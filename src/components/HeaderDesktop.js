@@ -6,10 +6,12 @@ import { ColorModeToggle } from '../containers'
 import { LinkButton, LinkAnchor, LinkAvatar } from '../components'
 import { IconBug, IconImage, IconNone } from '../components/icons'
 
-const HeaderStyled = styled.header`
+const HeaderDesktopStyled = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding: 20;
+  align-items: center;
+  padding: 10px 20px;
+  width: 1080px;
 `
 
 const HeaderSegment = styled.div`
@@ -45,14 +47,14 @@ const LogoImage = styled.img`
 
 const LogoText = styled.span`
   font-size: 1.2em;
-  font-weight: bold;
+  font-weight: 700;
   color: secondary;
   margin: 0 10px;
 `
 
 const Header = ({ isAuthenticated, authenticatedUser }) => {
   return (
-    <HeaderStyled>
+    <HeaderDesktopStyled>
       <HeaderSegment>
         <LinkAnchor to='/'>
           <Logo>
@@ -104,7 +106,7 @@ const Header = ({ isAuthenticated, authenticatedUser }) => {
           </>
         )}
       </HeaderSegmentButtons>
-    </HeaderStyled>
+    </HeaderDesktopStyled>
   )
 }
 

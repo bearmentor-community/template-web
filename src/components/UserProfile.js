@@ -8,6 +8,7 @@ const UserProfileStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1em;
 `
 
 const Profile = styled.div`

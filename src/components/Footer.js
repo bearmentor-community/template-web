@@ -10,14 +10,14 @@ const FooterStyled = styled.footer`
   flex-direction: column;
   align-items: center;
   color: textAlt;
-  margin-top: 100;
-  padding: 20 0;
+  margin-top: 200px;
+  padding: 20px 0;
 `
 
 const SocialList = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 20;
+  margin-bottom: 20px;
 `
 
 const SocialLink = styled.a`
@@ -57,7 +57,7 @@ const Footer = () => {
       </SocialList>
 
       <Copyright>
-        Copyright © {year}{' '}
+        © {year}{' '}
         <a href='https://github.com/azobu-projects/template'>Template</a> by{' '}
         <a href='https://github.com/azobu-projects'>Azobu Projects</a>
       </Copyright>

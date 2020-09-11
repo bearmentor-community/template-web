@@ -15,9 +15,9 @@ const AvatarImage = styled.img`
   background-color: background;
   object-fit: cover;
   box-sizing: border-box;
-  border-width: 1px;
   border-style: solid;
   border-color: backgroundAlt;
+  border-width: 2px;
   border-radius: 50%;
 `
 

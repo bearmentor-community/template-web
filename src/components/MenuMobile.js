@@ -9,7 +9,7 @@ const MenuMobileStyled = styled.ul`
   background-color: backgroundAlt;
   padding: 0;
   border: 0;
-  margin-top: 0;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -20,9 +20,9 @@ const MenuMobileStyled = styled.ul`
   position: absolute;
   transform: translateY(0);
   opacity: 1;
-  box-shadow: primary;
   transition: all 0.2s ease-in-out;
-  z-index: 10;
+  z-index: 2;
+  box-shadow: boxShadow;
 
   display: ${({ isActive }) => (isActive ? 'flex' : 'none')};
   pointer-events: ${({ isActive }) => (isActive ? 'auto' : 'none')};
@@ -33,16 +33,14 @@ const MenuMobileStyled = styled.ul`
   li {
     display: flex;
     background-color: backgroundAlt;
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: border;
     transition: all 0.2s ease-in-out;
   }
 
   li a {
     text-align: center;
-    padding: 10px;
+    padding: 15px 20px;
     width: 100%;
+    font-weight: 700;
   }
 `
 
@@ -65,7 +63,9 @@ const MenuMobile = ({
             </LinkAnchor>
           </li>
           <li>
-            <LinkAnchor to='/login'>Login</LinkAnchor>
+            <LinkAnchor variant='primary' to='/login'>
+              Login
+            </LinkAnchor>
           </li>
         </>
       )}

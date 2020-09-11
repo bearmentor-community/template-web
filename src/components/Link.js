@@ -4,7 +4,7 @@ import styled from '@xstyled/emotion'
 import { Link as ReactRouterLink } from 'react-router-dom'
 
 const LinkStyled = styled(ReactRouterLink)`
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   color: primary;
   &:hover {

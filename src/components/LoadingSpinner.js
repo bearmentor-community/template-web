@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled, { useColorMode } from '@xstyled/emotion'
 
@@ -36,19 +36,30 @@ const LoadingSpinner = ({
   width = 100,
   height = 100,
   innerSize = 50,
-  border = 10
+  border = 10,
+  delayMs = 200
 }) => {
   const [colorMode] = useColorMode()
-  const color = colorMode === 'dark' ? '#fff' : '#000'
+  const [delayed, setDelayed] = useState(true)
+  const color = colorMode === 'dark' ? '#ccc' : '#333'
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setDelayed(false), delayMs)
+    return () => clearTimeout(timeout)
+  }, [delayMs])
 
   return (
-    <Spinner
-      color={color}
-      width={width}
-      height={height}
-      innerSize={innerSize}
-      border={border}
-    />
+    <>
+      {!delayed && (
+        <Spinner
+          color={color}
+          width={width}
+          height={height}
+          innerSize={innerSize}
+          border={border}
+        />
+      )}
+    </>
   )
 }
 
@@ -56,7 +67,8 @@ LoadingSpinner.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   innerSize: PropTypes.number,
-  border: PropTypes.number
+  border: PropTypes.number,
+  delayMs: PropTypes.number
 }
 
 export default LoadingSpinner

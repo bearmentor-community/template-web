@@ -8,7 +8,7 @@ const ButtonStyled = styled.button`
   border: none;
   border-radius: 5px;
   color: #fff;
-  font-weight: bold;
+  font-weight: 700;
   padding: 10px 20px;
   background-color: none;
   transition: all 0.2s ease-in-out;
@@ -30,16 +30,13 @@ const ButtonStyled = styled.button`
       tertiary: css`
         background-color: transparent;
         color: primary;
-        border: 2;
+        border-width: 3px;
+        border-style: solid;
         border-color: primary;
         &:hover {
           color: primaryAlt;
           border-color: primaryAlt;
         }
-      `,
-      transparent: css`
-        background-color: transparent;
-        color: text;
       `
     }
   })}

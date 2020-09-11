@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import { Buttons, Button, Debug } from '../components'
+import { Input } from '../components/forms'
 import { getItems, resetItems } from '../redux/actions/items'
 
 const DebugContainer = ({
@@ -18,15 +19,17 @@ const DebugContainer = ({
 
   return (
     <>
+      <form>
+        <Input type='text' placeholder='/resources/:id' />
+      </form>
+
       <Buttons>
         <Button onClick={handleGetData}>Get Data</Button>
         <Button onClick={handleResetData}>Reset Data</Button>
         {isLoading && <span>Loading...</span>}
       </Buttons>
 
-      <p>{error && JSON.stringify(error)}</p>
-
-      <Debug data={data} />
+      <Debug data={data || error} />
     </>
   )
 }

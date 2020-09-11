@@ -66,10 +66,13 @@ const SearchContainer = ({
           <Alert>{errors.keyword.message}</Alert>
         )}
       </Center>
+
       {!isLoading && items && items.length > 0 && (
         <ResultsCount>About {items.length} results</ResultsCount>
       )}
+
       {!isLoading && items && items.length > 0 && <Items items={items} />}
+
       {!isLoading && query.keyword && items.length <= 0 && (
         <div>
           <h2>Sorry, no items for "{query.keyword}"</h2>

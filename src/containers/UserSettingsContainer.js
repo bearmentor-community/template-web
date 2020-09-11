@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useForm } from 'react-hook-form'
-import dayjs from 'dayjs'
 
-import { UserSettingsForm, Alert } from '../components'
+import { UserSettingsForm } from '../components'
 
 const UserSettingsContainer = ({
   isLoading,
@@ -31,25 +30,14 @@ const UserSettingsContainer = ({
   return (
     <>
       {!isLoading && user && (
-        <>
-          <UserSettingsForm
-            isLoading={isLoading}
-            user={user}
-            register={register}
-            handleSubmit={handleSubmit}
-            errors={errors}
-            submitData={submitData}
-          />
-
-          <Alert variant='info'>
-            Joined since{' '}
-            {dayjs(user.createdAt).format('D MMMM YYYY [at] HH:mm')}
-          </Alert>
-          <Alert variant='info'>
-            Last updated{' '}
-            {dayjs(user.updatedAt).format('D MMMM YYYY [at] HH:mm')}
-          </Alert>
-        </>
+        <UserSettingsForm
+          isLoading={isLoading}
+          user={user}
+          register={register}
+          handleSubmit={handleSubmit}
+          errors={errors}
+          submitData={submitData}
+        />
       )}
     </>
   )

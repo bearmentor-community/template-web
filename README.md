@@ -68,6 +68,7 @@ All the frontend/web dependencies sorted by priority:
   - [**Styled System**]() — Style props for rapid UI development
   - [**xstyled**]() — Consistent theme based on Styled System for `styled-components` and `emotion`
   - [**Emotion**]() — Library designed for writing CSS styles with JavaScript
+- [**Google Fonts**]() — Library of free licensed font families
 - [**Axios**]() — Promise based HTTP client for the browser and Mode.js
   - [**React Query**]() — ...
   - [**SWR**]() — ...

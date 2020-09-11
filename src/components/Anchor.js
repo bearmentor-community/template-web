@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
 const AnchorStyled = styled.a`
-  font-weight: bold;
   text-decoration: none;
   color: primary;
+  font-weight: 500;
   &:hover {
     color: primaryAlt;
   }

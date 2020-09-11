@@ -1,24 +1,45 @@
 import React from 'react'
+import styled from '@xstyled/emotion'
 
-import { Page, Hero, Content, Link } from '../components'
+import {
+  Page,
+  HeroSpecial,
+  ContentSpecial,
+  Buttons,
+  LinkButton
+} from '../components'
+
+const Marker = styled.mark`
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg, #5cadd6, #3380cc);
+`
 
 const PageHome = () => {
   return (
     <Page>
-      <Hero heading='Welcome to Template' />
+      <HeroSpecial>
+        Starter kit to build a<br />
+        <Marker>complete web app.</Marker>
+      </HeroSpecial>
 
-      <Content>
-        <h2>Quick starter kit project to build a complete web app</h2>
+      <ContentSpecial>
         <p>
-          The technologies and tools are using JavaScript, Node.js, React,
-          Redux, Express, MongoDB, PostgreSQL, REST API. Also deployment using
-          PM2, Netlify, PM2, Google Cloud Platform, Nginx, Let's Encrypt,
-          Cloudflare, and Uniregistry.
+          Powered by JavaScript, Node.js, React, Redux, Express, MongoDB,
+          PostgreSQL, REST API, PM2, Netlify, Google Cloud Platform, PM2, Nginx,
+          Let's Encrypt, Circle CI, Docker, Cloudflare, and Uniregistry.
         </p>
-        <p>
-          <Link to='/about'>Visit about page to learn more</Link>
-        </p>
-      </Content>
+        <Buttons center>
+          <LinkButton variant='primary' to='/register'>
+            Get started
+          </LinkButton>
+          <LinkButton variant='secondary' to='/about'>
+            Learn more
+          </LinkButton>
+        </Buttons>
+      </ContentSpecial>
     </Page>
   )
 }

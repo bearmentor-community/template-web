@@ -12,8 +12,6 @@ const Form = styled.form`
 
 const InputText = styled.input`
   flex: 1;
-  font-size: 1.2em;
-  padding: 2;
   margin-right: 10px;
   width: 100%;
 `

@@ -5,11 +5,13 @@ import Avatar from './Avatar'
 import Button from './Button'
 import Buttons from './Buttons'
 import Content from './Content'
+import ContentSpecial from './ContentSpecial'
 import Debug from './Debug'
 import Footer from './Footer'
 import HeaderDesktop from './HeaderDesktop'
 import HeaderMobile from './HeaderMobile'
 import Hero from './Hero'
+import HeroSpecial from './HeroSpecial'
 import Items from './Items'
 import ItemDetail from './ItemDetail'
 import ItemsResults from './ItemsResults'
@@ -39,11 +41,13 @@ export {
   Button,
   Buttons,
   Content,
+  ContentSpecial,
   Debug,
   Footer,
   HeaderDesktop,
   HeaderMobile,
   Hero,
+  HeroSpecial,
   ItemDetail,
   Items,
   ItemsResults,

@@ -8,11 +8,10 @@ const UserStyled = styled.div`
   display: flex;
   padding: 15px;
   background-color: background;
-  border-width: 2px;
+  border-width: 3px;
   border-style: solid;
   border-radius: 5px;
   border-color: backgroundAlt;
-  transition: inherit;
   &:hover {
     border-color: primary;
   }
@@ -30,7 +29,7 @@ const SubInfo = styled.div`
 const Name = styled.h1`
   display: flex;
   align-items: flex-start;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 20px;
   margin-top: 0;
   margin-bottom: 0.1rem;
@@ -50,10 +49,7 @@ const User = ({ user, isYou }) => {
       <Avatar user={user} size={50} />
       <Info>
         <SubInfo>
-          <Name>
-            <span>{user.name}</span>
-            {isYou && <span>(You)</span>}
-          </Name>
+          <Name>{user.name}</Name>
           <Username>@{user.username}</Username>
         </SubInfo>
         <SubInfo>

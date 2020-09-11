@@ -7,31 +7,40 @@
     "xl": 1200
   },
   "colors": {
-    "primary": "#5cadd6",
-    "primaryAlt": "#297aa3",
+    "primary": "#3380cc",
+    "primaryAlt": "#1F4D7A",
     "secondary": "#8f8fa3",
     "secondaryAlt": "#5c5c70",
-    "background": "#fff",
-    "backgroundAlt": "#eee",
-    "text": "#000",
+    "background": "#f9f9f9",
+    "backgroundAlt": "#fff",
+    "backgroundGlass": "hsla(0, 0%, 100%, 0.8)",
+    "text": "#333",
     "textAlt": "#888",
     "textDisabled": "#aaa",
     "textError": "#e02460",
     "border": "#ccc",
+    "borderAlt": "hsla(0, 0%, 80%, 0.5)",
     "valid": "#40bf6a",
     "invalid": "#c91d1d",
     "modes": {
       "dark": {
         "background": "#000",
         "backgroundAlt": "#111",
-        "text": "#fff",
-        "textAlt": "#aaa",
+        "backgroundGlass": "#111",
+        "text": "#eee",
+        "textAlt": "#999",
         "textDisabled": "#aaa",
-        "border": "#333"
+        "border": "#333",
+        "borderAlt": "hsla(0, 0%, 20%, 0.5)"
       }
     }
   },
   "shadows": {
-    "primary": "0 2rem 2rem 0.5rem rgba(0, 0, 0, 0.25)"
+    "boxShadow": "0 2rem 2rem 0 rgba(0, 0, 0, 0.5)",
+    "modes": {
+      "dark": {
+        "boxShadow": "0 2rem 2rem 0 rgba(255, 255, 255, 0.25)"
+      }
+    }
   }
 }

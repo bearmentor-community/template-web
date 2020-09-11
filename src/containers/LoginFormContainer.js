@@ -27,7 +27,7 @@ const LoginFormContainer = ({ isLoading, error, handleLogin }) => {
         handleSubmit={handleSubmit}
         errors={errors}
         submitData={submitData}
-        submitText='Login to My Account'
+        submitText='Login'
         submitTextLoading='Logging in...'
       />
 
@@ -39,7 +39,7 @@ const LoginFormContainer = ({ isLoading, error, handleLogin }) => {
       )}
 
       <p>
-        New here? <Link to='/register'>Register yourself</Link>
+        New here? <Link to='/register'>Register for free</Link>
       </p>
     </>
   )

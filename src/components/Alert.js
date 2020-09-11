@@ -5,7 +5,7 @@ import styled, { css } from '@xstyled/emotion'
 
 const AlertStyled = styled.p`
   margin: 0;
-  font-size: 0.8em;
+  font-size: 1em;
   ${variant({
     default: 'error',
     variants: {

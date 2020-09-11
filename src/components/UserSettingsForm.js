@@ -2,14 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
-import { Avatar } from '../components'
+import dayjs from 'dayjs'
 
-const Form = styled.form`
+import { Avatar, Alert } from '../components'
+
+const UserSettingsFormStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1em;
+`
+
+const Form = styled.form`
   width: 100%;
-  max-width: 480px;
+  max-width: 420px;
   & > div {
     margin: 10 0;
   }
@@ -22,34 +28,26 @@ const Field = styled.div`
   width: 100%;
 `
 
-const Label = styled.label`
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-bottom: 2;
-`
+const Label = styled.label``
 
-const Input = styled.input`
-  padding: 2;
-  font-size: 1.2em;
-`
+const Input = styled.input``
 
 const InputFile = styled.input`
   cursor: pointer;
-  padding: 2;
+  padding: 10px;
   color: #555;
 `
 
-const Submit = styled.input`
+const InputSubmit = styled.input`
   cursor: pointer;
+  padding: 10px;
+  margin: 10px 0;
   color: #fff;
   font-size: 1.2em;
-  font-weight: bold;
-  padding: 3;
+  font-weight: 700;
   width: 100%;
   background-color: primary;
   border: none;
-  margin: 10px 0;
-  transition: inherit;
   &:hover {
     background-color: primaryAlt;
   }
@@ -59,10 +57,6 @@ const Bio = styled.textarea`
   font-size: 1.2em;
   min-height: 100px;
   max-height: 200px;
-  padding: 2;
-  border: 2;
-  border-radius: 5px;
-  border-color: border;
   resize: vertical;
 `
 
@@ -80,7 +74,7 @@ const UserSettingsForm = ({
   submitData
 }) => {
   return (
-    <>
+    <UserSettingsFormStyled>
       <Avatar user={user} size={150} />
 
       <Form onSubmit={handleSubmit(submitData)} encType='multipart/form-data'>
@@ -163,13 +157,20 @@ const UserSettingsForm = ({
           {errors.email && <Error>{errors.email.message}</Error>}
         </Field>
 
-        <Submit
+        <InputSubmit
           type='submit'
           value={isLoading ? 'Saving Changes' : 'Save Changes'}
           disabled={isLoading}
         />
       </Form>
-    </>
+
+      <Alert variant='info'>
+        Joined since {dayjs(user.createdAt).format('D MMMM YYYY [at] HH:mm')}
+      </Alert>
+      <Alert variant='info'>
+        Last updated {dayjs(user.updatedAt).format('D MMMM YYYY [at] HH:mm')}
+      </Alert>
+    </UserSettingsFormStyled>
   )
 }
 

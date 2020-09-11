@@ -4,7 +4,7 @@ import styled from '@xstyled/emotion'
 
 const Form = styled.form`
   width: 100%;
-  max-width: 480px;
+  max-width: 420px;
 `
 
 const Field = styled.div`
@@ -13,23 +13,17 @@ const Field = styled.div`
   margin-bottom: 20;
 `
 
-const Label = styled.label`
-  font-weight: bold;
-  margin-bottom: 2;
-`
+const Label = styled.label``
 
-const Input = styled.input`
-  padding: 3;
-  font-size: 1.2em;
-`
+const Input = styled.input``
 
 const Submit = styled.input`
   cursor: pointer;
+  padding: 10px;
   border: none;
   color: #fff;
   font-size: 1.2em;
-  font-weight: bold;
-  padding: 3;
+  font-weight: 700;
   width: 100%;
   background-color: primary;
   transition: all 0.2s ease-in-out;
@@ -135,7 +129,7 @@ const AuthForm = ({
             })}
           />
           {errors.password?.type === 'minLength' && (
-            <Error>Sorry, the password have to be at least 8 characters</Error>
+            <Error>The password length has to be at least 8 characters</Error>
           )}
           {errors.password && <Error>{errors.password.message}</Error>}
         </Field>

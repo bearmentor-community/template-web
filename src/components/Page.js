@@ -3,6 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { breakpoints } from '@xstyled/system'
 import styled, { css } from '@xstyled/emotion'
+import { motion } from 'framer-motion'
 
 import { SEOContainer, HeaderContainer, FooterContainer } from '../containers'
 import site from '../site.json'
@@ -16,9 +17,16 @@ const PageStyled = styled.div`
   transition: all 0.2s ease-in-out;
 `
 
-const Main = styled.main`
+const Main = styled(motion.main)`
   flex: 1;
-
+  ${breakpoints({
+    xs: css`
+      padding-top: 55px;
+    `,
+    md: css`
+      padding-top: 60px;
+    `
+  })};
   p,
   ul,
   ol {
@@ -35,6 +43,23 @@ const Main = styled.main`
     padding-left: 2em;
   }
 `
+
+const pageVariants = {
+  initial: {
+    opacity: 0
+  },
+  in: {
+    opacity: 1
+  },
+  out: {
+    opacity: 0
+  }
+}
+
+const pageTransition = {
+  ease: 'anticipate',
+  duration: 0.5
+}
 
 const Page = ({
   title,
@@ -56,7 +81,15 @@ const Page = ({
 
       {header && <HeaderContainer />}
 
-      <Main>{children}</Main>
+      <Main
+        initial='initial'
+        animate='in'
+        exit='out'
+        variants={pageVariants}
+        transition={pageTransition}
+      >
+        {children}
+      </Main>
 
       {footer && <FooterContainer />}
     </PageStyled>

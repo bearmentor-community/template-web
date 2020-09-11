@@ -1,7 +1,7 @@
 {
   "name": "Template",
-  "defaultTitle": "Template",
-  "defaultDescription": "Description of template",
+  "defaultTitle": "Template: Starter kit to build a complete web app",
+  "defaultDescription": "Starter kit to build a complete web app powered by JavaScript, Node.js, React, Redux, and Express",
   "defaultImage": "../public/images/image.jpg",
   "siteUrl": "https://template.azobu.com",
   "twitterUsername": "@AzobuHQ",
