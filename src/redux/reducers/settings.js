@@ -1,4 +1,5 @@
 import {
+  USER_SETTINGS_CLEAR,
   GET_USER_SETTINGS_STARTED,
   GET_USER_SETTINGS_SUCCESS,
   GET_USER_SETTINGS_FAILURE,
@@ -15,6 +16,10 @@ const initialState = {
 
 const settings = (state = initialState, action) => {
   switch (action.type) {
+    case USER_SETTINGS_CLEAR:
+      return {
+        ...initialState
+      }
     case GET_USER_SETTINGS_STARTED:
       return {
         ...state,

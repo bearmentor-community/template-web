@@ -4,6 +4,7 @@ import AuthForm from './AuthForm'
 import Avatar from './Avatar'
 import Button from './Button'
 import Buttons from './Buttons'
+import Center from './Center'
 import Content from './Content'
 import ContentSpecial from './ContentSpecial'
 import Debug from './Debug'
@@ -12,8 +13,8 @@ import HeaderDesktop from './HeaderDesktop'
 import HeaderMobile from './HeaderMobile'
 import Hero from './Hero'
 import HeroSpecial from './HeroSpecial'
-import Items from './Items'
 import ItemDetail from './ItemDetail'
+import Items from './Items'
 import ItemsResults from './ItemsResults'
 import Link from './Link'
 import LinkAnchor from './LinkAnchor'
@@ -24,13 +25,13 @@ import MenuMobile from './MenuMobile'
 import NotFound from './NotFound'
 import Page from './Page'
 import Paragraph from './Paragraph'
+import Row from './Row'
 import SearchForm from './SearchForm'
-import Center from './Center'
 import SyntaxBlock from './SyntaxBlock'
 import Toggle from './Toggle'
+import User from './User'
 import UserProfile from './UserProfile'
 import Users from './Users'
-import User from './User'
 import UserSettingsForm from './UserSettingsForm'
 
 export {
@@ -60,6 +61,7 @@ export {
   NotFound,
   Page,
   Paragraph,
+  Row,
   SearchForm,
   Center,
   SyntaxBlock,

@@ -4,13 +4,15 @@ import styled from '@xstyled/emotion'
 
 import dayjs from 'dayjs'
 
-import { Avatar, Alert } from '../components'
+import { Avatar, Row, Alert } from '../components'
 
 const UserSettingsFormStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 1em;
+  width: 100%;
+  max-width: 420px;
 `
 
 const Form = styled.form`
@@ -164,12 +166,14 @@ const UserSettingsForm = ({
         />
       </Form>
 
-      <Alert variant='info'>
-        Joined since {dayjs(user.createdAt).format('D MMMM YYYY [at] HH:mm')}
-      </Alert>
-      <Alert variant='info'>
-        Last updated {dayjs(user.updatedAt).format('D MMMM YYYY [at] HH:mm')}
-      </Alert>
+      <Row>
+        <Alert variant='info'>
+          Joined {dayjs(user.createdAt).format('D MMMM YYYY')}
+        </Alert>
+        <Alert variant='info'>
+          Updated {dayjs(user.updatedAt).format('D MMMM YYYY')}
+        </Alert>
+      </Row>
     </UserSettingsFormStyled>
   )
 }

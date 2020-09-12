@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { clear } from '../redux/actions/auth'
+import { clear } from '../redux/actions/settings'
 
-const useAuthClear = () => {
-  const error = useSelector((state) => state.auth.error)
+const useSettingsClear = () => {
+  const error = useSelector((state) => state.settings.error)
   const dispatch = useDispatch()
   const [isInitial, setIsInitial] = useState(false)
 
@@ -14,4 +14,4 @@ const useAuthClear = () => {
   }, [isInitial, setIsInitial, error, dispatch])
 }
 
-export default useAuthClear
+export default useSettingsClear
