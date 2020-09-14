@@ -24,7 +24,7 @@ const NotFound = () => {
       <NotFoundStyled>
         <p>
           The link you followed may be broken, or the page may have been
-          removed.
+          removed. This page often called "404 Not Found" page.
         </p>
         <p>
           But you can go to <Link to='/'>homepage</Link> or go back to{' '}
