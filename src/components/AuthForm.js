@@ -57,6 +57,7 @@ const AuthForm = ({
             name='email'
             type='email'
             autoComplete='email'
+            placeholder='Enter email address'
             autoFocus={true}
             ref={register({
               required: 'Sorry, please enter your email address',
@@ -65,7 +66,6 @@ const AuthForm = ({
                 message: 'Please provide a valid email'
               }
             })}
-            placeholder='name@example.com'
           />
           {errors.email && <Error>{errors.email.message}</Error>}
         </Field>
@@ -78,7 +78,7 @@ const AuthForm = ({
             name='name'
             type='text'
             autoComplete='name'
-            placeholder='Full Name'
+            placeholder='Enter your full name'
             aria-invalid={errors.name ? 'true' : 'false'}
             ref={register({
               required: 'Sorry, please enter your full name',
@@ -99,14 +99,14 @@ const AuthForm = ({
             name='username'
             type='text'
             autoComplete='username'
-            placeholder='username'
+            placeholder='Your username'
             aria-invalid={errors.username ? 'true' : 'false'}
             ref={register({
               required: 'Sorry, please enter your username',
               pattern: {
                 value: /^[a-zA-Z0-9_]*$/i,
                 message:
-                  'Please provide a username with only alphabet, number, and underscore'
+                  'Please provide a username with only alphabet, number, and underscore but no space'
               }
             })}
           />
@@ -121,7 +121,7 @@ const AuthForm = ({
             name='password'
             type='password'
             autoComplete='password'
-            placeholder='********'
+            placeholder='Enter your password'
             aria-invalid={errors.password ? 'true' : 'false'}
             ref={register({
               required: 'Sorry, please enter your password',

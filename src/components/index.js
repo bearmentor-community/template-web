@@ -27,6 +27,7 @@ import Page from './Page'
 import Paragraph from './Paragraph'
 import Row from './Row'
 import SearchForm from './SearchForm'
+import Special from './Special'
 import SyntaxBlock from './SyntaxBlock'
 import Toggle from './Toggle'
 import User from './User'
@@ -41,6 +42,7 @@ export {
   Avatar,
   Button,
   Buttons,
+  Center,
   Content,
   ContentSpecial,
   Debug,
@@ -63,11 +65,11 @@ export {
   Paragraph,
   Row,
   SearchForm,
-  Center,
+  Special,
   SyntaxBlock,
   Toggle,
+  User,
   UserProfile,
   Users,
-  User,
   UserSettingsForm
 }

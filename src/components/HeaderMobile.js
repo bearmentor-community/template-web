@@ -82,7 +82,12 @@ const HeaderMobile = ({ isAuthenticated, authenticatedUser }) => {
       </Segment>
 
       <SegmentButtons>
-        <MenuButton variant='transparent' onClick={changeIsMenuActive}>
+        <MenuButton
+          id='menu-button'
+          role='menu'
+          variant='transparent'
+          onClick={changeIsMenuActive}
+        >
           <span>{isMenuActive ? '✕' : '☰'}</span>
         </MenuButton>
 

@@ -10,7 +10,7 @@ const FooterStyled = styled.footer`
   flex-direction: column;
   align-items: center;
   color: textAlt;
-  margin-top: 200px;
+  margin-top: 100px;
   padding: 20px 0;
 `
 

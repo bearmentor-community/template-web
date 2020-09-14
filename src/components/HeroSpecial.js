@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { breakpoints } from '@xstyled/system'
-import styled, { css } from '@xstyled/emotion'
+import styled from '@xstyled/emotion'
 
 const HeroSpecialStyled = styled.section`
   padding: 0 20px;
@@ -18,18 +17,6 @@ const Heading = styled.h1`
   padding: 1em 0;
   letter-spacing: -0.05em;
   font-size: calc(10px + 5vw);
-
-  /* ${breakpoints({
-    xs: css`
-      font-size: 1.8em;
-    `,
-    sm: css`
-      font-size: 3em;
-    `,
-    md: css`
-      font-size: 4em;
-    `
-  })} */
 `
 
 const HeroSpecial = ({ children }) => {

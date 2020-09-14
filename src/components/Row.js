@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
 const RowStyled = styled.div`
-  width: 100 %;
+  width: 100%;
 `
 
 const Row = ({ children }) => {

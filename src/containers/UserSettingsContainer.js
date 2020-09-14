@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useForm } from 'react-hook-form'
 
+import useSettingsClear from '../hooks/useSettingsClear'
 import { UserSettingsForm } from '../components'
 
 const UserSettingsContainer = ({
@@ -11,6 +12,8 @@ const UserSettingsContainer = ({
   handleUpdateUserSettings,
   handleGetAuthenticatedUser
 }) => {
+  useSettingsClear()
+
   const { register, handleSubmit, errors } = useForm({
     mode: 'onChange',
     defaultValues: {
