@@ -50,7 +50,7 @@ const RouterContainer = () => {
             <Route path='/logout' component={PageLogout} />
             <Route path='/settings' component={PageUserSettings} />
             <Route path='/:slug' component={PageUserProfile} />
-            <Route key={'/404.html'} component={PageNotFound} />
+            <Route path='*' exact component={PageNotFound} />
           </Switch>
         </AnimatePresence>
       </>

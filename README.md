@@ -73,7 +73,6 @@ All the frontend/web dependencies sorted by priority:
   - [**React Query**]() — ...
   - [**SWR**]() — ...
 - [**React-GA**]() — React Google Analytics Module
-- [**`react-snap`**](https://github.com/stereobooster/react-snap) — Pre-renders a web app into static HTML
 - [**Sentry**]() — Application monitoring and error tracking software
 - [**LogRocket**]() — Logging and Session Replay for JavaScript Apps
 - [**JSON Web Token (JWT)**]() — Compact URL-safe means of representing claims

@@ -17,6 +17,7 @@ const GlobalStyleContainer = createGlobalStyle`
   body {
     color: text;
     background-color: background;
+    transition: all 0.2s ease-in-out;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
