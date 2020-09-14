@@ -2,25 +2,25 @@ import React from 'react'
 import { ConnectedRouter } from 'connected-react-router'
 import { AnimatePresence } from 'framer-motion'
 import { Switch, Route } from 'react-router-dom'
+import loadable from '@loadable/component'
 
 import { history } from '../redux/store'
-import {
-  PageAbout,
-  PageDebug,
-  PageHome,
-  PageItem,
-  PageItems,
-  PageLogin,
-  PageLogout,
-  PageNotFound,
-  PageRegister,
-  PageSearch,
-  PageUsers,
-  PageUserSettings,
-  PageUserProfile,
-  PageUpload
-} from '../pages'
 import { ScrollToTop, GoogleAnalytics } from '../containers'
+
+const PageAbout = loadable(() => import('../pages/PageAbout'))
+const PageDebug = loadable(() => import('../pages/PageDebug'))
+const PageHome = loadable(() => import('../pages/PageHome'))
+const PageItem = loadable(() => import('../pages/PageItem'))
+const PageItems = loadable(() => import('../pages/PageItems'))
+const PageLogin = loadable(() => import('../pages/PageLogin'))
+const PageLogout = loadable(() => import('../pages/PageLogout'))
+const PageNotFound = loadable(() => import('../pages/PageNotFound'))
+const PageRegister = loadable(() => import('../pages/PageRegister'))
+const PageSearch = loadable(() => import('../pages/PageSearch'))
+const PageUsers = loadable(() => import('../pages/PageUsers'))
+const PageUserSettings = loadable(() => import('../pages/PageUserSettings'))
+const PageUserProfile = loadable(() => import('../pages/PageUserProfile'))
+const PageUpload = loadable(() => import('../pages/PageUpload'))
 
 const RouterContainer = () => {
   return (
