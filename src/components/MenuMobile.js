@@ -23,19 +23,16 @@ const MenuMobileStyled = styled.ul`
   transition: all 0.2s ease-in-out;
   z-index: 2;
   box-shadow: boxShadow;
-
   display: ${({ isActive }) => (isActive ? 'flex' : 'none')};
   pointer-events: ${({ isActive }) => (isActive ? 'auto' : 'none')};
   transform: ${({ isActive }) =>
     isActive ? 'translateY(0)' : 'translateY(-100%)'};
   opacity: ${({ isActive }) => (isActive ? '1' : '0')};
-
   li {
     display: flex;
     background-color: backgroundAlt;
     transition: all 0.2s ease-in-out;
   }
-
   li a {
     text-align: center;
     padding: 15px 20px;

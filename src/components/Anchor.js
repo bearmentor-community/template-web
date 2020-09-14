@@ -5,7 +5,7 @@ import styled from '@xstyled/emotion'
 const AnchorStyled = styled.a`
   text-decoration: none;
   color: primary;
-  font-weight: 500;
+  font-weight: 400;
   &:hover {
     color: primaryAlt;
   }

@@ -9,7 +9,7 @@ const LinkAnchorStyled = styled(Link)`
   display: flex;
   text-decoration: none;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
 
   ${variant({
     default: 'text',

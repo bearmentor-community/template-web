@@ -36,10 +36,10 @@
     }
   },
   "shadows": {
-    "boxShadow": "0 2rem 2rem 0 rgba(0, 0, 0, 0.5)",
+    "boxShadow": "0 2rem 1rem 0 rgba(0, 0, 0, 0.25)",
     "modes": {
       "dark": {
-        "boxShadow": "0 2rem 2rem 0 rgba(255, 255, 255, 0.25)"
+        "boxShadow": "0 2rem 1rem 0 rgba(255, 255, 255, 0.25)"
       }
     }
   }
