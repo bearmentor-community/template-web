@@ -11,11 +11,7 @@ import {
 } from '../components'
 
 const Marker = styled.mark`
-  color: inherit;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(90deg, #5cadd6, #3380cc);
+  color: primary;
 `
 
 const PageHome = () => {

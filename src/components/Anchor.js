@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import styled from '@xstyled/emotion'
 
 const AnchorStyled = styled.a`
-  text-decoration: none;
   color: primary;
   font-weight: 400;
   &:hover {

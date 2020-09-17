@@ -24,10 +24,10 @@ const NotFound = () => {
       <NotFoundStyled>
         <p>
           The link you followed may be broken, or the page may have been
-          removed. This page often called "404 Not Found" page.
+          removed. This page is often called "404 Not Found"
         </p>
         <p>
-          But you can go to <Link to='/'>homepage</Link> or go back to{' '}
+          Instead, you can go back to <Link to='/'>homepage</Link> or{' '}
           <a
             href='/'
             onClick={(event) => {
@@ -37,7 +37,6 @@ const NotFound = () => {
           >
             previous page
           </a>
-          .
         </p>
       </NotFoundStyled>
     </>
